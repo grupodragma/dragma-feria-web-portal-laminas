@@ -1,0 +1,251 @@
+<?= $this->doctype() ?>
+
+<!DOCTYPE html>
+<html lang="<?php echo $this->layout()->idiomaSeleccionado; ?>">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="theme-color" content="#00b3ce" />
+        <meta http-equiv="Content-Language" content="<?php echo $this->layout()->idiomaSeleccionado; ?>" />
+        <meta name="description" content="LA ÚNICA FERIA DEL SECTOR INMOBILIARIO EN EL PERÚ, y es organizada por la Centro Virtual de Convenciones." />
+        <meta name="Keywords" content="Ferias virtuales, recorridos, convenciones" />
+        <title><?php echo $this->headTitle()->renderTitle(); ?></title>
+        <?php echo $this->headMeta(); ?>
+        <meta name="author" content="Dragma">
+        <base href="<?php echo $this->layout()->base_url; ?>" />
+        <link href="https://centrovirtualdeconvenciones.com/expohogar.png" rel="shortcut icon" title="feria-2020" />
+        <meta name="viewport" content="width=480" initial-scale="1" />
+        <link rel="alternate" hreflang="es" href="https://dragmastands.com/" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700;800&display=swap" rel="stylesheet" />
+        <link href="css/grt-responsive-menu.css" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+        <link href="css/slick.css" rel="stylesheet" type="text/css" />
+        <link href="css/slick-theme.css" rel="stylesheet" type="text/css" />
+        <link href="css/base.css" rel="stylesheet" type="text/css" />
+        <?php echo $this->partial('partial/principal/css/default', []); ?>
+    </head>
+
+    <body style="overflow-y: scroll;">
+        <div class="boton-atajos">
+            <!-- <div id="chat-circle" class="btn btn-raised">
+                <div id="chat-overlay"></div>
+                <img class="chat-circle_robot" src="imagenes/message-top.png" />
+            </div> -->
+
+            <a href="#" class="back-to-top"><img src="imagenes/arrow-top.png" /></a>
+        </div>
+
+        <div class="chat-box">
+            <div class="chat-box-body">
+                <!--welcome message-->
+                <div class="chat-box-welcome__header">
+                    <div class="chat-box__header-text">
+                        <img src="imagenes/logo-principal.svg" width="40%" />
+                        <span class="chat-box-toggle"><i class="material-icons">cancel</i></span>
+                    </div>
+
+                    <div id="chat-box-welcome__ava">
+                        <img class="chat-box-welcome_robot" src="imagenes/girl-chat.png" />
+                    </div>
+                    <div class="chat-box-welcome__welcome-text">
+                        <p>Hola! Soy Diana Torres. En que te puedo Ayudar?</p>
+                    </div>
+                </div>
+
+                <!--chat-bot after welcome was toggled-->
+                <div id="chat-box__wraper">
+                    <div class="chat-box-header">
+                        <img src="imagenes/logo-principal.svg" width="40%" />
+                        <span class="chat-box-toggle"><i class="material-icons">cancel</i></span>
+                    </div>
+
+                    <div class="chat-box-overlay"></div>
+                    <div class="chat-logs">
+                        <div id="cm-msg-0" class="chat-msg bot">
+                            <span class="msg-avatar">
+                                <img class="chat-box-overlay_robot" src="imagenes/girl-chat.png" />
+                            </span>
+                            <div class="cm-msg-text">
+                                Hi! soy Diana Torrres. En que puedo ayudarte?
+                            </div>
+                        </div>
+                        <div class="spin-container">
+                            <div class="spiner">
+                                <div aria-hidden="true"></div>
+                                <div aria-hidden="true"></div>
+                                <div aria-hidden="true"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--chat-log-->
+                </div>
+            </div>
+            <div class="chat-input-box" id="chatLog">
+                <form class="chat-input__form">
+                    <input type="text" class="chat-input__text" id="chat-input__text" placeholder="Escribe tu mensaje" />
+                    <button type="submit" class="chat-submit" id="chat-submit">
+                        <i class="material-icons">send</i>
+                    </button>
+                </form>
+                <p6 class="chat-box__sign">powered by deepPiXEL</p6>
+            </div>
+        </div>
+
+        <header>
+            <div class="center-header" data-aos="fade-down">
+                <div class="logo">
+                    <a href="index.html"> <img src="imagenes/LOGO-EXPOHOGAR.svg" /></a>
+                </div>
+
+                <div class="space-res" style="visibility: hidden;"></div>
+                <div id="menu">
+                    <nav>
+                        <ul class="grt-menu">
+                            <li><a href="index.html" class="opciones">Home</a></li>
+
+                            <li class="grt-dropdown"><a href="inmobiliarias-resume.html" class="opciones">Inmobiliarias</a></li>
+                            <li><a href="principales-bancos.html" class="opciones">Bancos</a></li>
+
+                            <li><a href="blog-1.html" class="opciones">Blog</a></li>
+                            <li><a href="contacto.html" class="opciones">Auditorio</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="space-res" style="visibility: hidden;"></div>
+
+                <div class="boton-cotiza">
+                    <div class="container-language" style="visibility: hidden;">
+                        <select
+                            name="idioma"
+                            class="idioma"
+                            style="
+                                margin: 0;
+                                margin-bottom: 0%;
+                                margin-top: 0%;
+                                border-radius: 5px;
+                                vertical-align: top;
+                                padding-top: 2vh;
+                                padding-bottom: 2vh;
+                                border: 2px solid #565fa9;
+
+                                padding: 1.2vh;
+                                background-color: #fff;
+                                background-image: url('https://centrovirtualdeconvenciones.com/arrow-select-green.svg');
+                                background-position: 97% center;
+                                background-position: right 10px center;
+                                background-repeat: no-repeat;
+                                background-size: 1.1em;
+                                appearance: none;
+
+                                -webkit-border-radius: 3px;
+                                -webkit-padding-end: 30px;
+                                -webkit-padding-start: 8px;
+                                -webkit-user-select: none;
+
+                                font-size: 0.9vw;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                color: #111;
+                                white-space: nowrap;
+                                width: 100%;
+                                transition: border 300ms;
+                            "
+                        >
+                            <option style="background-color: #fff; color: #555;">ESP</option>
+                            <option style="background-color: #fff; color: #555;">ENG</option>
+                            <option style="background-color: #fff; color: #555;">POR</option>
+                            <option style="background-color: #fff; color: #555;">CHI</option>
+                        </select>
+                    </div>
+
+                    <div class="user-header" style="visibility: hidden;">
+                        <img src="imagenes/nombres-registro.svg" />
+                        <span>Hola Usario</span>
+                    </div>
+                </div>
+
+                <button class="grt-mobile-button"><span class="line1"></span><span class="line2"></span><span class="line3"></span></button>
+            </div>
+        </header>
+
+        <?= $this->content; ?>
+
+        <footer>
+            <div class="center-footer">
+                <div class="first-footer">
+                    <div class="logo-expo-footer">
+                        <div class="logo-fin"><img src="imagenes/logo-expohogar-footer-blanco.png" /></div>
+                        <div class="redes-fin">
+                            <span>
+                                <a href="https://www.facebook.com/GrupoDragma/"><img src="imagenes/fb-footer.png" /></a>
+                            </span>
+                            <span>
+                                <a href="https://www.instagram.com/grupo.dragma/?utm_medium=copy_linkLinkedin:"><img src="imagenes/insta-footer.png" /></a>
+                            </span>
+                            <span>
+                                <a href="https://www.linkedin.com/company/grupodragma/"><img src="imagenes/lnk-footer.png" /></a>
+                            </span>
+                            <span>
+                                <a href="https://wa.link/tof98k"><img src="imagenes/wsp-footer.png" /></a>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="space-footer"></div>
+                    <div class="links-footer">
+                        <div class="links-tres">
+                            <h2><img src="imagenes/mundo-footer.svg" />Otros:</h2>
+                            <a href="#">> Preguntas Frecuentes</a>
+                        </div>
+                        <div class="links-tres">
+                            <h2><img src="imagenes/llamar-footer.svg" />Contacto directo:</h2>
+                            <p>> Central de Informes</p>
+                            <span>959 716 260 </span>
+                        </div>
+                        <div class="links-tres">
+                            <h2><img src="imagenes/map-footer.svg" />Ubicación:</h2>
+                            <p>Av. Aviación Nº 2760 - San Borja</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="second-footer">
+                    <p>Ponemos a tu disposición nuestro servicio de Atención al Cliente para atender cualquier consulta o comentario. Para mayor información click aquí.</p>
+                    <a href="#"><img src="imagenes/telefono-footer.svg" /> 01 223 2902</a>
+                </div>
+            </div>
+        </footer>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+        <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="js/slick.min.js"></script>
+        <script type="text/javascript" src="js/jquery.popupoverlay.js"></script>
+        <script type="text/javascript" src="js/grt-responsive-menu.js"></script>
+        <script type="text/javascript" src="js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="js/jquery.validate_messages_es.js"></script>
+        <script type="text/javascript" src="js/home/scripts.js?t=<?php echo time(); ?>"></script>
+        <script type="text/javascript" src="js/home/main.js?t=<?php echo time(); ?>"></script>
+
+        <?= $this->inlineScript() ?>
+
+        <script>
+            function abrirVentanaWindow(url, title, w, h, e) {
+                e?.preventDefault();
+                if( url == '' || url == '#' )return;
+                var dualScreenLeft = window.screenLeft != undefined ? window.screenLeft : screen.left;  
+                var dualScreenTop = window.screenTop != undefined ? window.screenTop : screen.top;  
+                width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;  
+                height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;  
+                var left = ((width / 2) - (w / 2)) + dualScreenLeft;  
+                var top = ((height / 2) - (h / 2)) + dualScreenTop;  
+                var newWindow = window.open(url, title, 'scrollbars=yes, width=' + w + ', height=' + h + ', top=' + top + ', left=' + left);  
+                if (window.focus) {  
+                    newWindow.focus();  
+                }  
+            }
+        </script>
+
+    </body>
+    
+</html>

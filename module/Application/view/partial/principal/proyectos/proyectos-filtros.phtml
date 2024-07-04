@@ -1,0 +1,94 @@
+<div class="los-titulos">
+    <h1>TODOS LOS PROYECTOS</h1>
+</div>
+
+<div class="filtro-todos">
+    <button class="hide-counter" onclick="myFunction()">FILTROS</button>
+
+    <form name="contacto" class="form-buscar" id="myDIVI">
+        <span class="close2">X</span>
+
+        <div class="all-selecters">
+            <div class="citys">
+                <h2>Tipos</h2>
+                <select data-filtro="tipoHabitacion" class="grayout filtro-mapa select-filtro-mapa">
+                    <option value="">Tipo</option>
+                    <?php foreach($this->tipoHabitaciones as $item) : ?>
+                    <option value="<?php echo $item['nombre']; ?>"><?php echo $item['nombre']; ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+
+            <div class="space"></div>
+
+            <div class="citys">
+                <h2>Distrito</h2>
+                <select data-filtro="distrito" class="grayout filtro-mapa select-filtro-mapa">
+                    <option value="">Distrito</option>
+                    <?php foreach($this->distritos as $item) : ?>
+                    <option value="<?php echo $item['nombre']; ?>"><?php echo $item['nombre']; ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+
+            <div class="space"></div>
+
+            <div class="citys">
+                <h2>N° de Habitaciones</h2>
+                <select data-filtro="numeroHabitacion" class="grayout filtro-mapa select-filtro-mapa">
+                    <option value="">Nro. de Habitaciones</option>
+                    <?php foreach($this->numeroHabitaciones as $item) : ?>
+                    <option value="<?php echo $item['nombre']; ?>"><?php echo $item['nombre']; ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+            <div class="space"></div>
+            <div class="citys">
+                <h2>Precio S/</h2>
+                <select data-filtro="rangoPrecios" class="grayout filtro-mapa select-filtro-mapa">
+                    <option value="">Precio</option>
+                    <?php foreach($this->rangoPrecios as $item) : ?>
+                    <option value="<?php echo number_format($item['precio_min'], 2, ',', '') ." a ".number_format($item['precio_max'], 2, ',', ''); ?>"><?php echo number_format($item['precio_min'], 2, '.', ',') ." a ".number_format($item['precio_max'], 2, '.', ','); ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+
+            <div class="space"></div>
+
+            <div class="citys">
+                <h2>Etapa del Proyecto</h2>
+                <select data-filtro="etapa" class="grayout filtro-mapa select-filtro-mapa">
+                    <option value="">Etapa</option>
+                    <?php foreach($this->etapas as $item) : ?>
+                    <option value="<?php echo $item['nombre']; ?>"><?php echo $item['nombre']; ?></option>
+                    <?php endforeach; ?>
+                </select>
+            </div>
+        </div>
+
+        <div class="espacito"></div>
+
+        <div class="boton">
+            <input type="button" name="button" id="button" value="BUSCAR" onclick="filtrarMapa(this)" class="send-filter" />
+            <input type="hidden" name="proceso" id="proceso" />
+        </div>
+    </form>
+</div>
+
+<style>
+    #map {
+        height: 100%;
+    }
+    .content {
+        width: 100%;
+        height: 76vh;
+    }
+</style>
+
+<div class="maps-filtro">
+    <div class="center-mapa">
+        <div class="content">
+            <div id="map"></div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,64 @@
+<?php //print_r($this->layout()->portal['config_formulario']) ?>
+<?php if( !empty($this->layout()->portal['config_formulario']) ) : ?>
+<form data-form="form-dinamico" class="form-ingreso">
+    <div class="caja-inputs">
+        <div class="form-controls">
+            <select data-filtro="distrito" class="grayout filtro-mapa select-filtro">
+                <option value="">Distrito</option>
+                <?php foreach($this->distritos as $item) : ?>
+                <option value="<?php echo $item['nombre']; ?>"><?php echo $item['nombre']; ?></option>
+                <?php endforeach; ?>
+            </select>
+            <select data-filtro="tipoHabitacion" class="grayout filtro-mapa select-filtro">
+                <option value="">Tipo de Habitación</option>
+                <?php foreach($this->tipoHabitaciones as $item) : ?>
+                <option value="<?php echo $item['nombre']; ?>"><?php echo $item['nombre']; ?></option>
+                <?php endforeach; ?>
+            </select>
+            <select data-filtro="numeroHabitacion" class="grayout filtro-mapa select-filtro">
+                <option value="">Nro. de Habitaciones</option>
+                <?php foreach($this->numeroHabitaciones as $item) : ?>
+                <option value="<?php echo $item['nombre']; ?>"><?php echo $item['nombre']; ?></option>
+                <?php endforeach; ?>
+            </select>
+            <select data-filtro="rangoPrecios" class="grayout filtro-mapa select-filtro">
+                <option value="">Precio</option>
+                <?php foreach($this->rangoPrecios as $item) : ?>
+                <option value="<?php echo number_format($item['precio_min'], 2, ',', '') ." a ".number_format($item['precio_max'], 2, ',', ''); ?>"><?php echo number_format($item['precio_min'], 2, '.', ',') ." a ".number_format($item['precio_max'], 2, '.', ','); ?></option>
+                <?php endforeach; ?>
+            </select>
+        </div>
+    </div>
+    <div class="caja-inputs-send">
+        <input type="button" name="button" id="button" value="BUSCAR" onclick="filtrarMapa(this)" class="send-registro-recepcion" />
+        <input type="hidden" name="proceso" id="proceso" />
+    </div>
+</form>
+<?php endif; ?>
+
+<script>
+    <?php $this->inlineScript()->captureStart(); ?>
+    
+    $("[data-form='form-dinamico']").validate({
+        ignore: [],
+        rules: {
+            dni: {
+                required: true,
+                number: true
+            }
+        },
+        errorPlacement: function (error, element) {
+            element.parents(".form-controls").find(".msgError").html(error);
+        },
+        submitHandler: function(form) {
+            $.post("/login", $(form).serialize(), function(response){
+                console.log(response);
+                if(response.result === 'success') {
+                    
+                }
+            }, 'json');
+        }
+    });
+
+    <?php $this->inlineScript()->captureEnd(); ?>
+</script>

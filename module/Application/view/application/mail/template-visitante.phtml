@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,400;0,600;0,700;0,900;1,200;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet" />
+        <title><?php echo $this->layout()->feria['nombre']; ?> <?php echo date('Y'); ?></title>
+        <style>
+            body {
+                font-family: Kanit, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <table width="200" border="0" align="center" cellpadding="0" cellspacing="0">
+            <tr>
+                <td>
+                    <table width="645" height="31" border="0" align="center" style="margin-top:15px;  ">
+                        <tr>
+                            <td width="437" style="font-size:14px;color:#575759;">
+                                <a href="<?php echo $this->layout()->feria['dominio']; ?>" style="text-decoration: none; color: #999;">
+                                    <img src="<?php echo $this->layout()->url_backend; ?>/ferias/logo/<?php echo $this->layout()->feria['hash_logo']; ?>" width="85%" />
+                                </a>
+                            </td>
+                            <td width="198" style="font-size: 16px; color: #444;  text-align: right;">
+                                <span style="display: block;">&nbsp;<?php echo $this->layout()->feria['correo']; ?></span><span style="font-size: 15px; color: #2b4575; display: block; font-weight: 600;">&nbsp;Comunícate con nosotros. &nbsp;</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <table width="665" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                            <td>
+                                <h2>HOLA, <?php echo $this->visitante['nombres']." ".$this->visitante['apellido_paterno']." ".$this->visitante['apellido_materno']; ?></h2>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <?php echo $this->contenidoCorreo; ?>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

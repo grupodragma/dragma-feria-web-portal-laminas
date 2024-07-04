@@ -1,0 +1,303 @@
+<?php //print_r($this->layout()->portal) ?>
+
+<?php $this->headTitle('FERIA VIRTUAL '.mb_strtoupper(@$this->layout()->feria['nombre'] ?? '')); ?>
+
+<?php
+    if( isset($this->seo) ) {
+        echo $this->headMeta()->appendName('keywords', $this->seo['keywords'])->setAutoEscape(false);
+        echo $this->headMeta()->appendName('description', $this->seo['descripcion'])->setAutoEscape(false); 
+    }
+?>
+
+<?php echo $this->partial('partial/principal/css/formulario-principal', []); ?>
+
+<section class="registro-home">
+    <a class="show-hide" href="#" onclick="smooth()">VER REGISTRO</a>
+
+    <div class="white-form-enter" id="show">
+        <div class="fondo-logo-form">
+            <img src="<?php echo ( $this->layout()->portal['hash_logo'] != '' ) ? $this->layout()->url_backend."/portal/imagenes/".$this->layout()->portal['hash_logo'] : 'imagenes/LOGO-EXPOHOGAR.svg'; ?>" alt="">
+        </div>
+        <div class="image-lap-responsive">
+            <img src="<?php echo ( $this->layout()->portal['hash_logo_banner'] != '' ) ? $this->layout()->url_backend."/portal/imagenes/".$this->layout()->portal['hash_logo_banner'] : 'imagenes/lap-responsive.png'; ?>" alt="">
+        </div>
+        <h3><?php echo ( $this->layout()->portal['texto_titulo_formulario'] != '' ) ? $this->layout()->portal['texto_titulo_formulario'] : 'Descubre AQUÍ en las mejores ofertas, departamentos desde 0% de cuota inicial'; ?></h3>
+        
+        <div class="welcome-banner">
+            <p>
+                <span>NOSOTROS</span><br />
+                te ayudamos a encontrar<br />
+                <strong>
+                    TU<br />
+                    DEPA IDEAL
+                </strong>
+                .
+            </p>
+            <a href="#">SELECCIONA</a>
+        </div>
+        
+        <?php /*echo $this->partial('partial/principal/formulario/formulario-principal', [
+            'tipoHabitaciones'=> $this->tipoHabitaciones,
+            'distritos'=> $this->distritos,
+            'numeroHabitaciones'=> $this->numeroHabitaciones,
+            'rangoPrecios'=> $this->rangoPrecios,
+            'etapas'=> $this->etapas,
+        ]);*/ ?>
+    </div>
+
+    <div class="vid-slider">
+        <h1>TUTORIAL</h1>
+        <p>¿Cómo usar la Portal Expohogar Inmobiliaria?</p>
+        <div class="vid item">
+            <iframe width="180" height="110" src="<?php echo ( $this->layout()->portal['url_video_tutorial'] != '') ? $this->layout()->portal['url_video_tutorial']: 'https://www.youtube.com/embed/9xwazD5SyVg'; ?>" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="TUTORIAL"></iframe>
+            <a href="#">VER AHORA</a>
+        </div>
+    </div>
+    <div class="video-popup">
+        <div class="iframe-wrapper">
+            <iframe width="820" height="500" src="" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="TUTORIAL"></iframe>
+            <span class="close-video"></span>
+        </div>
+    </div>
+
+    <div class="slide active" style="<?php echo (!isset($this->banner['banner-registro']['banner_programado'])) ? 'background: url('.$this->layout()->url_backend.'/portal/banner/'.$this->banner['banner-registro']['banner_principal']['hash_banner'].') no-repeat fixed center' : 'background: url('.$this->layout()->url_backend.'/banner/imagenes/'.$this->banner['banner-registro']['banner_programado']['hash_banner'].') no-repeat fixed center'; ?>"></div>
+
+</section>
+
+<?php echo $this->partial('partial/principal/banner/banner-principal', ['banner'=> $this->banner]); ?>
+
+<?php 
+    echo $this->partial(
+        'partial/principal/proyectos/proyectos-destacados',
+        [
+            'proyectos'=> $this->proyectosMasDestacados,
+            'titulo'=> 'INMUEBLES MÁS DESTACADOS'
+        ]
+    );
+?>
+
+<?php /*echo $this->partial('partial/principal/proyectos/proyectos-filtros', [
+    'proyectosMasDestacados'=> $this->proyectosMasDestacados,
+    'tipoHabitaciones'=> $this->tipoHabitaciones,
+    'distritos'=> $this->distritos,
+    'numeroHabitaciones'=> $this->numeroHabitaciones,
+    'rangoPrecios'=> $this->rangoPrecios,
+    'etapas'=> $this->etapas,
+    'proyectosMapaGoogle'=> $this->proyectosMapaGoogle
+]);*/ ?>
+
+<div class="los-titulos">
+    <h1>TU PROYECTO IDEAL</h1>
+</div>
+
+<div class="lima-filtros">
+    <div class="center">
+        <div class="welcome-banner">
+            <p><span>NOSOTROS</span><br />te ayudamos a encontrar<br /><strong>TU<br />DEPA IDEAL</strong></p>
+            <a href="#">SELECCIONA</a>
+        </div>
+        <div class="space"></div>
+        <div class="grid-filtros">
+            <div class="caja-filtro">
+                <a href="#"> <img src="imagenes/logo-moderna-lima.png" alt=""> </a>
+            </div>
+
+            <div class="caja-filtro">
+                <a href="#"> <img src="imagenes/lima-top-logo.png" alt=""> </a>
+            </div>
+
+            <div class="caja-filtro">
+                <a href="#"> <img src="imagenes/especial-playas-logo.png" alt=""> </a>
+            </div>
+
+            <div class="caja-filtro">
+                <a href="#">
+                    <span>Último lanzamiento de Grupo Sol Inmobiliaria</span>
+                    <strong><img src="imagenes/yt-filtro.svg" alt=""></strong>
+                </a>
+            </div>
+
+            <div class="caja-filtro">
+                <a href="#">
+                    <span>Los mejores tips para encontrar tu lugar IDEAL</span>
+                    <strong><img src="imagenes/finger-filtro.svg" alt=""></strong>
+                </a>
+            </div>
+
+            <div class="caja-filtro">
+                <a href="#">
+                    <span>¿Qué debo saber antes de comprar un inmueble?</span>
+                    <strong><img src="imagenes/search-filtro.svg" alt=""></strong>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    <?php $this->inlineScript()->captureStart(); ?>
+
+    function filtrarMapa(obj) {
+        let contenedorFiltros = $(obj).parents("form");
+        let objSelect = contenedorFiltros.find("select.filtro-mapa");
+        let filter = new Object();
+        let totalfiltrosVacios = false;
+
+        objSelect.each(function(){
+            let keySelect = $(this).attr("data-filtro");
+            let valorSelect = $(this).val();
+            filter[keySelect] = valorSelect;
+            if(valorSelect == '')totalfiltrosVacios++;
+        });
+
+        if(objSelect.length !== totalfiltrosVacios) {
+            initMap(filter);
+        }
+
+    }
+
+    $(document).ready(function () {
+        initMap();
+    });
+    
+    async function initMap(filter=null) {
+        const listDirections = obtenerDatosProyectos(filter);
+        console.log("listDirections", listDirections);
+
+        /*const { Map } = await google.maps.importLibrary("maps");
+
+        const map = new Map(document.getElementById("map"), {
+            zoom: 8,
+            center: new google.maps.LatLng(0, 0),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        });
+
+        const shape = {
+            coord: [1, 1, 1, 20, 18, 20, 18 , 1],
+            type: 'poly'
+        };
+
+        const bounds = new google.maps.LatLngBounds();
+
+        const infoWindow = new google.maps.InfoWindow({
+            maxWidth: 450
+        });
+
+        const listDirections = obtenerDatosProyectos(filter);
+
+        listDirections.forEach(item => {
+            const marker = new google.maps.Marker({
+                position: item.position,
+                map,
+                title: item.title,
+                animation: google.maps.Animation.DROP,
+                contentHtml: item.html
+            });
+            bounds.extend(marker.getPosition());
+            marker.addListener("click", () => {
+                infoWindow.close();
+                infoWindow.setContent(marker.contentHtml);
+                infoWindow.open(marker.getMap(), marker);
+            });
+        })
+
+        map.fitBounds(bounds);*/
+    }
+
+    function obtenerDatosProyectos(filter=null){
+
+        //console.log("filter", filter);
+
+        const urlBackend = '<?php echo $this->layout()->url_backend; ?>';
+        const idiomaSeleccionado = '<?php echo $this->layout()->idiomaSeleccionado; ?>';
+        let proyectos = JSON.parse('<?php echo $this->proyectosMapaGoogle; ?>');
+        let dataInicial = proyectos;
+        const monedas = JSON.parse('<?php echo json_encode($this->layout()->simboloMoneda); ?>');
+        const listDirections = [];
+        let dataResults = [];
+
+        //Filtrar datos
+        if(filter != null) {
+            if(filter['tipoHabitacion'] && filter['tipoHabitacion'] != '') {
+                proyectos = proyectos.filter(item => item.tipoHabitacion && item.tipoHabitacion.indexOf(filter['tipoHabitacion']) !== -1 )
+            }
+            if(filter['distrito'] && filter['distrito'] != '') {
+                proyectos = proyectos.filter(item => item.distrito && item.distrito.indexOf(filter['distrito']) !== -1 )
+            }
+            if(filter['numeroHabitacion'] && filter['numeroHabitacion'] != '') {
+                proyectos = proyectos.filter(item => item.numeroHabitacion && item.numeroHabitacion.indexOf(filter['numeroHabitacion']) !== -1 )
+            }
+            if(filter['rangoPrecios'] && filter['rangoPrecios'] != '') {
+                let precioRangoMin = parseFloat(filter['rangoPrecios'].split(" a ")[0]);
+                let precioRangoMax = parseFloat(filter['rangoPrecios'].split(" a ")[1]);
+                
+                proyectos = proyectos.filter(item => parseFloat(item.precio_desde) !== 0 && (parseFloat(item.precio_desde) >= precioRangoMin  && parseFloat(item.precio_desde) <= precioRangoMax))
+            }
+            if(filter['etapa'] && filter['etapa'] != '') {
+                proyectos = proyectos.filter(item => item.etapa && item.etapa.indexOf(filter['etapa']) !== -1 )
+            }
+        } else {
+            proyectos = dataInicial;
+        }
+
+        console.log("proyectos", proyectos);
+
+        proyectos.forEach(item => {
+            
+            //console.log("proyecto", item);
+
+            let datosMapa = {};
+
+            datosMapa.position = {
+                lat: parseFloat(item.latitud), 
+                lng: parseFloat(item.longitud), 
+            };
+
+            datosMapa.title = item.empresa;
+            
+            let divContentHtml = $("<div>");
+
+            divContentHtml.html(plantillaStandHTML);
+
+            //Obtener el simbolo de la moneda
+            const simboloMoneda = ( monedas[item.moneda] ) ? monedas[item.moneda] : '';
+
+            //Actualizar datos del HTML
+            divContentHtml.find("[data-mapa='enlace']").attr("href", `${ idiomaSeleccionado }/panel/proyecto/${item.hash_url}`);
+            divContentHtml.find("[data-mapa='distrito']").text(item.distrito?.toUpperCase());
+            divContentHtml.find("[data-mapa='empresa_logo']").attr("src", `${ urlBackend }/empresas/logo/${item.empresa_logo}`);
+            divContentHtml.find("[data-mapa='expositor_foto']").attr("src", `${ urlBackend }/expositores/foto/${item.expositor_foto}`);
+            divContentHtml.find("[data-mapa='titulo']").text(item.nombre);
+            divContentHtml.find("[data-mapa='descripcion']").text(item.descripcion);
+            divContentHtml.find("[data-mapa='precio_desde']").text(`${simboloMoneda} ${parseFloat(item.precio_desde)}`);
+            divContentHtml.find("[data-mapa='precio_especial']").text(`${simboloMoneda} ${parseFloat(item.precio_especial)}`);
+
+            //Ocultar sección de precio especial cuando sea {0}
+            if(parseFloat(item.precio_especial) === 0){
+                divContentHtml.find("[data-mapa='precio_especial']").parent().hide();
+            }
+
+            //Validar imagenes del stand
+            let frisoImagenIzquierda = ( item.stand_configuracion.imagen_logo_1 ) ? `${ urlBackend }/paginas/stand-circular-portal/${item.stand_configuracion.imagen_logo_1.hash}` : `${ urlBackend }/img/plantillas/stand-circular-portal/imagen_logo_1.svg`;
+            let frisoImagenDerecha = ( item.stand_configuracion.imagen_logo_2 ) ? `${ urlBackend }/paginas/stand-circular-portal/${item.stand_configuracion.imagen_logo_2.hash}` : `${ urlBackend }/img/plantillas/stand-circular-portal/imagen_logo_2.svg`;
+            let bannerImagenCentro = ( item.stand_configuracion.imagen_banner_1 ) ? `${ urlBackend }/paginas/stand-circular-portal/${item.stand_configuracion.imagen_banner_1.hash}` : `${ urlBackend }/img/plantillas/stand-circular-portal/imagen_banner_1.jpg`;
+
+            divContentHtml.find("[data-mapa='friso_imagen_izquierda']").attr("src", frisoImagenIzquierda);
+            divContentHtml.find("[data-mapa='friso_imagen_derecha']").attr("src", frisoImagenDerecha);
+            divContentHtml.find("[data-mapa='banner_centro']").attr("src", bannerImagenCentro);
+            divContentHtml.find("[data-mapa='precio_especial_logo']").attr("src", frisoImagenIzquierda);
+
+            //Guardar datos del HTML
+            datosMapa.html = divContentHtml.html();
+            
+            listDirections.push(datosMapa); 
+
+        })
+
+        //console.log("listDirections", listDirections);
+
+        return listDirections;
+    }
+
+    <?php $this->inlineScript()->captureEnd(); ?>
+</script>

@@ -1,0 +1,41 @@
+<div class="info-modulo">
+    <div class="center" data-title="ESTAMOS AQUÍ PARA AYUDARTE" style="margin-top: 3%;">
+        <div class="contenido-hide">
+            <h2>ASESOR EN LÍNEA</h2>
+            <div class="foto">
+                <div class="all-agente">
+                    <div class="picture">
+                        <img src="<?php echo ( $this->expositor['hash_foto'] != '' ) ? $this->layout()->url_backend."/expositores/foto/".$this->expositor['hash_foto'] : $this->layout()->url_backend."/img/no-imagen.jpg"; ?>" alt="">
+                    </div>
+                    <span><?php echo $this->expositor['nombres']." ".$this->expositor['apellido_paterno']." ".$this->expositor['apellido_materno'] ?></span>
+                </div>
+                <div class="space"></div>
+                <div class="two-botons">
+                    <div class="tit">
+                        <span>ASESOR EN LÍNEA</span>
+                    </div>
+                    <div class="box-responsive">
+                        <a class="<?php if( $this->expositor['telefono'] == '' ) { echo "disabled"; } ?>" href="tel:<?php echo $this->expositor['telefono']; ?>">
+                            <img src="imagenes/asesor-llamada.png" alt="">
+                        </a>
+                        <a class="<?php if( $this->expositor['enlace_wsp'] == '' ) { echo "disabled"; } ?>" href="javascript:abrirVentanaWindow('<?php echo $this->expositor['enlace_wsp']; ?>')">
+                            <img src="imagenes/asesor-wsp.png" alt="">
+                        </a>
+                        <a href="javascript:void(0)" onclick="abrirVentanaWindow('<?php echo $this->expositor['enlace_conferencia_asesor']; ?>');">
+                            <img src="imagenes/asesor-video.png" alt="">
+                        </a>
+                    </div>
+                    <div class="horario" style="<?php if( $this->expositor['horario_atencion'] === '00:00-00:00 | 00:00-00:00' ) { echo 'display: none;'; } ?>">
+                        <p><?php echo $this->layout()->language->translate('HORARIO DE ATENCIÓN')['text']; ?></p>
+                        <div class="hours">
+                            <?php list($inicio, $fin) = ($this->expositor['horario_atencion'] != '') ? explode("-", explode(" | ", $this->expositor['horario_atencion'])[0]) : explode("-", "00:00-00:00"); ?>
+                            <small><?php echo $inicio; ?> <?php echo $this->layout()->language->translate('a')['text']; ?> <?php echo $fin; ?></small>
+                            <?php list($inicio, $fin) = ($this->expositor['horario_atencion'] != '') ? explode("-", explode(" | ", $this->expositor['horario_atencion'])[1]) : explode("-", "00:00-00:00"); ?>
+                            <small><?php echo $inicio; ?> <?php echo $this->layout()->language->translate('a')['text']; ?> <?php echo $fin; ?></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

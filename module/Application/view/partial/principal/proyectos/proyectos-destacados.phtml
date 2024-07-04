@@ -1,0 +1,170 @@
+<!--VERSIÓN MÓVIL-->
+<!-- <div class="back-green" style="background-color: transparent;">
+    <h2>INMUEBLES MÁS DESTACADOS</h2>
+    <?php if( !empty($this->proyectos) ) : ?>
+    <div class="center">
+        <section class="regular slider">
+            <?php foreach($this->proyectos as $proyecto) : ?>
+            <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/proyecto/<?php echo $proyecto['hash_url']; ?>">
+                <div class="caja" data-aos="fade-in">
+                    <div class="logos-top">
+                        <span><?php echo mb_strtoupper($proyecto['distrito']); ?></span>
+                        <img src="<?php echo ( $proyecto['empresa_logo'] != '' ) ? $this->layout()->url_backend."/empresas/logo/".$proyecto['empresa_logo'] : 'imagenes/logo-inmo.png'; ?>" alt="">
+                    </div>
+                    <div>
+                        <div class="back-standi">
+                            <div class="agent">
+                                <h2><span></span>ASESOR EN LINEA</h2>
+                                <div class="box-dat">
+                                    <div class="foto">
+                                        <img src="<?php echo ( $proyecto['expositor_foto'] != '' ) ? $this->layout()->url_backend."/expositores/foto/".$proyecto['expositor_foto'] : "imagenes/girl-phone.jpg"; ?>" alt="">
+                                    </div>
+                                    <div class="botones">
+                                        <span> <img src="imagenes/icons-call-agent-01.svg" /></span>
+                                        <span> <img src="imagenes/icons-call-agent-02.svg" /></span>
+                                        <span> <img src="imagenes/icons-call-agent-03.svg" /></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="logos-top-stand">
+                                    <div class="der">
+                                        <img src="<?php echo ( isset($proyecto['stand_configuracion']['imagen_logo_1'])) ? $this->layout()->url_backend.'/paginas/stand-circular-portal/'.$proyecto['stand_configuracion']['imagen_logo_1']['hash'] : $this->layout()->url_backend.'/img/plantillas/stand-circular-portal/imagen_logo_1.svg'; ?>" alt="">
+                                    </div>
+                                    <div class="space-stand"></div>
+                                    <div class="right">
+                                        <img src="<?php echo ( isset($proyecto['stand_configuracion']['imagen_logo_2'])) ? $this->layout()->url_backend.'/paginas/stand-circular-portal/'.$proyecto['stand_configuracion']['imagen_logo_2']['hash'] : $this->layout()->url_backend.'/img/plantillas/stand-circular-portal/imagen_logo_2.svg'; ?>" alt="">
+                                    </div>
+                                </div>
+                                <div class="arte-stand-portal">
+                                    <img src="<?php echo ( isset($proyecto['stand_configuracion']['imagen_banner_1'])) ? $this->layout()->url_backend.'/paginas/stand-circular-portal/'.$proyecto['stand_configuracion']['imagen_banner_1']['hash'] : $this->layout()->url_backend.'/img/plantillas/stand-circular-portal/imagen_banner_1.jpg'; ?>" alt="">
+                                </div>
+                                <div class="stand-portal">
+                                    <img src="imagenes/stand-portal.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <div class="textos">
+                            <big><?php echo mb_strtoupper($proyecto['nombre']); ?></big>
+                            <span><?php echo mb_strtoupper($proyecto['titulo_recuadro']); ?></span>
+                        </div>
+                        <div class="textos-2">
+                            <span>Precio desde</span>
+                            <strong></strong>
+                            <big><?php echo ( isset($this->layout()->simboloMoneda[$proyecto['moneda']]) ) ? $this->layout()->simboloMoneda[$proyecto['moneda']]." ".number_format($proyecto['precio_desde'], 2, ',', '') : number_format($proyecto['precio_desde'], 2, ',', ''); ?></big>
+                        </div>
+                        <div class="textos-3" style="<?php if( $proyecto['precio_especial'] !== '0.00' && $proyecto['sala_venta'] == "0") { echo "display: inherit;"; } ?>">
+                            <span>Precio Especial</span>
+                            <img src="imagenes/logo-lima.png" alt="">
+                            <strong></strong>
+                            <big><?php echo ( isset($this->layout()->simboloMoneda[$proyecto['moneda']]) ) ? $this->layout()->simboloMoneda[$proyecto['moneda']]." ".number_format($proyecto['precio_especial'], 2, '.', ',') : number_format($proyecto['precio_especial'], 2, '.', ','); ?></big>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <?php endforeach; ?>
+        </section>
+    </div>
+    <?php endif; ?>
+</div> -->
+
+<div class="back-green" style="background-color: transparent;">
+    <h2 style="display: none;">VER PROYECTOS SIMILARES</h2>
+
+    <div class="center">
+        <section class="bannersi" style="display: flex; align-items: center; justify-content: center;">
+            <?php echo $this->partial('partial/principal/proyectos/proyectos-destacados-banner-movil', [
+                'proyectos'=> $this->proyectos
+            ]); ?>
+        </section>
+    </div>
+</div>
+
+<!--VERSIÓN DESKTOP-->
+<div class="contenedor-programas-asesor">
+    <div class="center">
+        <h1><?php echo $this->titulo; ?></h1>
+        <?php if( !empty($this->proyectos) ) : ?>
+        <div id="grid">
+            <?php foreach($this->proyectos as $proyecto) : //print_r($proyecto) ?>
+            <div class="caja" <?php if( $proyecto['destacado'] == "1" && $proyecto['hash_super_oferta'] != '' ) { echo 'id="vibrar" data-aos="fade-in"'; } ?>>
+                <?php if( $proyecto['destacado'] == "1" && $proyecto['hash_super_oferta'] != '' ) : ?>
+                <small><img src="<?php echo $this->layout()->url_backend."/productos/imagen/".$proyecto['hash_super_oferta']; ?>" alt=""></small>
+                <?php endif; ?>
+                <div class="logos-top">
+                    <span><?php echo mb_strtoupper($proyecto['distrito']); ?></span>
+                    <img src="<?php echo ( $proyecto['empresa_logo'] != '' ) ? $this->layout()->url_backend."/empresas/logo/".$proyecto['empresa_logo'] : 'imagenes/logo-inmo.png'; ?>" alt="">
+                </div>
+                <div>
+                    <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/proyecto/<?php echo $proyecto['hash_url']; ?>">
+                        <div class="back-standi" style="<?php if(isset($proyecto['stand_configuracion']['imagen_fondo_movil']) && $proyecto['stand_configuracion']['imagen_fondo_movil']['hash'] != '') { echo "background-image: url(".$this->layout()->url_backend.'/paginas/stand-circular-portal/'.$proyecto['stand_configuracion']['imagen_fondo_movil']['hash'].") !important"; } ?>">
+                            <div class="agent">
+                                <h2><span></span>ASESOR EN LINEA</h2>
+                                <div class="box-dat">
+                                    <div class="foto">
+                                        <img src="<?php echo ( $proyecto['expositor_foto'] != '' ) ? $this->layout()->url_backend."/expositores/foto/".$proyecto['expositor_foto'] : "imagenes/girl-phone.jpg"; ?>" alt="">
+                                    </div>
+                                    <div class="botones">
+                                        <span> <img src="imagenes/icons-call-agent-01.svg" alt=""></span>
+                                        <span> <img src="imagenes/icons-call-agent-02.svg" alt=""></span>
+                                        <span> <img src="imagenes/icons-call-agent-03.svg" alt=""></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="logos-top-stand">
+                                    <div class="der">
+                                        <img src="<?php echo ( isset($proyecto['stand_configuracion']['imagen_logo_1'])) ? $this->layout()->url_backend.'/paginas/stand-circular-portal/'.$proyecto['stand_configuracion']['imagen_logo_1']['hash'] : $this->layout()->url_backend.'/img/plantillas/stand-circular-portal/imagen_logo_1.svg'; ?>" alt="">
+                                    </div>
+                                    <div class="space-stand"></div>
+                                    <div class="right">
+                                        <img src="<?php echo ( isset($proyecto['stand_configuracion']['imagen_logo_2'])) ? $this->layout()->url_backend.'/paginas/stand-circular-portal/'.$proyecto['stand_configuracion']['imagen_logo_2']['hash'] : $this->layout()->url_backend.'/img/plantillas/stand-circular-portal/imagen_logo_2.svg'; ?>" alt="">
+                                    </div>
+                                </div>
+                                <div class="arte-stand-portal">
+                                    <img src="<?php echo ( isset($proyecto['stand_configuracion']['imagen_banner_1'])) ? $this->layout()->url_backend.'/paginas/stand-circular-portal/'.$proyecto['stand_configuracion']['imagen_banner_1']['hash'] : $this->layout()->url_backend.'/img/plantillas/stand-circular-portal/imagen_banner_1.jpg'; ?>" alt="">
+                                </div>
+                                <div class="stand-portal">
+                                    <img src="imagenes/stand-portal.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="desc">
+                    <div class="textos">
+                        <big><?php echo mb_strtoupper($proyecto['nombre']); ?></big>
+                        <span><?php echo mb_strtoupper($proyecto['titulo_recuadro']); ?></span>
+                    </div>
+                    <div class="textos-2">
+                        <span>Precio desde</span>
+                        <strong></strong>
+                        <big><?php echo ( isset($this->layout()->simboloMoneda[$proyecto['moneda']]) ) ? $this->layout()->simboloMoneda[$proyecto['moneda']]." ".number_format($proyecto['precio_desde'], 2, '.', ',') : number_format($proyecto['precio_desde'], 2, '.', ','); ?></big>
+                    </div>
+                    <div class="textos-3" style="<?php if( $proyecto['precio_especial'] !== '0.00' && $proyecto['sala_venta'] == "0") { echo "display: inherit;"; } ?>">
+                        <span>Precio Especial</span>
+                        <img src="imagenes/logo-lima.png" alt="">
+                        <strong></strong>
+                        <big><?php echo ( isset($this->layout()->simboloMoneda[$proyecto['moneda']]) ) ? $this->layout()->simboloMoneda[$proyecto['moneda']]." ".number_format($proyecto['precio_especial'], 2, '.', ',') : number_format($proyecto['precio_especial'], 2, '.', ','); ?></big>
+                    </div>
+                    <?php if( $proyecto['sala_venta'] == "1" && $proyecto['sala_venta_rv'] != "" ) : ?>
+                    <a href="javascript:abrirVentanaWindow('<?php echo $proyecto['sala_venta_rv']; ?>')" class="textos-4">SALA DE VENTA VIRTUAL</a>
+                    <?php endif; ?>
+                </div>
+            </div>
+            <?php endforeach; ?>
+        </div>
+        <?php endif; ?>
+    </div>
+</div>
+
+<script>
+    <?php $this->inlineScript()->captureStart(); ?>
+    
+    
+    
+    <?php $this->inlineScript()->captureEnd(); ?>
+</script>
+

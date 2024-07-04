@@ -1,0 +1,135 @@
+<?php
+    foreach($this->proyectos as $proyecto) :
+        $urlDetail = $this->layout()->idiomaSeleccionado . '/panel/proyecto/' . $proyecto['hash_url'];
+?>
+    <div class="banner">
+        <div class="boton-veris">
+            <a href="<?php echo $urlDetail; ?>" style="background: #6341ce; color: #fff; border: 0px;">
+                <i class="fas fa-video"></i>&nbsp;VER MÁS REELS
+            </a>
+            <a href="<?php echo $urlDetail; ?>" style="background: none; color: #fff; border: 0px;display: none;">
+                VER DE NUEVO
+            </a>
+        </div>
+
+        <button class="buttoner" id="btn">
+            <img src="imagenes/play-go-01.png" alt="">
+        </button>
+
+        <div class="logos-head">
+            <div class="logos-left-1">
+                <p><?php echo mb_strtoupper($proyecto['distrito']); ?></p>
+            </div>
+            <div class="logos-left-2">
+                <img src="<?php echo ( $proyecto['empresa_logo'] != '' ) ? $this->layout()->url_backend."/empresas/logo/".$proyecto['empresa_logo'] : 'imagenes/logo-inmo.png'; ?>" alt="">
+            </div>
+        </div>
+
+        <div class="logos" style="display: none;">
+            <div class="box">
+                <div class="box1"><img src="imagenes/tiktok-oc-01.svg" /></div>
+
+                <div class="box2">
+                    <div class="boxup">
+                        <img src="imagenes/proyecto-pa-06.png" />
+                    </div>
+                    <div class="boxup">
+                        <p>RIMAC</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-icons2">
+            <div class="box-botones">
+                <div class="box2">
+                    <a href="<?php echo $urlDetail; ?>">
+                        <img src="<?php echo ( $proyecto['expositor_foto'] != '' ) ? $this->layout()->url_backend."/expositores/foto/".$proyecto['expositor_foto'] : "imagenes/girl-phone.jpg"; ?>" alt="">
+                    </a>
+                </div>
+
+                <div class="box1">
+                    <a href="<?php echo $urlDetail; ?>"><img src="imagenes/tiktok-oc-02.svg" alt="" /></a>
+                </div>
+
+                <div class="box1">
+                    <a href="<?php echo $urlDetail; ?>"><img src="imagenes/tiktok-oc-04.svg" alt="" /></a>
+                </div>
+
+                <div class="box1">
+                    <a href="<?php echo $urlDetail; ?>"><img src="imagenes/tiktok-oc-03.svg" alt="" /></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-icons" style="display: none;">
+            <div class="box-botones">
+                <div class="box2">
+                    <a href="<?php echo $urlDetail; ?>"><img src="imagenes/tiktok-foto-06.png" alt="" /></a>
+                </div>
+
+                <div class="box1">
+                    <a href="<?php echo $urlDetail; ?>"><img src="imagenes/tiktok-oc-02.svg" alt="" /></a>
+                </div>
+
+                <div class="box1">
+                    <a href="<?php echo $urlDetail; ?>"><img src="imagenes/tiktok-oc-04.svg" alt="" /></a>
+                </div>
+
+                <div class="box1">
+                    <a href="<?php echo $urlDetail; ?>"><img src="imagenes/tiktok-oc-03.svg" alt="" /></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-bottom2">
+            <div class="box-test">
+                <div class="box-first">
+                    <h1><?php echo mb_strtoupper($proyecto['nombre']); ?></h1>
+                    <p><?php echo mb_strtoupper($proyecto['titulo_recuadro']); ?></p>
+                </div>
+
+                <div class="box-second">
+                    <p>PRECIO DESDE</p>
+                    <p><?php echo ( isset($this->layout()->simboloMoneda[$proyecto['moneda']]) ) ? $this->layout()->simboloMoneda[$proyecto['moneda']]." ".number_format($proyecto['precio_desde'], 2, '.', ',') : number_format($proyecto['precio_desde'], 2, '.', ','); ?></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="box-bottom" style="display: none;">
+            <div class="box-botones">
+                <div class="box1">
+                    <a href="<?php echo $urlDetail; ?>"><img src="imagenes/abajo-icon-04.svg" alt="" />Precio</a>
+                </div>
+                <div class="box1">
+                    <a href="<?php echo $urlDetail; ?>"><img src="imagenes/abajo-icon-01.svg" alt="" />Inicio</a>
+                </div>
+                <div class="box1">
+                    <a href="<?php echo $urlDetail; ?>"><img src="imagenes/abajo-icon-02.svg" alt="" />Buscar</a>
+                </div>
+
+                <div class="box1">
+                    <a href="<?php echo $urlDetail; ?>"><img src="imagenes/abajo-icon-03.svg" alt="" />Dorms.</a>
+                </div>
+
+                <div class="box1">
+                    <a href="<?php echo $urlDetail; ?>"><img src="imagenes/abajo-icon-05.svg" alt="" />Ubicación</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-bottom" style="display: none;">
+            <div class="text-botones">
+                <p>Besco</p>
+                <p>compra ahora el depa de tus sueños escribenos para mas información</p>
+            </div>
+        </div>
+
+        <video autoplay muted loop id="video">
+            <source src="<?php echo $proyecto['hash_reel_video'] != '' ? $this->layout()->url_backend."/productos/video/".$proyecto['hash_reel_video'] : 'https://dragma3d.com/besco-s.mp4'; ?>" type="video/mp4" />
+        </video>
+
+        <div class="header-overlay"></div>
+        <div class="content"></div>
+    </div>
+<?php endforeach; ?>

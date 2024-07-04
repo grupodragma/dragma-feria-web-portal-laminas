@@ -1,0 +1,14 @@
+<div id="menu">
+    <nav>
+        <ul class="grt-menu">
+            <?php
+                $menuHidden = ['bancos', 'blog', 'auditorio'];
+                $linkDisabled = '';
+                foreach($this->menus as $item):
+                    $linkDisabled = in_array($item['hash_url'], $menuHidden) ? 'pointer-events: none' : '';
+                ?>
+                <li><a style="<?php echo $linkDisabled; ?>" href="<?php echo ( $item['hash_url'] == '/' ) ? $this->layout()->idiomaSeleccionado : $this->layout()->idiomaSeleccionado."/panel/".$item['hash_url']; ?>" class="opciones"><?php echo $item['nombre']; ?></a></li>
+            <?php endforeach; ?>
+        </ul>
+    </nav>
+</div>

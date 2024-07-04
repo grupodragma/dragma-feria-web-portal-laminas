@@ -1,0 +1,112 @@
+<div class="filtro-todos">
+    <form id="formFiltroInmobiliaria" class="form-buscar2">
+        <div class="all-selecters2">
+            <div class="citys2">
+                <input type="search" id="busqueda-inmobiliaria" placeholder="Escribe tu Busqueda" name="filtros" class="grayout" style="margin: 0;margin-bottom: 0%;margin-top: 0%;background-color: #fff;border-radius: 12px;vertical-align: top;padding: 2%;background-position: 97% center;background-position: right 10px center;background-repeat: no-repeat;background-size: 19px;appearance: none;border: 0px solid #ccc;-webkit-border-radius: 3px;-webkit-padding-end: 30px;-webkit-padding-start: 8px;-webkit-user-select: none;font-size: 0.9em;overflow: hidden;text-overflow: ellipsis;color: #111;white-space: nowrap;width: 100%;transition: border 300ms;"/>
+            </div>
+        </div>
+        <div class="boton2">
+            <input type="button" name="button" id="buscar-inmobiliaria" value="BUSQUEDA" class="send-filter2" />
+            <input type="hidden" name="proceso" id="proceso" />
+        </div>
+    </form>
+</div>
+
+<div class="banner-ad" style="padding-bottom: 0%;">
+    <div class="banner-ad-center">
+        <a href="javascript:void(0)">
+            <img src="<?php echo (!isset($this->banner['banner-superior-horizontal']['banner_programado'])) ? $this->layout()->url_backend.'/portal/banner/'.$this->banner['banner-superior-horizontal']['banner_principal']['hash_banner'] : $this->layout()->url_backend.'/banner/imagenes/'.$this->banner['banner-superior-horizontal']['banner_programado']['hash_banner']; ?>" alt="">
+        </a>
+    </div>
+</div>
+
+<div class="los-titulos-bancos">
+    <h1>INMOBILIARIAS</h1>
+    <p>Comunícate al instante con la inmobiliaria de tu preferencia..</p>
+</div>
+
+<?php if( !empty($this->inmobiliarias) ) : ?>
+
+<div class="grid-inmos-resume">
+    <div class="grid-resume-center">
+        <?php foreach($this->inmobiliarias as $item) : ?>
+        <div class="caja-inmos" data-nombre="<?php echo $item['nombre']; ?>">
+            <div class="log-inmos">
+                <img src="<?php echo ( $item['hash_logo'] != '' ) ? $this->layout()->url_backend."/empresas/logo/".$item['hash_logo'] : 'imagenes/logo-inmo.png'; ?>" alt="">
+            </div>
+            <p><?php echo $item['resumen']; ?></p>
+            <!-- <div class="box-contact-inmos" style="<?php if( $item['expositor'] == '' ) { echo "display: none;"; } ?>">
+                <h2><span></span>ASESOR EN LÍNEA</h2>
+                <div class="call">
+                    <div class="photo">
+                        <div class="pho">
+                            <img src="<?php echo ( $item['expositor_hash_foto'] != '' ) ? $this->layout()->url_backend."/expositores/foto/".$item['expositor_hash_foto'] : $this->layout()->url_backend."/img/no-imagen.jpg"; ?>" alt="">
+                        </div>
+                        <p><?php echo $item['expositor']; ?></p>
+                    </div>
+                    <div class="icons-call">
+                        <div class="icns">
+                            <a class="<?php if( $item['expositor_telefono'] == '' ) { echo "disabled"; } ?>" href="tel:<?php echo $item['expositor_telefono']; ?>">
+                                <img src="imagenes/icons-call-agent-01.svg" alt="">
+                            </a>
+                            <a class="<?php if( $item['expositor_enlace_wsp'] == '' ) { echo "disabled"; } ?>" href="javascript:abrirVentanaWindow('<?php echo $item['expositor_enlace_wsp']; ?>')">
+                                <img src="imagenes/icons-call-agent-02.svg" alt="">
+                            </a>
+                            <a href="javascript:void(0)" onclick="abrirVentanaWindow('<?php echo $item['expositor_enlace_conferencia_asesor']; ?>');">
+                                <img src="imagenes/icons-call-agent-03.svg" alt="">
+                            </a>
+                        </div>
+                        <h3>HORARIO DE ATENCIÓN</h3>
+                        <?php if( $item['expositor_horario_atencion'] != '00:00-00:00 | 00:00-00:00' ) : ?>
+                        <h4><?php echo str_replace("|", " - ", $item['expositor_horario_atencion']); ?></h4>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div> -->
+            <div class="button-enviar-inmos">
+                <a href="javascript:void(0)">Ver Proyetos</a>
+            </div>
+        </div>
+        <?php endforeach; ?>
+    </div>
+</div>
+
+<div class="numbers-page">
+    <div class="center-numbers">
+        <?php for($i = 1; $i <= $this->totalPaginas; $i++) : ?>
+        <a href="es/panel/inmobiliarias/<?php echo $i; ?>?q=<?php echo $busqueda; ?>" class="<?php if( $this->pagina == $i ) { echo "active"; } ?>"><?php echo $i; ?></a>
+        <?php endfor; ?>
+    </div>
+</div>
+
+<?php endif; ?>
+
+<script type="text/javascript">
+
+    <?php $this->inlineScript()->captureStart(); ?>
+
+    document.getElementById('formFiltroInmobiliaria').addEventListener('submit', function(event) {
+        event.preventDefault();
+    })
+
+    document.getElementById("buscar-inmobiliaria").addEventListener("click", function(event) {
+        filtroRedireccionar();
+    });
+
+    document.getElementById("busqueda-inmobiliaria").addEventListener("keypress", function(event) {
+        console.log(event.keyCode)
+        if( event.keyCode == 13 ) {
+            filtroRedireccionar();
+        }
+    });
+
+    function filtroRedireccionar(){
+        let filtro = document.getElementById("busqueda-inmobiliaria").value;
+        if( filtro != "" ){
+            window.location.href = `${ Panel.idioma }/panel/inmobiliarias?q=${ filtro }`;
+        }
+    }
+
+    <?php $this->inlineScript()->captureEnd(); ?>
+
+</script>

@@ -1,0 +1,32 @@
+<style>
+    <?php if( !in_array($this->layout()->portal['form_principal_titulo_color_texto'], ['','#000000'])) : ?>
+    .white-form-enter h3{
+        color: <?php echo $this->layout()->portal['form_principal_titulo_color_texto']; ?>
+    }
+    <?php endif; ?>
+    <?php if( !in_array($this->layout()->portal['form_principal_campo_fondo_color'], ['','#000000'])) : ?>
+    .select-filtro{
+        background-color: <?php echo $this->layout()->portal['form_principal_campo_fondo_color']; ?>
+    }
+    <?php endif; ?>
+    <?php if( !in_array($this->layout()->portal['form_principal_campo_color_texto'], ['','#000000'])) : ?>
+    .select-filtro{
+        color: <?php echo $this->layout()->portal['form_principal_campo_color_texto']; ?>
+    }
+    <?php endif; ?>
+    <?php if( !in_array($this->layout()->portal['form_principal_boton_color_texto'], ['','#000000'])) : ?>
+    .caja-inputs-send .send-registro-recepcion{
+        color: <?php echo $this->layout()->portal['form_principal_boton_color_texto']; ?>
+    }
+    <?php endif; ?>
+    <?php if( !in_array($this->layout()->portal['form_principal_boton_fondo_color'], ['','#000000'])) : ?>
+    .caja-inputs-send .send-registro-recepcion{
+        background: <?php echo $this->layout()->portal['form_principal_boton_fondo_color']; ?>
+    }
+    <?php endif; ?>
+    <?php if( !in_array($this->layout()->portal['form_principal_boton_hover_color'], ['','#000000'])) : ?>
+    .caja-inputs-send .send-registro-recepcion:hover{
+        background: <?php echo $this->layout()->portal['form_principal_boton_hover_color']; ?>
+    }
+    <?php endif; ?>
+</style>

@@ -1,0 +1,485 @@
+<?php //print_r($this->proyecto); ?>
+<?php //print_r($this->empresa); ?>
+
+<style>
+    .grid-planos-infox{
+        gap: 1% 1%;
+    }
+</style>
+
+<div class="filtro-todos">
+    <button class="hide-counter" onclick="myFunction()">FILTROS</button>
+    <form action="buscar.php" method="post" name="contacto" class="form-buscar" id="myDIVI">
+        <span class="close2">X</span>
+        <?php echo $this->partial('partial/panel/filtros/encabezado-busqueda', [
+            'tipoHabitaciones'=> $this->tipoHabitaciones,
+            'distritos'=> $this->distritos,
+            'numeroHabitaciones'=> $this->numeroHabitaciones,
+            'rangoPrecios'=> $this->rangoPrecios,
+            'etapas'=> $this->etapas,
+        ]); ?>
+        <div class="espacito"></div>
+        <div class="boton">
+            <input type="button" name="button" id="button" value="BUSCAR" onClick="Buscador.filtrar()" class="send-filter" />
+            <input type="hidden" name="proceso" id="proceso" />
+        </div>
+    </form>
+</div>
+
+<?php echo $this->partial('partial/panel/componentes/info-modulo-asesor', ['expositor'=> $this->expositor]); ?>
+
+<div class="infox-proyecto">
+    <div class="center-infox">
+        <div class="logo-infox">
+            <div class="log-company"><img src="<?php echo ( $this->empresa['hash_logo'] != '' ) ? $this->layout()->url_backend."/empresas/logo/".$this->empresa['hash_logo'] : ''; ?>" alt=""></div>
+
+            <div class="place-company">
+                <!-- <span>VIA NOVA</span><span><img src="imagenes/map-logo-infox.svg" alt="">MAGDALENA</span> -->
+                <span><?php echo $this->proyecto['nombre']; ?></span>
+            </div>
+        </div>
+        <div class="box-infox">
+            <div class="container-gal">
+                <div class="contai-infox">
+                    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 980px; height: 520px; overflow: hidden; visibility: hidden;">
+                        <!-- Loading Screen -->
+                        <div data-u="loading" class="jssorl-009-spin" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.7);">
+                            <img style="margin-top: -19px; position: relative; top: 50%; width: 38px; height: 38px;" src="img/spin.svg" alt="">
+                        </div>
+                        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 980px; height: 520px; overflow: hidden;">
+                            <?php foreach( $this->proyecto['imagenes'] as $imagen) : ?>
+                            <div>
+                                <img data-u="image" src="<?php echo $this->layout()->url_backend."/productos/slider/".$imagen['hash_imagen']; ?>" alt="">
+                                <div class="text-areacin"><?php echo $imagen['titulo']; ?></div>
+                                <img data-u="thumb" src="<?php echo $this->layout()->url_backend."/productos/slider/".$imagen['hash_imagen']; ?>" alt="">
+                            </div>
+                            <?php endforeach; ?>
+                        </div>
+                        <a data-scale="0" href="https://www.jssor.com" style="display: none; position: absolute;"></a>
+                        <!-- Thumbnail Navigator -->
+                        <div data-u="thumbnavigator" class="jssort101" style="position: absolute; left: 0px; bottom: 0px; width: 0px; height: 0px; background-color: #fff;" data-autocenter="1" data-scale-bottom="0.75">
+                            <div data-u="slides">
+                                <div data-u="prototype" class="p" style="width: 190px; height: 90px;">
+                                    <div data-u="thumbnailtemplate" class="t"></div>
+                                    <svg viewbox="0 0 16000 16000" class="cv">
+                                        <circle class="a" cx="8000" cy="8000" r="3238.1"></circle>
+                                        <line class="a" x1="6190.5" y1="8000" x2="9809.5" y2="8000"></line>
+                                        <line class="a" x1="8000" y1="9809.5" x2="8000" y2="6190.5"></line>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Arrow Navigator -->
+                        <div data-u="arrowleft" class="jssora106" style="width: 45px; height: 55px; top: 220px; left: 1px;" data-scale="0.75">
+                            <img data-u="image" src="imagenes/flecha-slider-der-01.svg" alt="">
+                        </div>
+                        <div data-u="arrowright" class="jssora106" style="width: 45px; height: 55px; top: 220px; right: 1px;" data-scale="0.75">
+                            <img data-u="image" src="imagenes/flecha-slider-izq-02.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="botones-infox">
+                    <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/proyecto/<?php echo $this->proyecto['hash_url']; ?>#defaultOpen" class="back-to-down">PROYECTOS</a>
+                    <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/proyecto/<?php echo $this->proyecto['hash_url']; ?>#defaultOpen" class="back-to-down">PLANOS</a>
+                    <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/proyecto/<?php echo $this->proyecto['hash_url']; ?>#promociones" class="back-to-down">PROMOCIÓN</a>
+                </div>
+                <?php if( $this->proyecto['sala_venta'] == "1" && $this->proyecto['sala_venta_rv'] != "" ) : ?>
+                <a href="javascript:abrirVentanaWindow('<?php echo $this->proyecto['sala_venta_rv']; ?>')" class="sala-boton">SALA DE VENTA VIRTUAL</a>
+                <?php endif; ?>
+            </div>
+            <div class="space-infox"></div>
+            <div class="text-infox">
+                <div class="name-infox">
+                    <div class="logo-text-infox">
+                        <h2><?php echo $this->proyecto['nombre']; ?></h2>
+                        <span><img src="imagenes/map-logo-infox.svg" alt=""><?php echo $this->proyecto['direccion']; ?></span>
+                    </div>
+                    <div class="space-text"></div>
+                    <div class="share-infox">
+                        <div class="precio">
+                            <small>Desde</small>
+                            <big style="font-weight: 700;"><?php echo ( isset($this->layout()->simboloMoneda[$this->proyecto['moneda']]) ) ? $this->layout()->simboloMoneda[$this->proyecto['moneda']]." ".number_format($this->proyecto['precio_desde'], 2, '.', ',') : number_format($this->proyecto['precio_desde'], 2, '.', ','); ?></big>
+                        </div>
+                        <a href="javascript:abrirVentanaWindow('<?php echo ( $this->proyecto['tipo_enlace'] == 'PDF' && $this->proyecto['hash_pdf'] != "" ) ? $this->layout()->url_backend."/productos/documentos/".$this->proyecto['hash_pdf'] : $this->proyecto['enlace']; ?>')">
+                            <img src="imagenes/icons-share-01.svg" alt="">&nbsp;BROCHURE
+                        </a>
+                        <button id="buttoni" class="colorize">
+                            <img src="imagenes/icons-share-02.svg" alt="">
+                        </button>
+                        <div id="newpost">
+                            <div class="follow">
+                                <a href="javascript:void(0)" onclick="Panel.compartirRedesSociales('facebook')" style="background-color: #316cf1;"><i class="fab fa-facebook-f"></i>&nbsp Facebook</a>
+                                <a href="javascript:void(0)" onclick="Panel.compartirRedesSociales('instagram')" style="background-color: #8000b1;"><i class="fab fa-instagram"></i>&nbsp Instagram</a>
+                                <a href="javascript:void(0)" onclick="Panel.compartirRedesSociales('whatsapp')" style="background-color: #0dda55;"><i class="fab fa-whatsapp"></i>&nbsp Whatsapp</a>
+                                <a href="javascript:void(0)" onclick="Panel.compartirRedesSociales('linkedin')" style="background-color: #235ec1;"><i class="fab fa-linkedin-in"></i>&nbsp Linkedin</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p><?php echo $this->proyecto['descripcion']; ?></p>
+                <div class="carac-infox">
+                    <?php $informacion = json_decode($this->proyecto['informacion'], true); ?>
+                    <?php if($informacion) : foreach($informacion as $info): ?>
+                    <li><?php echo $this->layout()->language->translate($info['titulo'])['text']; ?><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $this->layout()->language->translate($info['descripcion'])['text']; ?></li>
+                    <?php endforeach; endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="tabs-all">
+    <div class="tab" style="width: 90%;">
+        <button class="tablinks" onclick="openCity(event, 'RecorridoVirtual')" id="defaultOpen">Recorrido Virtual</button>
+        <button class="tablinks" onclick="openCity(event, 'Recorrido360')">Recorrido 360°</button>
+        <!-- <button class="tablinks" onclick="openCity(event, 'UbicacionMapa')">Ubicación</button> -->
+        <button class="tablinks" onclick="openCity(event, 'PlanosID')">Planos</button>
+    </div>
+
+    <!-- <div id="UbicacionMapa" class="tabcontent">
+        <?php if( $this->proyecto['latitud'] != '' || $this->proyecto['longitud'] != '' ) : ?>
+        <iframe
+            width="100%"
+            height="450" 
+            style="border:0"
+            src="https://www.google.com/maps/embed/v1/place?q=<?php echo $this->proyecto['latitud']; ?>,<?php echo $this->proyecto['longitud']; ?>&amp;key=<?php echo $this->layout()->google_maps['key']; ?>"
+            title="<?php echo $this->proyecto['nombre']; ?>"
+        ></iframe>
+        <?php endif; ?>
+    </div> -->
+
+    <div id="PlanosID" class="tabcontent">
+        <div class="panel">
+            <div class="tabs-all-panel">
+                <div class="tab2">
+                    <?php if(!empty($this->filtroOpciones)) : ?>
+                    <button class="opcion-elemento tablinks2" data-elemento="todos"><span>Todos</span></button>
+                    <?php endif; ?>
+                    <?php foreach($this->filtroOpciones as $item) : ?>
+                    <button class="opcion-elemento tablinks2" data-elemento="<?php echo $item['key']; ?>"><span><?php echo $item['value']; ?></span></button>
+                    <?php endforeach; ?>
+                </div>
+                <div class="tabcontent2 contenedor-elementos" style="display: inherit">
+                    <div class="grid-planos-infox">
+                        <?php foreach($this->planos as $item) : $informacion = json_decode($item['informacion'], true); ?>
+                        <div class="all elemento" data-elemento="<?php echo "todos|".$item['tipo_habitacion_hash_url']."|".$item['numero_habitacion_hash_url']; ?>" style="display: none;">
+                            <div class="image-plano-infox">
+                                <a href="#" class="caja<?php echo $item['idplanos']; ?>_open">
+                                    <span><img src="imagenes/lupa-zoom-01.svg" alt=""></span> <img src="<?php echo ( $item['hash_imagen'] != "" ) ? $this->layout()->url_backend."/planos/imagen/".$item['hash_imagen'] : "imagenes/plano-page-01.jpg" ?>" alt="">
+                                </a>
+                            </div>
+                            <div class="texto-plano-infox">
+                                <div class="desc-planos">
+                                    <h2><?php echo $item['nombre']; ?></h2>
+                                    <h3>Desde <?php echo $item['moneda']." ".$item['precio_desde']; ?></h3>
+                                    <ul>
+                                    <?php if($informacion) : foreach($informacion as $info): ?>
+                                    <li><?php echo $this->layout()->language->translate($info['titulo'])['text']; ?> - <?php echo $this->layout()->language->translate($info['descripcion'])['text']; ?></li>
+                                    <?php endforeach; endif; ?>
+                                    </ul>
+                                </div>
+                                <div class="botones-planox">
+                                    <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/calcula-credito/<?php echo $this->proyecto['idbancos']; ?>">Calcula tu crédito hipotecario<img src="imagenes/bcp-cal-02.svg" alt=""></a>
+                                    <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/cotizar-ahora" class="green">COTIZAR AHORA</a>
+                                    <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/reservar" class="green">Lo quiero reservar con S/500.00</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="caja<?php echo $item['idplanos']; ?>" class="well-plano">
+                            <div class="modal-contents-plano">
+                                <div class="image"><img src="<?php echo ( $item['hash_imagen'] != "" ) ? $this->layout()->url_backend."/planos/imagen/".$item['hash_imagen'] : "imagenes/plano-page-01.jpg" ?>" alt=""></div>
+                            </div>
+                        </div>
+                        <?php endforeach; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="RecorridoVirtual" class="tabcontent" style="height: 90vh;">
+        <?php if( $this->proyecto['enlace_recorrido_virtual'] != '' ) : ?>
+        <iframe
+            width="560"
+            height="315"
+            src="<?php echo $this->proyecto['enlace_recorrido_virtual']; ?>"
+            title="<?php echo $this->proyecto['nombre']; ?>"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+        ></iframe>
+        <?php endif; ?>
+    </div>
+
+    <div id="Recorrido360" class="tabcontent" style="height: 90vh;">
+        <?php if( $this->proyecto['recorrido_virtual_360'] != "" ) : ?>
+        <iframe
+            class="paniframe"
+            src="<?php echo $this->proyecto['recorrido_virtual_360']; ?>"
+            height="100%"
+            width="100%"
+            allowfullscreen="true"
+            mozallowfullscreen="true"
+            webkitallowfullscreen="true"
+            title="<?php echo $this->proyecto['nombre']; ?>"
+        ></iframe>
+        <?php endif; ?>
+    </div>
+</div>
+
+<div class="panel-all">
+    
+    <button class="accordion" id="mapa_ubicacion">
+        MAPA DE UBICACIÓN<span><img src="imagenes/arrow-select.svg" /></span>
+    </button>
+
+    <div class="panel" style="display: block; padding-bottom: 2%;">
+        <?php if( $this->proyecto['hash_ubicacion_mapa'] != '' ) : ?>
+        <img src="<?php echo $this->layout()->url_backend."/productos/imagen/".$this->proyecto['hash_ubicacion_mapa']; ?>" style="width: 100%; height: auto;" />
+        <?php else: ?>
+        <p>No se encontro la imagen.</p>
+        <?php endif; ?>
+    </div>
+
+    <button class="accordion" id="promociones">
+        PROMOCIONES <span><img src="imagenes/arrow-select.svg" alt=""></span>
+    </button>
+
+    <div class="panel" style="display: block;">
+        <div id="grid" data-aos="fade-up">
+            <?php if(!empty($this->promociones)) : foreach( $this->promociones as $item ) : ?>
+            <a href="#" class="caja<?php echo $item['idpromociones']; ?>_open">
+                <span><img src="imagenes/lupa-zoom-01.svg" alt=""></span><img src="<?php echo ( $item['hash_imagen'] != "" ) ? $this->layout()->url_backend."/promociones/imagen/".$item['hash_imagen'] : "imagenes/promo-image.jpg" ?>" width="100%" alt="">
+            </a>
+            <!-- MODAL PROMOCIÓN [INICIO] -->
+            <div id="caja<?php echo $item['idpromociones']; ?>" class="well-2">
+                <div class="modal-contents-caja">
+                    <div><img src="<?php echo $this->layout()->url_backend; ?>/promociones/imagen/<?php echo $item['hash_imagen']; ?>" width="100%" alt=""></div>
+                    <div class="botones-two" style="display: none">
+                        <?php if( $item['tipo_enlace'] == 'PDF' ) : ?>
+                        <a href="<?php echo $this->layout()->url_backend; ?>/promociones/documentos/<?php echo $item['hash_pdf']; ?>" class="_modal_brochure" download="<?php echo $item['nombre_pdf']; ?>" target="_blank"><?php echo $this->layout()->language->translate('DESCARGA BROCHURE')['text']; ?></a>
+                        <div class="space"></div>
+                        <?php endif; ?>
+                        <?php if( $item['tipo_enlace'] == 'URL' ) : ?>
+                        <a href="<?php echo $item['enlace']; ?>" class="_modal_abrir_enlace" target="_blank"><?php echo $this->layout()->language->translate('ABRIR ENLACE')['text']; ?></a>
+                        <div class="space"></div>
+                        <?php endif; ?>
+                        <?php if (isset($this->layout()->datosUsuario)) : ?>
+                        <a href="javascript:void(0)" class="_modal_envia_correo" onclick="Panel.enviarCorreo('promocion', <?php echo $item['idpromociones']; ?>, this)"><?php echo $this->layout()->language->translate('ENVIA POR CORREO')['text']; ?></a>
+                        <?php endif; ?>
+                        <div class="space"></div>
+                        <a href="javascript:void(0)">CONTACTO</a>
+                        <div class="space"></div>
+                        <a href="javascript:abrirVentanaWindow('<?php echo ( $item['enlace_wsp'] != '' ) ? $item['enlace_wsp'] : $this->empresa['enlace_wsp']; ?>')" class="wsp _modal_wsp"><img src="imagenes/whatsapp.svg" alt=""></a>
+                    </div>
+                </div>
+            </div>
+            <!-- MODAL PROMOCIÓN [FIN] -->
+            <?php endforeach; else : ?>
+            <p>No se encontraron promociones</p>
+            <?php endif; ?>
+        </div>
+    </div>
+
+    <!-- <button class="accordion" id="planos">
+        PLANOS <span><img src="imagenes/arrow-select.svg" alt=""></span>
+    </button>
+
+    <div class="panel">
+        <div class="tabs-all-panel">
+            <div class="tab2">
+                <?php if(!empty($this->filtroOpciones)) : ?>
+                <button class="opcion-elemento tablinks2" data-elemento="todos"><span>Todos</span></button>
+                <?php endif; ?>
+                <?php foreach($this->filtroOpciones as $item) : ?>
+                <button class="opcion-elemento tablinks2" data-elemento="<?php echo $item['key']; ?>"><span><?php echo $item['value']; ?></span></button>
+                <?php endforeach; ?>
+            </div>
+            <div class="tabcontent2 contenedor-elementos" style="display: inherit">
+                <div class="grid-planos-infox">
+                    <?php foreach($this->planos as $item) : $informacion = json_decode($item['informacion'], true); ?>
+                    <div class="all elemento" data-elemento="<?php echo "todos|".$item['tipo_habitacion_hash_url']."|".$item['numero_habitacion_hash_url']; ?>" style="display: none;">
+                        <div class="image-plano-infox">
+                            <a href="#" class="caja<?php echo $item['idplanos']; ?>_open">
+                                <span><img src="imagenes/lupa-zoom-01.svg" alt=""></span> <img src="<?php echo ( $item['hash_imagen'] != "" ) ? $this->layout()->url_backend."/planos/imagen/".$item['hash_imagen'] : "imagenes/plano-page-01.jpg" ?>" alt="">
+                            </a>
+                        </div>
+                        <div class="texto-plano-infox">
+                            <div class="desc-planos">
+                                <h2><?php echo $item['nombre']; ?></h2>
+                                <h3>Desde <?php echo $item['moneda']." ".$item['precio_desde']; ?></h3>
+                                <ul>
+                                <?php if($informacion) : foreach($informacion as $info): ?>
+                                <li><?php echo $this->layout()->language->translate($info['titulo'])['text']; ?> - <?php echo $this->layout()->language->translate($info['descripcion'])['text']; ?></li>
+                                <?php endforeach; endif; ?>
+                                </ul>
+                            </div>
+                            <div class="botones-planox">
+                                <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/calcula-credito/<?php echo $this->proyecto['idbancos']; ?>">Calcula tu crédito hipotecario<img src="imagenes/bcp-cal-02.svg" alt=""></a>
+                                <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/cotizar-ahora" class="green">COTIZAR AHORA</a>
+                                <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/reservar" class="green">Lo quiero reservar con S/500.00</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="caja<?php echo $item['idplanos']; ?>" class="well-plano">
+                        <div class="modal-contents-plano">
+                            <div class="image"><img src="<?php echo ( $item['hash_imagen'] != "" ) ? $this->layout()->url_backend."/planos/imagen/".$item['hash_imagen'] : "imagenes/plano-page-01.jpg" ?>" alt=""></div>
+                        </div>
+                    </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        </div>
+    </div> -->
+</div>
+
+<?php
+    echo $this->partial(
+        'partial/principal/proyectos/proyectos-destacados',
+        [
+            'proyectos'=> $this->proyectosSimilares,
+            'titulo'=> 'VER PROYECTOS SIMILARES'
+        ]
+    );
+?>
+
+<div class="back-green" style="display: none">
+    <h2>VER PROYECTOS SIMILARES</h2>
+
+    <div class="center">
+        <section class="regular slider">
+            <?php foreach($this->proyectosSimilares as $proyecto) : //print_r($proyecto) ?>
+            <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/proyecto/<?php echo $proyecto['hash_url']; ?>">
+                <div class="caja" data-aos="fade-in">
+                    <div class="logos-top">
+                        <span><?php echo mb_strtoupper($proyecto['distrito']); ?></span>
+                        <img src="<?php echo ( $proyecto['empresa_logo'] != '' ) ? $this->layout()->url_backend."/empresas/logo/".$proyecto['empresa_logo'] : 'imagenes/logo-inmo.png'; ?>" alt="">
+                    </div>
+                    <div>
+                        <div class="back-standi" style="<?php if(isset($proyecto['stand_configuracion']['imagen_fondo_movil']) && $proyecto['stand_configuracion']['imagen_fondo_movil']['hash'] != '') { echo "background-image: url(".$this->layout()->url_backend.'/paginas/stand-circular-portal/'.$proyecto['stand_configuracion']['imagen_fondo_movil']['hash'].") !important"; } ?>">
+                            <div class="agent">
+                                <h2><span></span>ASESOR EN LINEA</h2>
+                                <div class="box-dat">
+                                    <div class="foto">
+                                        <img src="<?php echo ( $proyecto['expositor_foto'] != '' ) ? $this->layout()->url_backend."/expositores/foto/".$proyecto['expositor_foto'] : "imagenes/girl-phone.jpg"; ?>" alt="">
+                                    </div>
+                                    <div class="botones">
+                                        <span> <img src="imagenes/icons-call-agent-01.svg" alt=""></span>
+                                        <span> <img src="imagenes/icons-call-agent-02.svg" alt=""></span>
+                                        <span> <img src="imagenes/icons-call-agent-03.svg" alt=""></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="back">
+                                <div class="logos-top-stand">
+                                    <div class="der">
+                                        <img src="<?php echo ( isset($proyecto['stand_configuracion']['imagen_logo_1'])) ? $this->layout()->url_backend.'/paginas/stand-circular-portal/'.$proyecto['stand_configuracion']['imagen_logo_1']['hash'] : $this->layout()->url_backend.'/img/plantillas/stand-circular-portal/imagen_logo_1.svg'; ?>" alt="">
+                                    </div>
+                                    <div class="space-stand"></div>
+                                    <div class="right">
+                                        <img src="<?php echo ( isset($proyecto['stand_configuracion']['imagen_logo_2'])) ? $this->layout()->url_backend.'/paginas/stand-circular-portal/'.$proyecto['stand_configuracion']['imagen_logo_2']['hash'] : $this->layout()->url_backend.'/img/plantillas/stand-circular-portal/imagen_logo_2.svg'; ?>" alt="">
+                                    </div>
+                                </div>
+                                <div class="arte-stand-portal">
+                                    <img src="<?php echo ( isset($proyecto['stand_configuracion']['imagen_banner_1'])) ? $this->layout()->url_backend.'/paginas/stand-circular-portal/'.$proyecto['stand_configuracion']['imagen_banner_1']['hash'] : $this->layout()->url_backend.'/img/plantillas/stand-circular-portal/imagen_banner_1.jpg'; ?>" alt="">
+                                </div>
+                                <div class="stand-portal">
+                                    <img src="imagenes/stand-portal.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="desc">
+                        <div class="textos">
+                            <big><?php echo mb_strtoupper($proyecto['nombre']); ?></big>
+                            <span><?php echo mb_strtoupper($proyecto['descripcion']); ?></span>
+                        </div>
+                        <div class="textos-2">
+                            <span>Precio desde</span>
+                            <strong></strong>
+                            <big><?php echo ( isset($this->layout()->simboloMoneda[$proyecto['moneda']]) ) ? $this->layout()->simboloMoneda[$proyecto['moneda']]." ".number_format($proyecto['precio_desde'], 2, '.', ',') : number_format($proyecto['precio_desde'], 2, '.', ','); ?></big>
+                        </div>
+                        <div class="textos-3" style="<?php if( $proyecto['precio_especial'] !== '0.00' && $proyecto['sala_venta'] == "0") { echo "display: inherit;"; } ?>">
+                            <span>Precio Especial</span>
+                            <img src="imagenes/logo-lima.png" alt="">
+                            <strong></strong>
+                            <big><?php echo ( isset($this->layout()->simboloMoneda[$proyecto['moneda']]) ) ? $this->layout()->simboloMoneda[$proyecto['moneda']]." ".number_format($proyecto['precio_especial'], 2, '.', ',') : number_format($proyecto['precio_especial'], 2, '.', ','); ?></big>
+                        </div>
+                        <!-- <?php if( $proyecto['sala_venta'] == "1" && $proyecto['sala_venta_rv'] != "" ) : ?>
+                        <big href="<?php echo $proyecto['sala_venta_rv']; ?>" class="textos-4">SALA DE VENTA VIRTUAL</big>
+                        <?php endif; ?> -->
+                    </div>
+                </div>
+            </a>
+            <?php endforeach; ?>
+        </section>
+    </div>
+</div>
+
+<script type="text/javascript">
+
+    <?php $this->inlineScript()->captureStart(); ?>
+
+    $(document).on("ready", function () {
+
+        <?php $i = 0; foreach($this->promociones as $item) : ?>
+        $("#caja<?php echo $item['idpromociones']; ?>").popup({
+            transition: "all 0.3s",
+            closebutton: true,
+        });
+        <?php $i++; endforeach; ?>
+        
+        <?php $i = 0; foreach($this->planos as $item) : ?>
+        $("#caja<?php echo $item['idplanos']; ?>").popup({
+            transition: "all 0.3s",
+            closebutton: true,
+        });
+        <?php $i++; endforeach; ?>
+
+        mostrarElementos('todos');
+
+    });
+
+    $(".opcion-elemento").click(function(){
+        let elemento = $(this).attr("data-elemento");
+        mostrarElementos(elemento);
+    })
+
+    function mostrarElementos(elemento){
+        let botonOpciones = $(".opcion-elemento");
+        let contenedorElementos = $(".contenedor-elementos");
+        //let elementoExiste = contenedorElementos.find(".elemento[data-elemento='"+elemento+"']");
+        let botonOpcionesExiste = $(".opcion-elemento[data-elemento='"+elemento+"']");
+        //Activar opción por el elemento seleccionado
+        botonOpciones.removeClass("active");
+        if(botonOpcionesExiste.length){
+            botonOpcionesExiste.addClass("active");
+        }
+        //Ocultar todos los elementos
+        contenedorElementos.find(".elemento").hide();
+        //Mostrar solo elementos existentes
+        contenedorElementos.find(".elemento").each(function(){
+            let elementos = $(this).attr("data-elemento").split("|");
+            if(elementos.indexOf(elemento) !== -1){
+                $(this).show();
+            }
+        })
+    }
+
+    var button = document.getElementById("buttoni");
+
+    button.onclick = function () {
+        var div = document.getElementById("newpost");
+        if (div.style.display !== "none") {
+            div.style.display = "none";
+        } else {
+            div.style.display = "block";
+        }
+    };
+
+    document.getElementById("defaultOpen").click();
+
+    jssor_1_slider_init();
+
+    <?php $this->inlineScript()->captureEnd(); ?>
+
+</script>

@@ -1,0 +1,57 @@
+<?php //print_r($this->proyectosFiltrados); ?>
+
+<style>
+    
+</style>
+
+<div class="filtro-todos">
+    <button class="hide-counter" onclick="myFunction()">FILTROS</button>
+    <form action="buscar.php" method="post" name="contacto" class="form-buscar" id="myDIVI">
+        <span class="close2">X</span>
+        <?php echo $this->partial('partial/panel/filtros/encabezado-busqueda', [
+            'tipoHabitaciones'=> $this->tipoHabitaciones,
+            'distritos'=> $this->distritos,
+            'numeroHabitaciones'=> $this->numeroHabitaciones,
+            'rangoPrecios'=> $this->rangoPrecios,
+            'etapas'=> $this->etapas,
+        ]); ?>
+        <div class="espacito"></div>
+        <div class="boton">
+            <input type="button" name="button" id="button" value="BUSCAR" onClick="Buscador.filtrar()" class="send-filter" />
+            <input type="hidden" name="proceso" id="proceso" />
+        </div>
+    </form>
+</div>
+
+<?php //print_r($this->banner) ?>
+
+<div class="banner-ad" style="padding-bottom: 0%;">
+    <div class="banner-ad-center">
+        <a href="javascript:void(0)">
+            <img src="<?php echo (!isset($this->banner['banner-superior-horizontal']['banner_programado'])) ? $this->layout()->url_backend.'/portal/banner/'.$this->banner['banner-superior-horizontal']['banner_principal']['hash_banner'] : $this->layout()->url_backend.'/banner/imagenes/'.$this->banner['banner-superior-horizontal']['banner_programado']['hash_banner']; ?>" alt="">
+        </a>
+    </div>
+</div>
+
+<?php
+    echo $this->partial(
+        'partial/principal/proyectos/busqueda-proyectos',
+        [
+            'proyectos'=> $this->proyectosFiltrados,
+            'titulo'=> 'RESULTADOS DE BUSQUEDA',
+            'banner'=> $this->banner,
+        ]
+    );
+?>
+
+<script type="text/javascript">
+
+    <?php $this->inlineScript()->captureStart(); ?>
+
+    Buscador.filtrosSeleccionados = JSON.parse('<?php echo json_encode($this->filtrosSeleccionados); ?>');
+
+    Buscador.fijarFiltrosSeleccionados();
+
+    <?php $this->inlineScript()->captureEnd(); ?>
+
+</script>

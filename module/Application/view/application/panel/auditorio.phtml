@@ -1,0 +1,67 @@
+<?php $this->headTitle('AUDITORIO - FERIA VIRTUAL '.mb_strtoupper($this->layout()->feria['nombre'])); ?>
+
+<?php
+    if( isset($this->seo) ) {
+        echo $this->headMeta()->appendName('keywords', $this->seo['keywords'])->setAutoEscape(false);
+        echo $this->headMeta()->appendName('description', $this->seo['descripcion'])->setAutoEscape(false); 
+    }
+?>
+
+<?php
+    $data = ['conferencias'=> $this->conferencias, 'cronogramaFechaActual'=> $this->cronogramaFechaActual, 'auditorioImagenesInicial'=> $this->auditorioImagenesInicial];
+    switch( $this->tipoAuditorio ) {
+        case 'auditorio_banner_1': echo $this->partial('partial/auditorio/banner_1', $data); break;
+        case 'auditorio_banner_2': echo $this->partial('partial/auditorio/banner_2', $data); break;
+        default: echo 'No se encontro una plantilla.'; break;
+    }
+?>
+
+<div class="franja-azul-conference-web">
+    <a href="#" id="cool-link-conference" style="color: #fff; text-decoration: none;" class="conference_open"><i class="fas fa-video"></i>&nbsp;<?php echo $this->layout()->language->translate('BIBLIOTECA DE VIDEOS')['text']; ?></a>
+    <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/cronogramas" id="cool-link-conference"><i class="fas fa-calendar-alt"></i>&nbsp;<?php echo $this->layout()->language->translate('CRONOGRAMA')['text']; ?></a>
+</div>
+
+<script>
+
+    <?php $this->inlineScript()->captureStart(); ?>
+
+    $(document).ready(function () {
+        $(".arrow-right").bind("click", function (event) {
+            event.preventDefault();
+            $(".vid-list-container").stop().animate(
+                {
+                    scrollLeft: "+=336",
+                },
+                750
+            );
+        });
+        $(".arrow-left").bind("click", function (event) {
+            event.preventDefault();
+            $(".vid-list-container").stop().animate(
+                {
+                    scrollLeft: "-=336",
+                },
+                750
+            );
+        });
+        $("#conference").popup({
+            transition: "all 0.3s",
+            closebutton: true,
+        });
+    });
+
+    socket.on('transmitirAhoraAuditorio', function(data){
+        //console.log(data);
+        let idferiasSelected = '<?php echo $this->layout()->feria['idferias']; ?>';
+        if(data.idferias == idferiasSelected) {
+            document.getElementById('vid_frame').src = data.enlace;
+        }
+    });
+
+    Panel.detectarAnuncio();
+
+    $("[data-conferencia='contenido']").addClass("no-visible");
+
+    <?php $this->inlineScript()->captureEnd(); ?>
+
+</script>

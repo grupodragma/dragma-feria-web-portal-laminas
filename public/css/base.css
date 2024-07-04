@@ -1,0 +1,101 @@
+.select-filtro{
+    margin: 0;
+    margin-bottom: 2%;
+    margin-top: 2%;
+    border-radius: 12px;
+    vertical-align: top;
+    padding: 3%;
+    background-color: #82c41e;
+    background-image: url('../imagenes/arrow-select.svg');
+    background-position: 97% center;
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 19px;
+    appearance: none;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -webkit-padding-end: 30px;
+    -webkit-padding-start: 8px;
+    -webkit-user-select: none;
+    font-size: 0.9em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #fff;
+    white-space: nowrap;
+    width: 100%;
+    transition: border 300ms;
+}
+.select-filtro-mapa{
+    margin: 0;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    background-color: #fff;
+    border-radius: 12px;
+    vertical-align: top;
+    padding: 4%;
+    background-image: url('../imagenes/arrow-select-green.svg');
+    background-position: 97% center;
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 19px;
+    appearance: none;
+    border: 1px solid #ccc;
+    -webkit-border-radius: 3px;
+    -webkit-padding-end: 30px;
+    -webkit-padding-start: 8px;
+    -webkit-user-select: none;
+    font-size: 0.9em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #111;
+    white-space: nowrap;
+    width: 100%;
+    transition: border 300ms;
+}
+.select-filtro-mapa option{
+    background-color: #fff;
+    color: #555;
+}
+.registro-home .slide.active{
+    background-size: cover !important;
+    background-position: center !important;
+}
+form .form-controls{
+    width: 100%;
+}
+.msgError .error{
+    color: #f00;
+}
+.select-idiomas{
+    margin: 0;
+    margin-bottom: 0%;
+    margin-top: 0%;
+    border-radius: 5px;
+    vertical-align: top;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border: 2px solid #565fa9;
+    padding: 1.2vh;
+    background-color: #fff;
+    background-image: url('../imagenes/arrow-select-green.svg');
+    background-position: 97% center;
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    background-size: 1.1em;
+    appearance: none;
+    -webkit-border-radius: 3px;
+    -webkit-padding-end: 30px;
+    -webkit-padding-start: 8px;
+    -webkit-user-select: none;
+    font-size: 0.9vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #111;
+    white-space: nowrap;
+    width: 100%;
+    transition: border 300ms;
+}
+.select-idiomas option{
+    background-color: #fff;
+    color: #555;
+}

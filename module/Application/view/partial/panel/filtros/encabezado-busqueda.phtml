@@ -1,0 +1,57 @@
+<div class="all-selecters">
+    <div class="citys">
+        <h2>Tipos</h2>
+        <select data-filtro="tipoHabitacion" class="grayout filtro-mapa select-filtro-mapa">
+            <option value="">Tipo</option>
+            <?php foreach($this->tipoHabitaciones as $item) : ?>
+            <option value="<?php echo $item['nombre']; ?>"><?php echo $item['nombre']; ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+
+    <div class="space"></div>
+
+    <div class="citys">
+        <h2>Distrito</h2>
+        <select data-filtro="distrito" class="grayout filtro-mapa select-filtro-mapa">
+            <option value="">Distrito</option>
+            <?php foreach($this->distritos as $item) : ?>
+            <option value="<?php echo $item['nombre']; ?>"><?php echo $item['nombre']; ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+
+    <div class="space"></div>
+
+    <div class="citys">
+        <h2>N° de Habitaciones</h2>
+        <select data-filtro="numeroHabitacion" class="grayout filtro-mapa select-filtro-mapa">
+            <option value="">Nro. de Habitaciones</option>
+            <?php foreach($this->numeroHabitaciones as $item) : ?>
+            <option value="<?php echo $item['nombre']; ?>"><?php echo $item['nombre']; ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+    <div class="space"></div>
+    <div class="citys">
+        <h2>Precio S/</h2>
+        <select data-filtro="rangoPrecios" class="grayout filtro-mapa select-filtro-mapa">
+            <option value="">Precio</option>
+            <?php foreach($this->rangoPrecios as $item) : ?>
+            <option value="<?php echo number_format($item['precio_min'], 2, ',', '') ." a ".number_format($item['precio_max'], 2, ',', ''); ?>"><?php echo number_format($item['precio_min'], 2, '.', ',') ." a ".number_format($item['precio_max'], 2, '.', ','); ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+
+    <div class="space"></div>
+
+    <div class="citys">
+        <h2>Etapa del Proyecto</h2>
+        <select data-filtro="etapa" class="grayout filtro-mapa select-filtro-mapa">
+            <option value="">Etapa</option>
+            <?php foreach($this->etapas as $item) : ?>
+            <option value="<?php echo $item['nombre']; ?>"><?php echo $item['nombre']; ?></option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+</div>

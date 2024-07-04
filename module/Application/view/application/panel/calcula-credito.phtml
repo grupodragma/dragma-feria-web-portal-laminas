@@ -1,0 +1,149 @@
+<div class="banner-banco-filtro">
+    <div class="banner-banco-filtro-center" style="<?php if( $this->banco['hash_encabezado_fondo'] != '' ) { echo 'background: url('.$this->layout()->url_backend.'/bancos/encabezado/'.$this->banco['hash_encabezado_fondo'].')'; } ?>">
+        <div class="icono"><img src="imagenes/bcp-cal-01.svg" alt="" /></div>
+        <div class="space"></div>
+        <p>
+            Calcula<br />
+            tu Crédito Hipotecario con
+        </p>
+        <div class="space"></div>
+        <div class="icono-banco"><img src="imagenes/bcp-cal-02.svg" alt="" /></div>
+    </div>
+</div>
+
+<div class="box-presupuesto">
+    <div class="box-presupuesto-center">
+        <h2>Contamos con dos opciones para que puedas hacer la simulación de tu crédito hipotecario.</h2>
+
+        <div class="formas-presupuesto">
+            <div class="form-1">
+                <div class="titulos">
+                    <div class="balla"><span>OPCIÓN</span> <strong>1</strong></div>
+                    <div class="tit"><h3>Realiza tu simulación tu mismo (a)</h3></div>
+                </div>
+
+                <form id="credito_hipotecario" name="contacto" class="form-cotiza">
+                    <div class="caja-cotiza">
+                        <h3>¿Cuál es el precio del inmueble?</h3>
+                        <div class="forms-cotiza">
+                            <div class="escribe-2">
+                                <input type="number" name="costo" class="campos-cotizar" placeholder="Precio" min="0" required />
+                            </div>
+                            <div class="space"></div>
+                            <div class="escribe-2">
+                                <select name="moneda" class="grayout" style="margin: 0;border: 1px solid #999;padding: 8%;width: 100%;vertical-align: top;background-color: #fff;background-image: url('imagenes/arrow-cotiza-01.svg');background-position: 97% center;background-position: right 10px center;background-repeat: no-repeat;background-size: 19px;appearance: none;text-align: center;-webkit-border-radius: 3px;-webkit-padding-end: 30px;-webkit-padding-start: 8px;-webkit-user-select: none;border-radius: 10px;font-size: 1em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;transition: border 300ms;" required>
+                                    <option style="color: #555;" value="S/.">S/.</option>
+                                    <option style="color: #555;" value="$">$</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="caja-cotiza">
+                        <h3>¿Cuál es el monto de cuota inicial?</h3>
+                        <div class="forms-cotiza">
+                            <div class="escribe-2">
+                                <select name="cuota_inicial" class="grayout" style="margin: 0;border: 1px solid #999;padding: 8%;width: 100%;vertical-align: top;background-color: #fff;background-image: url('imagenes/arrow-cotiza-01.svg');background-position: 97% center;background-position: right 10px center;background-repeat: no-repeat;background-size: 19px;appearance: none;text-align: center;-webkit-border-radius: 3px;-webkit-padding-end: 30px;-webkit-padding-start: 8px;-webkit-user-select: none;border-radius: 10px;font-size: 1em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;transition: border 300ms;" required>
+                                    <?php foreach($this->banco['cuota_inicial_porcentaje'] as $valor) : ?>
+                                    <option style="color: #555;" value="<?php echo $valor; ?>"><?php echo $valor; ?>%</option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="caja-cotiza">
+                        <h3>¿Plazo de Crédito Hipotecario?</h3>
+                        <div class="forms-cotiza">
+                            <div class="escribe-2">
+                                <select name="plazo" class="grayout" style="margin: 0;border: 1px solid #999;padding: 8%;width: 100%;vertical-align: top;background-color: #fff;background-image: url('imagenes/arrow-cotiza-01.svg');background-position: 97% center;background-position: right 10px center;background-repeat: no-repeat;background-size: 19px;appearance: none;text-align: center;-webkit-border-radius: 3px;-webkit-padding-end: 30px;-webkit-padding-start: 8px;-webkit-user-select: none;border-radius: 10px;font-size: 1em;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;transition: border 300ms;" required>
+                                    <?php foreach($this->banco['plazo_credito_hipotecario'] as $valor) : ?>
+                                    <option style="color: #555;" value="<?php echo $valor; ?>">
+                                        <?php echo $valor; ?> Años
+                                    </option>
+                                    <?php endforeach; ?>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="caja-cotiza">
+                        <h3>Tipo de Cuota a Pagar</h3>
+                        <div class="forms-cotiza">
+                            <div class="escribe-2">
+                                <input type="checkbox" name="tipo_cuota" class="slectOne" value="SIMPLE" required><span>SIMPLE</span>
+                                &nbsp;
+                                <input type="checkbox" name="tipo_cuota" class="slectOne" value="DOBLE" required><span>DOBLE</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="caja-cotiza">
+                        <input type="submit" value="SIMULAR" class="send-cotiza-enviar" />
+                        <input type="hidden" id="proceso" />
+                    </div>
+
+                    <div class="caja-cotiza">
+                        <div class="result">
+                            <span data-credito="total_cuota_mensual">S/. 00.00</span>
+                            <small>Cuotas Mensuales</small>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="solicita">
+                <div class="titulos">
+                    <div class="balla"><span>OPCIÓN</span> <strong>2</strong></div>
+                    <div class="tit"><h3>Solicita una comnunicacín inmediata</h3></div>
+                </div>
+                <h4>Calcula tu crédito ahora, comunícate en directo con nuestros asesores en línea.</h4>
+                <div class="box-agente-cotizar">
+                    <p><span></span>ASESOR EN LÍNEA</p>
+                    <div class="fotito">
+                        <img src="<?php echo ( $this->banco['hash_logo_asesor'] != '' ) ? $this->layout()->url_backend."/bancos/asesor/logo/".$this->banco['hash_logo_asesor'] : 'imagenes/agente-cotiza-01.png'; ?>" alt="">
+                    </div>
+                    <div class="botons-agente-cotiza">
+                        <a href="#"><img src="imagenes/agente-cotiza-icons-02.svg" alt="" /></a>
+                        <a href="tel:<?php echo $this->banco['telefono']; ?>"><img src="imagenes/agente-cotiza-icons-03.svg" alt="" /></a>
+                        <a href="javascript:void(0)"><img src="imagenes/agente-cotiza-icons-04.svg" alt="" /></a>
+                        <a href="javascript:abrirVentanaWindow('<?php echo $this->banco['enlace_wsp']; ?>')"><img src="imagenes/agente-cotiza-icons-05.svg" alt="" /></a>
+                    </div>
+                    <?php if( $this->banco['horario_atencion'] != '00:00-00:00 | 00:00-00:00' ) : list($horarioInicio, $horarioFin) = explode(" | ", $this->banco['horario_atencion']); ?>
+                    <div class="horario-agente">
+                        <big>HORARIO DE ATENCIÓN</big>
+                        <small><?php echo str_replace("-", " a ", $horarioInicio)." - ".str_replace("-", " a ", $horarioFin); ?></small>
+                    </div>
+                    <?php endif; ?>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    <?php $this->inlineScript()->captureStart(); ?>
+
+    $("form#credito_hipotecario").validate({
+        ignore: [],
+        rules: {},
+        errorPlacement: function (error, element) {
+            
+        },
+        submitHandler: function(form) {
+            let deuda = parseFloat(document.querySelector("input[name='costo']").value);
+            let anos = parseInt(document.querySelector("select[name='plazo']").value);
+            let interes = parseFloat(document.querySelector("select[name='cuota_inicial']").value);
+            const total_cuota_mensual = document.querySelector("span[data-credito='total_cuota_mensual']");
+            const moneda = document.querySelector("select[name='moneda']").value;
+            //Hallar el interés
+            interes = (interes/100)/12;
+            const m = (deuda*interes*(Math.pow((1+interes),(anos*12))))/((Math.pow((1+interes),(anos*12)))-1);
+            total_cuota_mensual.innerHTML = `${ moneda } ${ m.toLocaleString("es-ES", {minimumFractionDigits: 2, maximumFractionDigits:2}) }`;
+        }
+    });
+
+    <?php $this->inlineScript()->captureEnd(); ?>
+
+</script>
