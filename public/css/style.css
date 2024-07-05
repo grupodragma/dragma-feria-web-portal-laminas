@@ -8498,7 +8498,7 @@ body{
         flex-direction: row;
         align-items: center;
         justify-content: center;
-        background-image: url(../imagenes/fondo-sale.jpg);
+        /*background-image: url(../imagenes/fondo-sale.jpg);*/
         background-size: cover;
         background-position: center;
     }
@@ -10407,7 +10407,7 @@ if it's not present, don't show loader */
         width: 100%;
         display: flex;
         flex-direction: column;
-        background-image: url(../imagenes/conferencias-02.jpg);
+        /*background-image: url(../imagenes/conferencias-02.jpg);*/
         justify-content: center;
         background-size: cover;
         background-position: center;
@@ -13281,7 +13281,7 @@ if it's not present, don't show loader */
     }
     .home .slide.active-3 {
         display: flex;
-        background-image: url(../imagenes/feria-mapa.jpg);
+        /*background-image: url(../imagenes/feria-mapa.jpg);*/
     }
     .home-mapas {
         height: 91vh;
@@ -13336,11 +13336,11 @@ if it's not present, don't show loader */
     }
     .home-2 .slide.active-4 {
         display: flex;
-        background-image: url(../imagenes/stand-usil.jpg);
+        /*background-image: url(../imagenes/stand-usil.jpg);*/
     }
     .home-2 .slide.active-6 {
         display: flex;
-        background-image: url(../imagenes/stand-upc.jpg);
+        /*background-image: url(../imagenes/stand-upc.jpg);*/
     }
     .home-stand-large {
         height: 67vh;
@@ -15142,7 +15142,7 @@ if it's not present, don't show loader */
         }
         .home-conferencias-zoom .slide.active {
             height: 100%;
-            background: url(../imagenes/salas/conferencias-responsive.jpg) no-repeat fixed;
+            /*background: url(../imagenes/salas/conferencias-responsive.jpg) no-repeat fixed;*/
             width: 100%;
             background-color: #111;
             webkit-background-size: cover;
@@ -16003,7 +16003,7 @@ if it's not present, don't show loader */
             display: flex;
             justify-content: center !important;
             align-items: center !important;
-            background-image: url(../imagenes/res-conf.jpg) !important;
+            /*background-image: url(../imagenes/res-conf.jpg) !important;*/
         }
         #grid-videos {
             display: grid;

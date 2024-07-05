@@ -30,7 +30,7 @@
         </div>
     </div>
     <div class="caja-inputs-send">
-        <input type="button" name="button" id="button" value="BUSCAR" onclick="filtrarMapa(this)" class="send-registro-recepcion" />
+        <input type="button" name="button" id="button" value="ENCONTRAR" onclick="validateFormFilter(this)" class="send-registro-recepcion" />
         <input type="hidden" name="proceso" id="proceso" />
     </div>
 </form>
@@ -38,27 +38,27 @@
 
 <script>
     <?php $this->inlineScript()->captureStart(); ?>
-    
-    $("[data-form='form-dinamico']").validate({
-        ignore: [],
-        rules: {
-            dni: {
-                required: true,
-                number: true
+
+    function validateFormFilter(button) {
+        const form = document.querySelector('form[data-form="form-dinamico"]');
+        const selects = form.querySelectorAll('select');
+
+        let atLeastOneSelected = false;
+        let queryParams = {};
+
+        selects.forEach(select => {
+            if (select.value !== "") {
+                atLeastOneSelected = true;
+                const filterName = select.getAttribute('data-filtro');
+                queryParams[filterName] = select.value;
             }
-        },
-        errorPlacement: function (error, element) {
-            element.parents(".form-controls").find(".msgError").html(error);
-        },
-        submitHandler: function(form) {
-            $.post("/login", $(form).serialize(), function(response){
-                console.log(response);
-                if(response.result === 'success') {
-                    
-                }
-            }, 'json');
-        }
-    });
+        });
+
+        let url = `${window.location.origin}/<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/busqueda-proyectos`;
+        let queryString = Object.keys(queryParams).map(key => key + '=' + encodeURIComponent(queryParams[key])).join('&');
+
+        window.location.href = `${url}?${queryString}`;
+    }
 
     <?php $this->inlineScript()->captureEnd(); ?>
 </script>
