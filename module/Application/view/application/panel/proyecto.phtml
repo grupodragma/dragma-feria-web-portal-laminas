@@ -30,100 +30,108 @@
 
 <div class="infox-proyecto">
     <div class="center-infox">
-        <div class="logo-infox">
-            <div class="log-company"><img src="<?php echo ( $this->empresa['hash_logo'] != '' ) ? $this->layout()->url_backend."/empresas/logo/".$this->empresa['hash_logo'] : ''; ?>" alt=""></div>
+        <div class="todo-left-infox">
+            <div class="logo-infox">
+                <div class="log-company"><img src="<?php echo ( $this->empresa['hash_logo'] != '' ) ? $this->layout()->url_backend."/empresas/logo/".$this->empresa['hash_logo'] : ''; ?>" alt=""></div>
 
-            <div class="place-company">
-                <!-- <span>VIA NOVA</span><span><img src="imagenes/map-logo-infox.svg" alt="">MAGDALENA</span> -->
-                <span><?php echo $this->proyecto['nombre']; ?></span>
+                <div class="place-company">
+                    <!-- <span>VIA NOVA</span><span><img src="imagenes/map-logo-infox.svg" alt="">MAGDALENA</span> -->
+                    <span><?php echo $this->proyecto['nombre']; ?></span>
+                </div>
             </div>
-        </div>
-        <div class="box-infox">
-            <div class="container-gal">
-                <div class="contai-infox">
-                    <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 980px; height: 520px; overflow: hidden; visibility: hidden;">
-                        <!-- Loading Screen -->
-                        <div data-u="loading" class="jssorl-009-spin" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.7);">
-                            <img style="margin-top: -19px; position: relative; top: 50%; width: 38px; height: 38px;" src="img/spin.svg" alt="">
-                        </div>
-                        <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 980px; height: 520px; overflow: hidden;">
-                            <?php foreach( $this->proyecto['imagenes'] as $imagen) : ?>
-                            <div>
-                                <img data-u="image" src="<?php echo $this->layout()->url_backend."/productos/slider/".$imagen['hash_imagen']; ?>" alt="">
-                                <div class="text-areacin"><?php echo $imagen['titulo']; ?></div>
-                                <img data-u="thumb" src="<?php echo $this->layout()->url_backend."/productos/slider/".$imagen['hash_imagen']; ?>" alt="">
+            <div class="box-infox">
+                <div class="container-gal">
+                    <div class="contai-infox">
+                        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 980px; height: 520px; overflow: hidden; visibility: hidden;">
+                            <!-- Loading Screen -->
+                            <div data-u="loading" class="jssorl-009-spin" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.7);">
+                                <img style="margin-top: -19px; position: relative; top: 50%; width: 38px; height: 38px;" src="img/spin.svg" alt="">
                             </div>
-                            <?php endforeach; ?>
+                            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 980px; height: 520px; overflow: hidden;">
+                                <?php foreach( $this->proyecto['imagenes'] as $imagen) : ?>
+                                <div>
+                                    <img data-u="image" src="<?php echo $this->layout()->url_backend."/productos/slider/".$imagen['hash_imagen']; ?>" alt="">
+                                    <div class="text-areacin"><?php echo $imagen['titulo']; ?></div>
+                                    <img data-u="thumb" src="<?php echo $this->layout()->url_backend."/productos/slider/".$imagen['hash_imagen']; ?>" alt="">
+                                </div>
+                                <?php endforeach; ?>
+                            </div>
+                            <a data-scale="0" href="https://www.jssor.com" style="display: none; position: absolute;"></a>
+                            <!-- Thumbnail Navigator -->
+                            <div data-u="thumbnavigator" class="jssort101" style="position: absolute; left: 0px; bottom: 0px; width: 0px; height: 0px; background-color: #fff;" data-autocenter="1" data-scale-bottom="0.75">
+                                <div data-u="slides">
+                                    <div data-u="prototype" class="p" style="width: 190px; height: 90px;">
+                                        <div data-u="thumbnailtemplate" class="t"></div>
+                                        <svg viewbox="0 0 16000 16000" class="cv">
+                                            <circle class="a" cx="8000" cy="8000" r="3238.1"></circle>
+                                            <line class="a" x1="6190.5" y1="8000" x2="9809.5" y2="8000"></line>
+                                            <line class="a" x1="8000" y1="9809.5" x2="8000" y2="6190.5"></line>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Arrow Navigator -->
+                            <div data-u="arrowleft" class="jssora106" style="width: 45px; height: 55px; top: 220px; left: 1px;" data-scale="0.75">
+                                <img data-u="image" src="imagenes/flecha-slider-der-01.svg" alt="">
+                            </div>
+                            <div data-u="arrowright" class="jssora106" style="width: 45px; height: 55px; top: 220px; right: 1px;" data-scale="0.75">
+                                <img data-u="image" src="imagenes/flecha-slider-izq-02.svg" alt="">
+                            </div>
                         </div>
-                        <a data-scale="0" href="https://www.jssor.com" style="display: none; position: absolute;"></a>
-                        <!-- Thumbnail Navigator -->
-                        <div data-u="thumbnavigator" class="jssort101" style="position: absolute; left: 0px; bottom: 0px; width: 0px; height: 0px; background-color: #fff;" data-autocenter="1" data-scale-bottom="0.75">
-                            <div data-u="slides">
-                                <div data-u="prototype" class="p" style="width: 190px; height: 90px;">
-                                    <div data-u="thumbnailtemplate" class="t"></div>
-                                    <svg viewbox="0 0 16000 16000" class="cv">
-                                        <circle class="a" cx="8000" cy="8000" r="3238.1"></circle>
-                                        <line class="a" x1="6190.5" y1="8000" x2="9809.5" y2="8000"></line>
-                                        <line class="a" x1="8000" y1="9809.5" x2="8000" y2="6190.5"></line>
-                                    </svg>
+                    </div>
+                    <div class="botones-infox">
+                        <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/proyecto/<?php echo $this->proyecto['hash_url']; ?>#defaultOpen" class="back-to-down">PROYECTOS</a>
+                        <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/proyecto/<?php echo $this->proyecto['hash_url']; ?>#defaultOpen" class="back-to-down">PLANOS</a>
+                        <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/proyecto/<?php echo $this->proyecto['hash_url']; ?>#promociones" class="back-to-down">PROMOCIÓN</a>
+                    </div>
+                    <?php if( $this->proyecto['sala_venta'] == "1" && $this->proyecto['sala_venta_rv'] != "" ) : ?>
+                    <a href="javascript:abrirVentanaWindow('<?php echo $this->proyecto['sala_venta_rv']; ?>')" class="sala-boton">SALA DE VENTA VIRTUAL</a>
+                    <?php endif; ?>
+                </div>
+                <div class="space-infox"></div>
+                <div class="text-infox">
+                    <div class="name-infox">
+                        <div class="logo-text-infox">
+                            <h2><?php echo $this->proyecto['nombre']; ?></h2>
+                            <span><img src="imagenes/map-logo-infox.svg" alt=""><?php echo $this->proyecto['direccion']; ?></span>
+                        </div>
+                        <div class="space-text"></div>
+                        <div class="share-infox">
+                            <div class="precio">
+                                <small>Desde</small>
+                                <big style="font-weight: 700;"><?php echo ( isset($this->layout()->simboloMoneda[$this->proyecto['moneda']]) ) ? $this->layout()->simboloMoneda[$this->proyecto['moneda']]." ".number_format($this->proyecto['precio_desde'], 2, '.', ',') : number_format($this->proyecto['precio_desde'], 2, '.', ','); ?></big>
+                            </div>
+                            <a href="javascript:abrirVentanaWindow('<?php echo ( $this->proyecto['tipo_enlace'] == 'PDF' && $this->proyecto['hash_pdf'] != "" ) ? $this->layout()->url_backend."/productos/documentos/".$this->proyecto['hash_pdf'] : $this->proyecto['enlace']; ?>')">
+                                <img src="imagenes/icons-share-01.svg" alt="">&nbsp;BROCHURE
+                            </a>
+                            <button id="buttoni" class="colorize">
+                                <img src="imagenes/icons-share-02.svg" alt="">
+                            </button>
+                            <div id="newpost">
+                                <div class="follow">
+                                    <a href="javascript:void(0)" onclick="Panel.compartirRedesSociales('facebook')" style="background-color: #316cf1;"><i class="fab fa-facebook-f"></i>&nbsp Facebook</a>
+                                    <a href="javascript:void(0)" onclick="Panel.compartirRedesSociales('instagram')" style="background-color: #8000b1;"><i class="fab fa-instagram"></i>&nbsp Instagram</a>
+                                    <a href="javascript:void(0)" onclick="Panel.compartirRedesSociales('whatsapp')" style="background-color: #0dda55;"><i class="fab fa-whatsapp"></i>&nbsp Whatsapp</a>
+                                    <a href="javascript:void(0)" onclick="Panel.compartirRedesSociales('linkedin')" style="background-color: #235ec1;"><i class="fab fa-linkedin-in"></i>&nbsp Linkedin</a>
                                 </div>
                             </div>
                         </div>
-                        <!-- Arrow Navigator -->
-                        <div data-u="arrowleft" class="jssora106" style="width: 45px; height: 55px; top: 220px; left: 1px;" data-scale="0.75">
-                            <img data-u="image" src="imagenes/flecha-slider-der-01.svg" alt="">
-                        </div>
-                        <div data-u="arrowright" class="jssora106" style="width: 45px; height: 55px; top: 220px; right: 1px;" data-scale="0.75">
-                            <img data-u="image" src="imagenes/flecha-slider-izq-02.svg" alt="">
-                        </div>
                     </div>
-                </div>
-                <div class="botones-infox">
-                    <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/proyecto/<?php echo $this->proyecto['hash_url']; ?>#defaultOpen" class="back-to-down">PROYECTOS</a>
-                    <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/proyecto/<?php echo $this->proyecto['hash_url']; ?>#defaultOpen" class="back-to-down">PLANOS</a>
-                    <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/proyecto/<?php echo $this->proyecto['hash_url']; ?>#promociones" class="back-to-down">PROMOCIÓN</a>
-                </div>
-                <?php if( $this->proyecto['sala_venta'] == "1" && $this->proyecto['sala_venta_rv'] != "" ) : ?>
-                <a href="javascript:abrirVentanaWindow('<?php echo $this->proyecto['sala_venta_rv']; ?>')" class="sala-boton">SALA DE VENTA VIRTUAL</a>
-                <?php endif; ?>
-            </div>
-            <div class="space-infox"></div>
-            <div class="text-infox">
-                <div class="name-infox">
-                    <div class="logo-text-infox">
-                        <h2><?php echo $this->proyecto['nombre']; ?></h2>
-                        <span><img src="imagenes/map-logo-infox.svg" alt=""><?php echo $this->proyecto['direccion']; ?></span>
+                    <p><?php echo $this->proyecto['descripcion']; ?></p>
+                    <div class="carac-infox">
+                        <?php $informacion = json_decode($this->proyecto['informacion'], true); ?>
+                        <?php if($informacion) : foreach($informacion as $info): ?>
+                        <li><?php echo $this->layout()->language->translate($info['titulo'])['text']; ?><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $this->layout()->language->translate($info['descripcion'])['text']; ?></li>
+                        <?php endforeach; endif; ?>
                     </div>
-                    <div class="space-text"></div>
-                    <div class="share-infox">
-                        <div class="precio">
-                            <small>Desde</small>
-                            <big style="font-weight: 700;"><?php echo ( isset($this->layout()->simboloMoneda[$this->proyecto['moneda']]) ) ? $this->layout()->simboloMoneda[$this->proyecto['moneda']]." ".number_format($this->proyecto['precio_desde'], 2, '.', ',') : number_format($this->proyecto['precio_desde'], 2, '.', ','); ?></big>
-                        </div>
-                        <a href="javascript:abrirVentanaWindow('<?php echo ( $this->proyecto['tipo_enlace'] == 'PDF' && $this->proyecto['hash_pdf'] != "" ) ? $this->layout()->url_backend."/productos/documentos/".$this->proyecto['hash_pdf'] : $this->proyecto['enlace']; ?>')">
-                            <img src="imagenes/icons-share-01.svg" alt="">&nbsp;BROCHURE
-                        </a>
-                        <button id="buttoni" class="colorize">
-                            <img src="imagenes/icons-share-02.svg" alt="">
-                        </button>
-                        <div id="newpost">
-                            <div class="follow">
-                                <a href="javascript:void(0)" onclick="Panel.compartirRedesSociales('facebook')" style="background-color: #316cf1;"><i class="fab fa-facebook-f"></i>&nbsp Facebook</a>
-                                <a href="javascript:void(0)" onclick="Panel.compartirRedesSociales('instagram')" style="background-color: #8000b1;"><i class="fab fa-instagram"></i>&nbsp Instagram</a>
-                                <a href="javascript:void(0)" onclick="Panel.compartirRedesSociales('whatsapp')" style="background-color: #0dda55;"><i class="fab fa-whatsapp"></i>&nbsp Whatsapp</a>
-                                <a href="javascript:void(0)" onclick="Panel.compartirRedesSociales('linkedin')" style="background-color: #235ec1;"><i class="fab fa-linkedin-in"></i>&nbsp Linkedin</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <p><?php echo $this->proyecto['descripcion']; ?></p>
-                <div class="carac-infox">
-                    <?php $informacion = json_decode($this->proyecto['informacion'], true); ?>
-                    <?php if($informacion) : foreach($informacion as $info): ?>
-                    <li><?php echo $this->layout()->language->translate($info['titulo'])['text']; ?><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<?php echo $this->layout()->language->translate($info['descripcion'])['text']; ?></li>
-                    <?php endforeach; endif; ?>
                 </div>
             </div>
+        </div>
+        <div class="todo-right-infox">
+            <?php echo $this->partial('partial/principal/formulario/formulario-contactanos', [
+                'expositor'=> $this->expositor,
+                'empresa'=> $this->empresa
+            ]); ?>
         </div>
     </div>
 </div>

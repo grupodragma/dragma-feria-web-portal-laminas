@@ -205,4 +205,40 @@ class ClienteController extends AbstractActionController {
         return new JsonModel($data);
     }
 
+    public function contactarProyectoAction() {
+        $email = $this->params()->fromPost('email');
+        $names = $this->params()->fromPost('names');
+        $last_names = $this->params()->fromPost('last_names');
+        $phone = $this->params()->fromPost('phone');
+        $dni = $this->params()->fromPost('dni');
+        $comments = $this->params()->fromPost('comments');
+        $email_expositor = $this->params()->fromPost('email_expositor');
+
+        $mailData = [
+            'visitante' => [
+                'email' => $email,
+                'names' => $names,
+                'last_names' => $last_names,
+                'phone' => $phone,
+                'dni' => $dni,
+                'comments' => $comments
+            ]
+        ];
+
+        if( $email_expositor != '-' ) {
+            $this->objMailSender->sendMail(
+                $email_expositor, //'freedemou@gmail.com',
+                'Contacto de Proyecto',
+                $mailData,
+                'contacto-proyecto',
+                null,
+                null,
+                null,
+                'Contacto de Proyecto'
+            );
+        }
+
+        return $this->jsonZF(['result'=>'success']);
+    }
+
 }

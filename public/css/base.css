@@ -99,3 +99,11 @@ form .form-controls{
     background-color: #fff;
     color: #555;
 }
+
+.no-underline {
+    text-decoration: none;
+}
+
+.contenedor-programas-asesor #grid .caja div .back-standi .back {
+    visibility: visible !important;
+}

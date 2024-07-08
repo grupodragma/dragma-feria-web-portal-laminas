@@ -356,7 +356,8 @@ return [
             'mail/template-promocion' => __DIR__ . '/../view/application/mail/template-promocion.phtml',
             'mail/template-banco' => __DIR__ . '/../view/application/mail/template-banco.phtml',
             'mail/template-expositor' => __DIR__ . '/../view/application/mail/template-expositor.phtml',
-            'mail/template-agenda-virtual' => __DIR__ . '/../view/application/mail/template-agenda-virtual.phtml'
+            'mail/template-agenda-virtual' => __DIR__ . '/../view/application/mail/template-agenda-virtual.phtml',
+            'mail/template-contacto-proyecto' => __DIR__ . '/../view/application/mail/template-contacto-proyecto.phtml'
         ],
         'template_path_stack' => [
             __DIR__ . '/../view',

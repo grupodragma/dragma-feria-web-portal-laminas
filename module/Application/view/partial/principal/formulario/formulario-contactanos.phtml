@@ -1,0 +1,63 @@
+<form action="enviar-comentario.php" method="post" name="contacto" id="contact-form-pro">
+    <h1>Contáctate con Grupo Dragma por el proyecto Camelia</h1>
+
+    <p style="border-top: 0px;">
+        <small>Correo Electrónico</small>
+        <input required="true" type="email" name="email" class="campos-contacto-home" placeholder="Escribe E-mail*" />
+    </p>
+    <p style="border-top: 0px;">
+        <small>Ingresa tus Nombres</small>
+        <input required="true" type="text" name="names" class="campos-contacto-home" placeholder="Escribe tus nombres*" />
+    </p>
+
+    <p style="border-top: 0px;">
+        <small>Ingresa tus Apellidos</small>
+        <input required="true" type="text" name="last_names" class="campos-contacto-home" placeholder="Escribe apellidos*" />
+    </p>
+
+    <p style="border-top: 0px;"><small>Ingresa Celular</small></p>
+    <p style="border-top: 0px;">
+        <input required="true" type="number" name="phone" class="campos-contacto-home" placeholder="Escribe celular*" />
+    </p>
+
+    <p style="border-top: 0px;"><small>Documento de Identidad</small></p>
+    <p style="border-top: 0px;">
+        <input required="true" type="number" name="dni" class="campos-contacto-home" placeholder="D.N.I.*" pattern="[0-9]+" />
+    </p>
+
+    <p style="border-top: 0px;">
+        <textarea required="true" name="comments" rows="10" cols="40" class="campos-contacto-come">Escribe aquí tus comentarios</textarea>
+    </p>
+
+    <input type="hidden" name="email_expositor" value="<?php echo $this->expositor['correo'] ?? '-'; ?>">
+
+    <input id="button-send-form" type="submit" name="button" id="button" value="CONTACTAR" class="send-home-wsp" /><br />
+
+    <!-- <input type="button" name="button" id="button" value="CONTACTAR POR WHATSAPP" onClick="javascript:Validarxx()" class="send-home-wsp2" /> -->
+
+    <a class="send-home-wsp2 no-underline <?php if( $this->expositor['enlace_wsp'] == '' ) { echo "disabled"; } ?>" href="javascript:abrirVentanaWindow('<?php echo $this->expositor['enlace_wsp']; ?>')">CONTACTAR POR WHATSAPP</a>
+
+    <strong> <a>*Al hacer click en "Contactar" aceptas los Términos y Condiciones y Políticas de Privacidad de Nexo Inmobiliario.</a></strong>
+</form>
+
+<script>
+    <?php $this->inlineScript()->captureStart(); ?>
+
+    const buttonSendForm = document.querySelector('#button-send-form');
+    const form = document.querySelector('#contact-form-pro');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        buttonSendForm.disabled = true;
+
+        const formData = new FormData(form);
+        const formDataObj = Object.fromEntries(formData.entries());
+        
+        $.post("/cliente/contactar-proyecto", formDataObj, function(response){
+            form.innerHTML = 'Su mensaje fue enviado.';
+        }, 'json');
+    });
+
+    <?php $this->inlineScript()->captureEnd(); ?>
+</script>

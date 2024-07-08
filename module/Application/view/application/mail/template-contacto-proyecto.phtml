@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,200;0,400;0,600;0,700;0,900;1,200;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet" />
+        <title>Feria Virtual</title>
+        <style>
+            body {
+                font-family: Kanit, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+			<tr>
+                <td>
+                    <?php echo $this->contenidoCorreo; ?>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p style="margin: 4px 0;">
+                        <strong>DATOS DEL CLIENTE:</strong>
+                    </p>
+                </td>
+            </tr>
+			<tr>
+                <td>
+                    <p style="margin: 4px 0;">
+                        <strong>Correo Electrónico: </strong> <?php echo $this->visitante['email']; ?><br>
+                        <strong>Nombres: </strong> <?php echo $this->visitante['names']; ?><br>
+                        <strong>Apellidos: </strong> <?php echo $this->visitante['last_names'] ?><br>
+                        <strong>Celular: </strong> <?php echo $this->visitante['phone'] ?><br>
+                        <strong>Documento de Identidad: </strong><?php echo $this->visitante['dni'] ?><br>
+                        <strong>Comentarios: </strong><?php echo $this->visitante['comments'] ?><br>
+                    </p>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>
