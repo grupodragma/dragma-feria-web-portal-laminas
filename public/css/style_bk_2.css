@@ -4615,7 +4615,7 @@ body{
         height: auto;
     }
     header .center-header .space-res {
-        width: 12%;
+        width: 15%;
         height: auto;
         display: flex;
     }
@@ -4629,7 +4629,7 @@ body{
     }
     header .center-header .boton-cotiza .user-header {
         width: 57%;
-        margin-left: 2%;
+        margin-left: 3%;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -4638,7 +4638,7 @@ body{
         display: flex;
     }
     header .center-header .boton-cotiza .container-language {
-        width: 50%;
+        width: 40%;
         display: flex;
 
         flex-direction: row;
@@ -4660,7 +4660,7 @@ body{
         font-weight: 500;
     }
     header .center-header .boton-cotiza {
-        width: 13%;
+        width: 10%;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -4759,8 +4759,8 @@ body{
     }
     .grid-go .grid-center #grid .caja {
         transition: all 0.3s ease;
-        border: 1px solid #A6A4A4;
-        height: 650px;
+        border: 1px solid #999;
+        height: auto;
         display: flex;
         flex-direction: column;
         position: relative;
@@ -5806,7 +5806,7 @@ body{
     .filtro-mapa .form-buscar {
         width: 100%;
         display: flex;
-        flex-direction: row; 
+        flex-direction: row;
         align-items: cemter;
     }
     .filtro-mapa .form-buscar .all-selecters {
@@ -6321,7 +6321,7 @@ body{
  
 
     .form-ingreso {
-        width: 100%;
+        width: 90%;
 		
 		padding: 3.5%;
 		border-radius: 20px;
@@ -15089,7 +15089,7 @@ if it's not present, don't show loader */
             overflow-y: scroll !important;
         }
         .white-form-enter {
-            width: 92%;
+            width: 86%;
             left: 0vh;
             padding-top: 0%;
             background: none !important;
@@ -15098,8 +15098,7 @@ if it's not present, don't show loader */
             display: flex;
             flex-direction: column;
             position: relative;
-			align-items: center;
-           
+            border:
         }
         .registro-home {
             height: auto;
@@ -15108,31 +15107,29 @@ if it's not present, don't show loader */
             align-items: center;
             width: 100%;
 			padding-bottom: 10%;
-            background: url(../imagenes/feria-intro-register-responsive.jpg) fixed center;
+            background: url(../imagenes/feria-intro-register.jpg) fixed center;
         }
         .registro-home .slide.active {
             display: flex;
-          background: url(../imagenes/feria-intro-register-responsive.jpg) fixed center;
+          background: url(../imagenes/feria-intro-register.jpg) fixed center;
         }
         .white-form-enter h2 {
             font-size: 1.4em
         }
         .white-form-enter h3 {
-            font-size: 1em;
-			font-weight: 800;
-			display: flex;
-			  margin-bottom: 1%;
+            font-size: 1.2em;
+			display: none;
         }
         .white-form-enter .image-lap-responsive {
             display: flex;
             align-items: center; 
             justify-content: center;
-            width: 88%;
-            margin-top: 3%;
-            margin-bottom: 5%;
+            width: 100%;
+            margin-top: 0%;
+            margin-bottom: 2%;
         }
         .white-form-enter .image-lap-responsive img {
-            display: flex;
+            display: none;
             align-items: center;
             justify-content: center;
             width: 100%;
@@ -17910,22 +17907,8 @@ if it's not present, don't show loader */
         .white-form-enter .fondo-logo-form img {
             width: 80%;
             height: auto;
-            display: flex;
+            display: none;
         }
-		
-		
-		
-        .white-form-enter .blanco {
-            width: 100%;
-			align-items: center;
-			padding: 4%;
-			flex-direction: column;
-			background-color: #fff;
-            height: auto;
-            display: flex;
-        }
-		
-		
         .franja-menu-bots {
             width: 100%;
             padding: 0%;
@@ -20649,7 +20632,7 @@ if it's not present, don't show loader */
             background-color: #ffffff;
         }
         header .center-header {
-            width: 98%;
+            width: 96%;
             height: auto;
             display: flex;
             align-items: center;
@@ -20664,7 +20647,7 @@ if it's not present, don't show loader */
             height: auto;
         }
         header .center-header .space-res {
-            width: 5%;
+            width: 2%;
             height: auto;
             display: flex;
         }
@@ -20710,7 +20693,7 @@ if it's not present, don't show loader */
             font-weight: 500;
         }
         header .center-header .boton-cotiza {
-            width: 40%;
+            width: 23%;
             display: flex;
             flex-direction: row;
             justify-content: flex-start;
@@ -23494,7 +23477,7 @@ if it's not present, don't show loader */
             -webkit-box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.45);
             box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.45);
             padding: 6%;
-            z-index: 888888888;
+            z-index: 888;
             border-radius: 12px;
             background: #fff;
             position: absolute;
@@ -25153,7 +25136,7 @@ if it's not present, don't show loader */
 		
 		
 		.well-chat2 .caja-chat2 {
-          display: none;
+          display: flex;
 			z-index:99889;
             width:92%;
 			margin: 0 auto;
@@ -25172,7 +25155,6 @@ if it's not present, don't show loader */
 .boton-veris{
 	
 	z-index:89888;
-	display: none;
 	
 	
 	
