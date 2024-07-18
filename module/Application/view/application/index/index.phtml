@@ -15,34 +15,22 @@
     <a class="show-hide" href="#" onclick="smooth()">VER REGISTRO</a>
 
     <div class="white-form-enter" id="show">
-        <div class="fondo-logo-form">
-            <img src="<?php echo ( $this->layout()->portal['hash_logo'] != '' ) ? $this->layout()->url_backend."/portal/imagenes/".$this->layout()->portal['hash_logo'] : 'imagenes/LOGO-EXPOHOGAR.svg'; ?>" alt="">
+        <div class="blanco">
+            <div class="fondo-logo-form">
+                <img src="<?php echo ( $this->layout()->portal['hash_logo'] != '' ) ? $this->layout()->url_backend."/portal/imagenes/".$this->layout()->portal['hash_logo'] : 'imagenes/LOGO-EXPOHOGAR.svg'; ?>" alt="">
+            </div>
+            <div class="image-lap-responsive">
+                <img src="<?php echo ( $this->layout()->portal['hash_logo_banner'] != '' ) ? $this->layout()->url_backend."/portal/imagenes/".$this->layout()->portal['hash_logo_banner'] : 'imagenes/lap-responsive.png'; ?>" alt="">
+            </div>
+            <h3><?php echo ( $this->layout()->portal['texto_titulo_formulario'] != '' ) ? $this->layout()->portal['texto_titulo_formulario'] : 'Descubre AQUÍ en las mejores ofertas, departamentos desde 0% de cuota inicial'; ?></h3>
+            <?php echo $this->partial('partial/principal/formulario/formulario-principal', [
+                'tipoHabitaciones'=> $this->tipoHabitaciones,
+                'distritos'=> $this->distritos,
+                'numeroHabitaciones'=> $this->numeroHabitaciones,
+                'rangoPrecios'=> $this->rangoPrecios,
+                'etapas'=> $this->etapas,
+            ]); ?>
         </div>
-        <div class="image-lap-responsive">
-            <img src="<?php echo ( $this->layout()->portal['hash_logo_banner'] != '' ) ? $this->layout()->url_backend."/portal/imagenes/".$this->layout()->portal['hash_logo_banner'] : 'imagenes/lap-responsive.png'; ?>" alt="">
-        </div>
-        <h3><?php echo ( $this->layout()->portal['texto_titulo_formulario'] != '' ) ? $this->layout()->portal['texto_titulo_formulario'] : 'Descubre AQUÍ en las mejores ofertas, departamentos desde 0% de cuota inicial'; ?></h3>
-        
-        <!-- <div class="welcome-banner">
-            <p>
-                <span>NOSOTROS</span><br />
-                te ayudamos a encontrar<br />
-                <strong>
-                    TU<br />
-                    DEPA IDEAL
-                </strong>
-                .
-            </p>
-            <a href="#">SELECCIONA</a>
-        </div> -->
-        
-        <?php echo $this->partial('partial/principal/formulario/formulario-principal', [
-            'tipoHabitaciones'=> $this->tipoHabitaciones,
-            'distritos'=> $this->distritos,
-            'numeroHabitaciones'=> $this->numeroHabitaciones,
-            'rangoPrecios'=> $this->rangoPrecios,
-            'etapas'=> $this->etapas,
-        ]); ?>
     </div>
 
     <div class="vid-slider">
