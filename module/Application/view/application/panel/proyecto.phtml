@@ -130,7 +130,8 @@
         <div class="todo-right-infox">
             <?php echo $this->partial('partial/principal/formulario/formulario-contactanos', [
                 'expositor'=> $this->expositor,
-                'empresa'=> $this->empresa
+                'empresa'=> $this->empresa,
+                'proyecto'=> $this->proyecto,
             ]); ?>
         </div>
     </div>
@@ -187,9 +188,10 @@
                                     </ul>
                                 </div>
                                 <div class="botones-planox">
-                                    <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/calcula-credito/<?php echo $this->proyecto['idbancos']; ?>">Calcula tu crédito hipotecario<img src="imagenes/bcp-cal-02.svg" alt=""></a>
-                                    <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/cotizar-ahora" class="green">COTIZAR AHORA</a>
-                                    <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/reservar" class="green">Lo quiero reservar con S/500.00</a>
+                                    <!-- <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/calcula-credito/<?php echo $this->proyecto['idbancos']; ?>">Calcula tu crédito hipotecario<img src="imagenes/bcp-cal-02.svg" alt=""></a> -->
+                                    <!-- <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/cotizar-ahora" class="green">COTIZAR AHORA</a> -->
+                                    <a onclick="Panel.idPlanoCotizarAhora = <?php echo $item['idplanos']; ?>" href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/cotizar-ahora" class="green chat66_open">COTIZAR AHORA</a>
+                                    <!-- <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/reservar" class="green">Lo quiero reservar con S/500.00</a> -->
                                 </div>
                             </div>
                         </div>
@@ -423,11 +425,28 @@
     </div>
 </div>
 
+<?php
+    echo $this->partial(
+        'partial/principal/formulario/formulario-cotiza-ahora',
+        [
+            'titulo'=> 'COTIZA AHORA',
+            'expositor'=> $this->expositor,
+            'empresa'=> $this->empresa,
+            'proyecto'=> $this->proyecto,
+        ]
+    );
+?>
+
 <script type="text/javascript">
 
     <?php $this->inlineScript()->captureStart(); ?>
 
     $(document).on("ready", function () {
+
+        $('#chat66').popup({
+            transition: 'all 0.3s',
+            closebutton: true
+        });
 
         <?php $i = 0; foreach($this->promociones as $item) : ?>
         $("#caja<?php echo $item['idpromociones']; ?>").popup({

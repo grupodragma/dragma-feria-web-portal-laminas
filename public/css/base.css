@@ -107,3 +107,12 @@ form .form-controls{
 .contenedor-programas-asesor #grid .caja div .back-standi .back {
     visibility: visible !important;
 }
+
+#form-msg-cotiza {
+    width: 100%;
+    padding: 3.5%;
+    border-radius: 20px;
+    background-color: #fff;
+    height: auto;
+    display: none;
+}

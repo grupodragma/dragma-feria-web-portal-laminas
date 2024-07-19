@@ -6334,7 +6334,8 @@ body{
     }
 .form-ingreso h2{
 	color: #888;
-	font-size: 3vh;
+	font-size: 2vh;
+	text-align: center;
         
     }
     .form-ingreso .caja-inputs .inputs-recepcion {
@@ -10500,6 +10501,7 @@ body{
         height: 100vh;
         display: flex;
         flex-direction: column;
+		align-items: center;
     }
 		
 		
@@ -10512,7 +10514,7 @@ body{
         height: 24vw;
 			margin-top: 10%;
         transition: all 0.3s ease;
-        display: none;
+        display: flex;
         align-items: center;
         border-radius: 14px;
         padding: 3%;
@@ -15108,7 +15110,7 @@ if it's not present, don't show loader */
             align-items: center;
             width: 100%;
 			padding-bottom: 10%;
-            background: url(../imagenes/feria-intro-register-responsive.jpg) fixed center;
+            background-color:#fff;
         }
         .registro-home .slide.active {
             display: flex;
@@ -17918,7 +17920,7 @@ if it's not present, don't show loader */
         .white-form-enter .blanco {
             width: 100%;
 			align-items: center;
-			padding: 4%;
+			padding: 0%;
 			flex-direction: column;
 			background-color: #fff;
             height: auto;
@@ -25149,11 +25151,11 @@ if it's not present, don't show loader */
 			cursor: pointer !important;
         }
 		
-		
+		 
 		
 		
 		.well-chat2 .caja-chat2 {
-          display: none;
+          display: flex;
 			z-index:99889;
             width:92%;
 			margin: 0 auto;

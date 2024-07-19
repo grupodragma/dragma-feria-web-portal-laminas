@@ -2,6 +2,7 @@ let Panel = {
     idioma: '',
     sesionUsuario: '',
     windowObjectReference: null,
+    idPlanoCotizarAhora: null,
     init: function(){
         this.sesionUsuario = ( this.sesionUsuario === '1' ) ? true : false;
     },

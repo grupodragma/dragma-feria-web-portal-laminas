@@ -394,6 +394,7 @@ class Module implements ConfigProviderInterface
                         $container->get(Service\MailSender::class),
                         $container->get(Model\PortalCorreosTable::class),
                         $container->get(Model\EmpresasTable::class),
+                        $container->get(Model\PlanosTable::class)
                     );
                 }
             ],

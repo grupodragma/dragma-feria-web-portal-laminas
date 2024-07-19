@@ -22,8 +22,9 @@ class ClienteController extends AbstractActionController {
     protected $objMailSender;
     protected $objFeriasCorreosTable;
     protected $objEmpresasTable;
+    protected $objPlanosTable;
 
-    public function __construct($serviceManager, $objVisitantesTable, $objFeriasTable, $objExpositoresTable, $objAgendaVirtualTable, $objMailSender, $objFeriasCorreosTable, $objEmpresasTable) {
+    public function __construct($serviceManager, $objVisitantesTable, $objFeriasTable, $objExpositoresTable, $objAgendaVirtualTable, $objMailSender, $objFeriasCorreosTable, $objEmpresasTable, $objPlanosTable) {
         $this->serviceManager = $serviceManager;
         $this->objVisitantesTable = $objVisitantesTable;
         $this->objFeriasTable = $objFeriasTable;
@@ -34,6 +35,7 @@ class ClienteController extends AbstractActionController {
         $this->objMailSender = $objMailSender;
         $this->objFeriasCorreosTable = $objFeriasCorreosTable;
         $this->objEmpresasTable = $objEmpresasTable;
+        $this->objPlanosTable = $objPlanosTable;
     }
     
     public function indexAction() {
@@ -235,6 +237,44 @@ class ClienteController extends AbstractActionController {
                 null,
                 null,
                 'Contacto de Proyecto'
+            );
+        }
+
+        return $this->jsonZF(['result'=>'success']);
+    }
+
+    public function cotizarPlanoProyectoAction() {
+        $names = $this->params()->fromPost('names');
+        $phone = $this->params()->fromPost('phone');
+        $dni = $this->params()->fromPost('dni');
+        $email_expositor = $this->params()->fromPost('email_expositor');
+        $idplanos = $this->params()->fromPost('idplanos');
+
+        $dataPlano = $this->objPlanosTable->obtenerDatoPlanos(['idplanos'=> $idplanos]);
+        
+        if(!$dataPlano) {
+            return $this->jsonZF(['result'=>'success']);
+        }
+
+        $mailData = [
+            'visitante' => [
+                'names' => $names,
+                'phone' => $phone,
+                'dni' => $dni
+            ],
+            'plano' => $dataPlano
+        ];
+
+        if( $email_expositor != '-' ) {
+            $this->objMailSender->sendMail(
+                'freedemou@gmail.com', //$email_expositor, //'freedemou@gmail.com',
+                'Cotizar Plano de Proyecto',
+                $mailData,
+                'cotizar-ahora-plano-proyecto',
+                null,
+                null,
+                null,
+                'Cotizar Plano de Proyecto'
             );
         }
 

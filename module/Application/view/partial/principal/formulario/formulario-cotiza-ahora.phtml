@@ -1,0 +1,73 @@
+<div id="chat66" class="well-chat2">
+  <div class="half"></div>
+
+  <div class="caja-chat2">
+      <form action="enviar-comentario.php" method="post" name="form-cotiza" id="form-cotiza-ahora" class="form-ingreso">
+          <h2><?php echo !empty($this->titulo) ? $this->titulo : 'COTIZAR AHORA'; ?></h2>
+          <div class="caja-inputs"></div>
+
+          <div class="caja-inputs">
+              <div id="input_container">
+                  <img src="imagenes/nombres-registro.svg" id="input_img" />
+                  <input type="text" required="true" name="names" id="input" placeholder="Nombres Completos*" />
+              </div>
+
+              <div id="input_container">
+                  <img src="imagenes/email-registro.svg" id="input_img" />
+                  <input type="number" required="true" name="dni" id="input" placeholder="DNI*" pattern="[0-9]+" />
+              </div>
+              <div id="input_container">
+                  <img src="imagenes/email-registro.svg" id="input_img" />
+                  <input type="number" required="true" name="phone" id="input" placeholder="Celular*" />
+              </div>
+          </div>
+
+          <div class="caja-inputs-send" style="margin-bottom: 1%; margin-top: 3px;">
+              <input type="submit" name="button" id="button-send-form-cotiza" value="ENVIAR" class="send-registro-recepcion" />
+          </div>
+
+          <input type="hidden" name="email_expositor" value="<?php echo $this->expositor['correo'] ?? '-'; ?>">
+      </form>
+
+      <div id="form-msg-cotiza"></div>
+  </div>
+</div>
+
+<script>
+    <?php $this->inlineScript()->captureStart(); ?>
+
+    const buttonSendFormCotiza = document.querySelector('#button-send-form-cotiza');
+    const formCotiza = document.querySelector('#form-cotiza-ahora');
+    const formMsgCotiza = document.querySelector('#form-msg-cotiza');
+
+    formCotiza.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        buttonSendFormCotiza.disabled = true;
+
+        const formDataCotiza = new FormData(formCotiza);
+        const formDataCotizaObj = Object.fromEntries(formDataCotiza.entries());
+
+        if (typeof formDataCotizaObj === 'object') {
+            formDataCotizaObj['idplanos'] = Panel.idPlanoCotizarAhora ?? null;
+        }
+        
+        $.post("/cliente/cotizar-plano-proyecto", formDataCotizaObj, function(response){
+            formCotiza.style.display = 'none';
+            formMsgCotiza.style.display = 'block';
+            formMsgCotiza.innerHTML = 'Su mensaje fue enviado.';
+
+
+            setTimeout(() => {
+                $('#chat66').popup('hide');
+                formCotiza.style.display = 'block';
+                formMsgCotiza.style.display = 'none';
+                formCotiza.reset();
+                formMsgCotiza.innerHTML = '';
+                buttonSendFormCotiza.disabled = false;
+            }, 2000);
+        }, 'json');
+    });
+
+    <?php $this->inlineScript()->captureEnd(); ?>
+</script>
