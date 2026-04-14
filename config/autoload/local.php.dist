@@ -1,0 +1,110 @@
+<?php
+/**
+ * Local Configuration Override
+ *
+ * This configuration override file is for overriding environment-specific and
+ * security-sensitive configuration information. Copy this file without the
+ * .dist extension at the end and populate values as needed.
+ *
+ * @NOTE: This file is ignored from Git by default with the .gitignore included
+ * in ZendSkeletonApplication. This is a good practice, as it prevents sensitive
+ * credentials from accidentally being committed into version control.
+ */
+
+return [
+    'db' => [
+        'driver'         => 'Pdo',
+        'dsn'            => 'mysql:dbname=db_feriavirtual_portal;host=localhost',
+        'username'       => 'root',
+        'password'       => '',
+        'driver_options' => [
+            PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES UTF8" 
+        ]
+    ],
+    'secure_access' =>[
+        'maximo_errores_login'=>50,
+        'tiempo_bloqueo'=>30
+    ],
+    'mail'=>[
+        'from'=>'no-reply@centrovirtualdeconvenciones.com',
+        'from_name'=>'Grupo Dragma - Feria Virtual',
+        'transport'=>'sendmail',
+        'transport'=>'smtp',
+        'smtp_options'=>[
+            'name' => 'centrovirtualdeconvenciones.com',
+            'host' => 'centrovirtualdeconvenciones.com',
+            'connection_class' => 'login',
+            'port' => 587,
+            'connection_config' => [
+                'username' => 'jgomez@centrovirtualdeconvenciones.com',
+                'password' => 'demodemo123A$$$',
+                'ssl' => 'tls'
+            ]
+        ]
+    ],
+    'url_backend'=> 'http://localhost:82',
+    'node_server'=> [
+        'host'=> 'centrovirtualdeconvenciones.com',
+        'port'=> '4500'
+    ],
+    'servidor'=> 'produccion', //produccion
+    'feria_colores_inicial'=> [
+        'boton_primero'=> [
+            'fondo'=> '#3ca3c1',
+            'texto'=> '#FFFFFF',
+            'hover_fondo'=> '#F7AC22',
+            'hover_texto'=> '#FFFFFF',
+        ],
+        'boton_segundo'=> [
+            'fondo'=> '#faa819',
+            'texto'=> '#FFFFFF',
+            'hover_fondo'=> '#3ca0a4',
+            'hover_texto'=> '#FFFFFF',
+        ],
+        'encabezado_primero'=> [
+            'fondo'=> '#FFFFFF',
+        ],
+        'encabezado_segundo'=> [
+            'fondo'=> '#3da3c1',
+            'texto'=> '#FFFFFF',
+            'texto_linea_hover'=> '#FFFFFF',
+            'buscador_fondo'=> '#faa81a',
+            'buscador_texto'=> '#444444',
+            'buscador_texto_linea_hover'=> '#FFFFFF',
+        ],
+        'encabezado_tercero'=> [
+            'fondo'=> '#1C6DB5',
+            'texto'=> '#FFFFFF',
+        ],
+        'pie_pagina_primero'=> [
+            'fondo'=> '#3da3c1',
+        ],
+        'pie_pagina_segundo'=> [
+            'fondo'=> '#FFCF2B',
+            'texto'=> '#FFFFFF',
+            'texto_linea_hover'=> '#111111',
+            'hover_fondo'=> '#111111',
+            'hover_texto'=> '#FFFFFF',
+            'fondo_menu'=> '#44A0C0',
+            'fondo_menu_resaltado'=> '#d43b3b'
+        ],
+        'flechas_zonas'=> [
+            'fondo'=> '#3da3c1',
+            'texto'=> '#FFFFFF',
+            'hover_fondo'=> '#3ca0a4',
+            'hover_texto'=> '#FFFFFF',
+        ]
+    ],
+    'google_cloud_translate'=> [
+        'key'=> 'AIzaSyAcbSARX7En_cunQwAB0fq1Bba1yZwXTys'
+    ],
+    'google'=> [
+        'translate'=> [
+            'key'=> 'AIzaSyAcbSARX7En_cunQwAB0fq1Bba1yZwXTys'
+        ],
+        'maps'=> [
+            'key'=> 'AIzaSyC21IqHOCenHHPCmMqQIqeKaoN9Rsb6kAQ'
+        ]
+    ]
+];
+
