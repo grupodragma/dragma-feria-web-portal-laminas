@@ -1,3 +1,87 @@
+<style>
+    .custom-tooltip {
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .tooltip-card {
+        width: 260px;
+        background: #fff;
+        border-radius: 12px;
+        overflow: hidden;
+        font-family: Arial;
+    }
+
+    .tooltip-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 0;
+        background: #f5f5f5;
+        font-size: 12px;
+        font-family: "Ubuntu", sans-serif;
+    }
+
+    .tooltip-header-title {
+        background: #5c6bc0;
+        color: #fff;
+        padding: 4px 8px;
+        border-radius: 0 7px 7px 0;
+    }
+
+    .tooltip-header-imagen {
+        width: 45%;
+    }
+
+    .tooltip-body {
+        padding: 10px 10px 5px 10px;
+    }
+
+    .tooltip-body h4 {
+        margin: 0;
+        font-size: 14px;
+        font-family: "Ubuntu", sans-serif;
+    }
+
+    .tooltip-body p {
+        margin: 4px 0;
+        font-size: 12px;
+        font-family: "Ubuntu", sans-serif;
+    }
+
+    .price {
+        display: flex;
+        justify-content: space-between;
+        margin: 6px 0;
+    }
+
+    .price strong {
+        color: red;
+    }
+
+    .btn {
+        background: red;
+        color: white;
+        border: none;
+        padding: 8px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-family: "Ubuntu", sans-serif;
+        cursor: pointer;
+        text-align: center;
+    }
+
+    .tooltip-body a {
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .leaflet-popup-content {
+        margin: 0;
+    }
+</style>
+
 <div class="los-titulos">
     <h1>TODOS LOS PROYECTOS</h1>
 </div>
@@ -69,7 +153,7 @@
         <div class="espacito"></div>
 
         <div class="boton">
-            <input type="button" name="button" id="button" value="BUSCAR" onclick="filtrarMapa(this)" class="send-filter" />
+            <input type="button" name="button" id="button" value="BUSCAR" onclick="App.mapManager.filterProjects(this)" class="send-filter" />
             <input type="hidden" name="proceso" id="proceso" />
         </div>
     </form>
@@ -92,3 +176,17 @@
         </div>
     </div>
 </div>
+
+<script>
+    <?php $this->inlineScript()->captureStart(); ?>
+
+    $(document).ready(function () {
+        App.mapManager.init('map', {
+            projects: JSON.parse('<?php echo $this->proyectosMapaGoogle; ?>'),
+            urlBackend: '<?php echo $this->layout()->url_backend; ?>',
+            selectedLanguage: '<?php echo $this->layout()->idiomaSeleccionado; ?>',
+        });
+    });
+
+    <?php $this->inlineScript()->captureEnd(); ?>
+</script>

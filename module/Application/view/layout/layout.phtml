@@ -22,6 +22,7 @@
         <link href="css/slick.css" rel="stylesheet" type="text/css" />
         <link href="css/slick-theme.css" rel="stylesheet" type="text/css" />
         <link href="css/base.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
         <?php echo $this->partial('partial/principal/css/default', []); ?>
     </head>
 
@@ -216,6 +217,8 @@
             </div>
         </footer>
         
+        <!-- JS de Leaflet -->
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
         <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
@@ -226,6 +229,7 @@
         <script type="text/javascript" src="js/jquery.validate_messages_es.js"></script>
         <script type="text/javascript" src="js/home/scripts.js?t=<?php echo time(); ?>"></script>
         <script type="text/javascript" src="js/home/main.js?t=<?php echo time(); ?>"></script>
+        <script type="text/javascript" src="js/home/map.js?t=<?php echo time(); ?>"></script>
 
         <?= $this->inlineScript() ?>
 

@@ -64,16 +64,6 @@
     );
 ?>
 
-<?php /*echo $this->partial('partial/principal/proyectos/proyectos-filtros', [
-    'proyectosMasDestacados'=> $this->proyectosMasDestacados,
-    'tipoHabitaciones'=> $this->tipoHabitaciones,
-    'distritos'=> $this->distritos,
-    'numeroHabitaciones'=> $this->numeroHabitaciones,
-    'rangoPrecios'=> $this->rangoPrecios,
-    'etapas'=> $this->etapas,
-    'proyectosMapaGoogle'=> $this->proyectosMapaGoogle
-]);*/ ?>
-
 <div class="los-titulos">
     <h1>TU PROYECTO IDEAL</h1>
 </div>
@@ -122,10 +112,20 @@
     </div>
 </div>
 
+<?php echo $this->partial('partial/principal/proyectos/proyectos-filtros', [
+    'proyectosMasDestacados'=> $this->proyectosMasDestacados,
+    'tipoHabitaciones'=> $this->tipoHabitaciones,
+    'distritos'=> $this->distritos,
+    'numeroHabitaciones'=> $this->numeroHabitaciones,
+    'rangoPrecios'=> $this->rangoPrecios,
+    'etapas'=> $this->etapas,
+    'proyectosMapaGoogle'=> $this->proyectosMapaGoogle
+]); ?>
+
 <script>
     <?php $this->inlineScript()->captureStart(); ?>
 
-    function filtrarMapa(obj) {
+    /*function filtrarMapa(obj) {
         let contenedorFiltros = $(obj).parents("form");
         let objSelect = contenedorFiltros.find("select.filtro-mapa");
         let filter = new Object();
@@ -139,13 +139,14 @@
         });
 
         if(objSelect.length !== totalfiltrosVacios) {
-            initMap(filter);
+            console.log(filter);
+            //initMap(filter);
         }
 
-    }
+    }*/
 
     $(document).ready(function () {
-        initMap();
+        //initMap();
     });
     
     async function initMap(filter=null) {
