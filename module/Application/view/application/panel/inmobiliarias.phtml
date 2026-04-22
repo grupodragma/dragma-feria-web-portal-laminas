@@ -1,3 +1,5 @@
+<?php $this->headTitle('Inmobiliarias'); ?>
+
 <div class="filtro-todos">
     <form id="formFiltroInmobiliaria" class="form-buscar2">
         <div class="all-selecters2">
@@ -36,8 +38,8 @@
             <div class="log-inmos">
                 <img src="<?php echo ( $item['hash_logo'] != '' ) ? $this->layout()->url_backend."/empresas/logo/".$item['hash_logo'] : 'imagenes/logo-inmo.png'; ?>" alt="">
             </div>
-            <p><?php echo $item['resumen']; ?></p>
-            <!-- <div class="box-contact-inmos" style="<?php if( $item['expositor'] == '' ) { echo "display: none;"; } ?>">
+            <p><?php echo $item['descripcion']; ?></p>
+            <div class="box-contact-inmos">
                 <h2><span></span>ASESOR EN LÍNEA</h2>
                 <div class="call">
                     <div class="photo">
@@ -64,9 +66,9 @@
                         <?php endif; ?>
                     </div>
                 </div>
-            </div> -->
+            </div>
             <div class="button-enviar-inmos">
-                <a href="javascript:void(0)">Ver Proyetos</a>
+                <a href="<?php echo $this->layout()->idiomaSeleccionado;?>/panel/inmobiliaria/<?php echo $item['idempresas']; ?>">Ver Proyetos</a>
             </div>
         </div>
         <?php endforeach; ?>

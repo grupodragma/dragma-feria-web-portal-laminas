@@ -262,4 +262,44 @@ class ProductosTable {
         }
         return $condiciones;
     }
+
+    public function obtenerProductosPorEmpresa($idempresas){
+        $condiciones = [];
+        $adapter = $this->tableGateway->getAdapter();
+        $sql = "SELECT p.*,
+        e.nombre AS empresa, e.hash_logo AS empresa_logo,
+        s.nombre AS segmento,
+        exp.hash_foto AS expositor_foto,
+        dist.nombre AS distrito,
+        IF(st.hash_url = 'circular-portal', ps.configuracion, NULL) AS stand_configuracion,
+        th.nombre AS tipoHabitacion,
+        nh.nombre AS numeroHabitacion,
+        et.nombre AS etapa
+        FROM productos p
+        INNER JOIN empresas e ON e.idempresas = p.idempresas
+        LEFT JOIN segmentos s ON s.idsegmentos = e.idsegmentos
+        LEFT JOIN expositores exp ON exp.idexpositores = e.idexpositores
+        LEFT JOIN distritos dist ON dist.iddistritos = p.iddistritos
+        LEFT JOIN paginas_stand ps ON ps.idempresas = e.idempresas
+        LEFT JOIN stand_galeria sg ON sg.idstandgaleria = e.idstandgaleria
+        LEFT JOIN stand st ON st.idstand = sg.idstand
+        LEFT JOIN tipo_habitacion th ON th.idtipohabitacion = p.idtipohabitacion
+        LEFT JOIN numero_habitacion nh ON nh.idnumerohabitacion = p.idnumerohabitacion
+        LEFT JOIN etapa et ON et.idetapa = p.idetapa";
+        $condiciones[] = "p.idempresas = {$idempresas}";
+        if( !empty($condiciones) ) $sql .= " WHERE ".implode(" AND ", $condiciones);
+        $sql .= " ORDER BY p.idproductos DESC";
+        //echo $sql;
+        //die;
+        $data = $adapter->query($sql, $adapter::QUERY_MODE_EXECUTE)->toArray();
+        $response = [];
+        if(!empty($data)){
+            foreach($data as $item){
+                $item['informacion'] = json_decode($item['informacion'], true);
+                $item['stand_configuracion'] = ( $item['stand_configuracion'] != '') ? json_decode($item['stand_configuracion'], true) : [];
+                $response[] = $item;
+            }
+        }
+        return $response;
+    }
 }

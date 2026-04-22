@@ -204,6 +204,30 @@ class PanelController extends AbstractActionController {
             'busqueda'=> $busqueda
         ];
         //print_r($data['inmobiliarias']);
+        //die;
+        return new ViewModel($data);
+    }
+
+    public function inmobiliariaDetalleAction() {
+        $this->layout()->setTemplate('layout/panel');
+        $idempresa = $this->params()->fromRoute('idempresa', '0');
+        $dataInmobiliaria = $this->objEmpresasTable->obtenerDatoEmpresas(['idempresas'=>$idempresa]);
+        $dataExpositor = $this->objExpositoresTable->obtenerDatoExpositores(['idexpositores'=> $dataInmobiliaria['idexpositores']]);
+        $dataProyectos = $this->objProductosTable->obtenerProductosPorEmpresa($idempresa);
+        $dataBancos = $this->objBancosTable->obtenerDatoBancos(['idbancos'=> $dataInmobiliaria['idbancos']]);
+        $data = [
+            'inmobiliaria'=> $dataInmobiliaria,
+            'expositor'=> $dataExpositor,
+            'proyectos'=> $dataProyectos,
+            'banco'=> $dataBancos,
+            'tipoHabitaciones'=> $this->objTipoHabitacionTable->obtenerTipoHabitacion(),
+            'distritos'=> $this->objDistritosTable->obtenerDistritos(),
+            'numeroHabitaciones'=> $this->objNumeroHabitacionTable->obtenerNumeroHabitacion(),
+            'rangoPrecios'=> $this->objRangoPreciosTable->obtenerRangoPrecios(),
+            'etapas'=> $this->objEtapaTable->obtenerEtapa()
+        ];
+        //print_r($data);
+        //die;
         return new ViewModel($data);
     }
 

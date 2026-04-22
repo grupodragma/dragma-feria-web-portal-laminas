@@ -1,0 +1,169 @@
+<?php $this->headTitle($inmobiliaria['nombre'] . ' - Inmobiliaria'); ?>
+
+<div class="banner-ask-filtro">
+    <div class="banner-ask-filtro-center">
+        <h2><?= $inmobiliaria['nombre'] ?></h2>
+    </div>
+</div>
+<?= !empty( $expositor ) ? $this->partial('partial/panel/componentes/info-modulo-asesor', ['expositor'=> $expositor]) : ''; ?>
+<div class="info-inmos">
+    <div class="center-info-inmos">
+        <div class="text-log">
+            <div class="logo-in">
+                <img src="<?= ( $inmobiliaria['hash_logo'] != '' ) ? $this->layout()->url_backend."/empresas/logo/".$inmobiliaria['hash_logo'] : 'imagenes/logo-inmo.png'; ?>" alt="">
+            </div>
+            <p><?= $inmobiliaria['descripcion']; ?></p>
+            <div class="bank-inmo">
+                <h2>Financiado por:</h2>
+                <img src="<?= ( $banco['hash_logo'] != '' ) ? $this->layout()->url_backend."/bancos/logo/".$banco['hash_logo'] : 'imagenes/logo-inmo.png'; ?>" alt="">
+            </div>
+        </div>
+        <div class="space-inmo"></div>
+        <div class="foto-log">
+            <div
+                id="jssor_1"
+                style="
+                    position: relative;
+                    margin: 0 auto;
+                    top: 0px;
+                    left: 0px;
+                    width: 350px;
+                    height: 436px;
+                    overflow: hidden;
+                    visibility: hidden;
+                "
+            >
+                <!-- Loading Screen -->
+                <div
+                    data-u="loading"
+                    class="jssorl-009-spin"
+                    style="
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 100%;
+                        height: 100%;
+                        text-align: center;
+                        background-color: rgba(0, 0, 0, 0.7);
+                    "
+                >
+                    <img
+                        style="margin-top: -19px; position: relative; top: 50%; width: 38px; height: 38px"
+                        src="img/spin.svg"
+                    />
+                </div>
+                <div
+                    data-u="slides"
+                    style="
+                        cursor: default;
+                        position: relative;
+                        top: 0px;
+                        left: 0px;
+                        width: 350px;
+                        height: 436px;
+                        overflow: hidden;
+                    "
+                >
+                    <?php foreach( $proyectos as $item ) { ?>
+                        <div>
+                            <img data-u="image" src="<?= isset($item['hash_portada']) && $item['hash_portada'] != '' ? $this->layout()->url_backend."/productos/imagen/".$item['hash_portada'] : $this->layout()->url_backend."/img/no-imagen.jpg"; ?>" />
+                            <div class="text-areacin2"><?= $item['nombre'] ?></div>
+                            <img data-u="thumb" src="img/031-s190x90.jpg" />
+                        </div>
+                    <?php } ?>
+                </div>
+                <a data-scale="0" href="https://www.jssor.com" style="display: none; position: absolute"></a>
+                <!-- Thumbnail Navigator -->
+                <div
+                    data-u="thumbnavigator"
+                    class="jssort101"
+                    style="position: absolute; left: 0px; bottom: 0px; width: 0px; height: 0px; background-color: #fff"
+                    data-autocenter="1"
+                    data-scale-bottom="0.75"
+                >
+                    <div data-u="slides">
+                        <div data-u="prototype" class="p" style="width: 190px; height: 90px">
+                            <div data-u="thumbnailtemplate" class="t"></div>
+                            <svg viewbox="0 0 16000 16000" class="cv">
+                                <circle class="a" cx="8000" cy="8000" r="3238.1"></circle>
+                                <line class="a" x1="6190.5" y1="8000" x2="9809.5" y2="8000"></line>
+                                <line class="a" x1="8000" y1="9809.5" x2="8000" y2="6190.5"></line>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <!-- Arrow Navigator -->
+                <div
+                    data-u="arrowleft"
+                    class="jssora106"
+                    style="width: 30px; height: 40px; top: 190px; left: 4px; border-radius: 12vh"
+                    data-scale="0.75"
+                >
+                    <img data-u="image" src="imagenes/flecha-slider-der-01.svg" />
+                </div>
+                <div
+                    data-u="arrowright"
+                    class="jssora106"
+                    style="width: 30px; height: 40px; top: 190px; right: 4px; border-radius: 12vh"
+                    data-scale="0.75"
+                >
+                    <img data-u="image" src="imagenes/flecha-slider-izq-02.svg" />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="panel-all">
+    <button class="accordion-3">
+        PROYECTOS <span><img src="imagenes/arrow-select.svg" /></span>
+    </button>
+    <div
+        class="panel-inmos"
+        style="border-radius: 3.5vh;-webkit-box-shadow: 1px 1px 9px 2px rgba(0, 0, 0, 0.1);-moz-box-shadow: 1px 1px 7px 2px rgba(0, 0, 0, 0.1);box-shadow: 1px 1px 7px 2px rgba(0, 0, 0, 0.1);"
+    >
+        <?= $this->partial('partial/principal/proyectos/proyectos-destacados-slider', [
+            'proyectos'=> $proyectos,
+            'titulo'=> ''
+        ]); ?>
+    </div>
+    <button class="accordion-3">
+        BÚSQUEDA DE PROYECTOS EN MAPA <span><img src="imagenes/arrow-select.svg" /></span>
+    </button>
+    <div
+        class="panel-inmos"
+        style="padding: 3%;border-radius: 3.5vh;-webkit-box-shadow: 1px 1px 9px 2px rgba(0, 0, 0, 0.1);-moz-box-shadow: 1px 1px 7px 2px rgba(0, 0, 0, 0.1);box-shadow: 1px 1px 7px 2px rgba(0, 0, 0, 0.1);">
+        <?php echo $this->partial('partial/panel/filtros/map-inmobiliaria-detalle', [
+            'tipoHabitaciones'=> $this->tipoHabitaciones,
+            'distritos'=> $this->distritos,
+            'numeroHabitaciones'=> $this->numeroHabitaciones,
+            'rangoPrecios'=> $this->rangoPrecios,
+            'etapas'=> $this->etapas,
+            'proyectos'=> json_encode($this->proyectos)
+        ]); ?>
+    </div>
+</div>
+
+<script type="text/javascript">
+    <?php $this->inlineScript()->captureStart(); ?>
+    $(document).ready(function () {
+        jssor_1_slider_init();
+        
+        var acc = document.getElementsByClassName("accordion-3");
+
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = "none";
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+    });
+    <?php $this->inlineScript()->captureEnd(); ?>
+</script>

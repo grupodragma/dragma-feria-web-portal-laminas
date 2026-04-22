@@ -337,6 +337,20 @@ return [
                     ],
                 ],
             ],
+            'panel-inmobiliaria-detalle' => [
+                'type'    => Segment::class,
+                'options' => [
+                    'route'    => '/[:lang]/panel/inmobiliaria[/:idempresa]',
+                    'constraints' => [
+                        'lang' => $extensionIdiomas,
+                        'idempresa'   => '[0-9]+'
+                    ],
+                    'defaults' => [
+                        'controller' => Controller\PanelController::class,
+                        'action'     => 'inmobiliaria-detalle'
+                    ],
+                ],
+            ],
         ],
     ],
     'view_manager' => [
