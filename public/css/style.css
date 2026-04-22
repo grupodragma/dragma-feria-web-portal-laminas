@@ -7,8 +7,8 @@
         overflow-x: hidden;
         overflow-y: hidden;
         height: 100%;
-        background-color: #ffffff;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Cpath d='M0 38.59l2.83-2.83 1.41 1.41L1.41 40H0v-1.41zM0 1.4l2.83 2.83 1.41-1.41L1.41 0H0v1.41zM38.59 40l-2.83-2.83 1.41-1.41L40 38.59V40h-1.41zM40 1.41l-2.83 2.83-1.41-1.41L38.59 0H40v1.41zM20 18.6l2.83-2.83 1.41 1.41L21.41 20l2.83 2.83-1.41 1.41L20 21.41l-2.83 2.83-1.41-1.41L18.59 20l-2.83-2.83 1.41-1.41L20 18.59z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+       
+         background-image: url("../imagenes/email-pattern.png");
     }
 	
 	
@@ -298,7 +298,7 @@ background: linear-gradient(360deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 
 .banner .box-bottom2 .box-test .box-first h1{
 	
 	width: 90%;
-	font-size: 1.3vh;
+	font-size: 2.1vh;
 	font-weight: 600;
 	padding: 0;
 	margin: 0;
@@ -1049,7 +1049,7 @@ video::-webkit-media-controls-fullscreen-button, video::-webkit-media-controls-p
 }
 
 body{
-  background:#dedede
+  
 }
 	
 	
@@ -1575,11 +1575,18 @@ body{
         flex-direction: row;
     }
     .box-blog .box-blog-center .content-temas .tema-blog {
-        width: 100%;
+        width: 97%;
+		margin-right: 3%;
         height: auto;
+		background-color: #fff;
+		border-radius: 3vh;
         display: flex;
+		
         flex-direction: row;
         margin-bottom: 2%;
+		
+		-webkit-box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.25);
+        box-shadow: 0px 3px 3px 3px rgba(0, 0, 0, 0.25);
     }
     .box-blog .box-blog-center .content-temas .tema-blog .foto-blog {
         width: 30%;
@@ -1855,13 +1862,14 @@ body{
     }
     .banner-blog-filtro .banner-blog-filtro-center {
         width: 100%;
-        padding: 2%;
+        padding: 2.5%;
         padding-left: 4%;
         padding-right: 4%;
         background: url(../imagenes/blog-01.jpg) no-repeat;
         background-size: cover;
         background-position: center;
         display: flex;
+		border-radius: 3vh;
         align-items: center;
         height: 14vw;
         flex-direction: row;
@@ -1935,12 +1943,14 @@ body{
     }
     #newpost {
         position: absolute;
-        width: 18%;
+        width: 35%;
         display: none;
         height: auto;
-        padding: 0.8%;
-        margin-top: 3%;
+        padding: 1.5%;
+		border-radius: 1.6vh;
+        margin-top: 2%;
         background: #fff;
+		border: 8vh;
         border: 2px solid #fcfcfc;
         margin-left: -1%;
         -webkit-box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
@@ -1953,12 +1963,14 @@ body{
         display: grid;
     }
     #newpost .follow a {
-        font-size: 0.8vw;
+        font-size: 1.9vh;
+		border-radius: 3vh;
         color: #fff;
-        padding: 3%;
+        padding: 6.5%;
     }
     .family-foto {
         width: 100%;
+		
         display: flex;
         padding: 4%;
         padding-top: 1%;
@@ -1967,7 +1979,13 @@ body{
     }
     .family-foto .center-family {
         width: 100%;
-        border: 1px solid #999;
+		border-radius: 3vh;
+		overflow: hidden;
+       -webkit-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+-moz-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+		background: #fafafa;
+background: linear-gradient(180deg,rgba(250, 250, 250, 1) 0%, rgba(255, 255, 255, 1) 54%, rgba(242, 242, 242, 1) 100%);
         display: flex;
         align-items: center;
         height: auto;
@@ -2042,6 +2060,8 @@ body{
         display: flex;
         flex-direction: row;
         align-items: center;
+		
+		
     }
     .panel-zones .comunicate-map .liric {
         width: 60%;
@@ -2072,7 +2092,11 @@ body{
         padding-bottom: 1%;
         display: flex;
         flex-direction: column;
-        border: 1px solid #004C8D;
+		box-shadow: 0px 3px 14px 4px rgba(0, 0, 0, 0.25);
+        
+		border-radius: 3vh;
+		  background: rgb(191, 229, 64);
+        background: linear-gradient(180deg, rgba(191, 229, 64, 1) 0%, rgba(129, 196, 29, 1) 46%, rgba(86, 94, 169, 1) 100%);
         align-items: center;
     }
     .panel-zones .comunicate-map .cuadro-bank-asesor .botons-agente-cotiza {
@@ -2137,12 +2161,13 @@ body{
         text-align: center;
         height: auto;
         font-size: 1.5vw;
-        color: #004C8D;
+		font-weight: 600;
+        color: #fff;
         margin-top: 1%;
         margin-bottom: 1%;
     }
     .panel-zones .comunicate-map .cuadro-bank-asesor .horario-agente-banks small {
-        color: #004C8D;
+        color: #fff;
         width: 100%;
         height: auto;
         font-size: 1.3vw;
@@ -2162,6 +2187,7 @@ body{
         display: flex;
         width: 100%;
         height: auto;
+	
         flex-direction: column;
         margin-top: 2%;
         margin-bottom: 2%;
@@ -2189,10 +2215,13 @@ body{
     }
     .text-areacin2 {
         position: absolute;
-        bottom: 0%;
-        width: 100%;
+		
+        bottom: 4%;
+		border-radius: 0vh 3vh 3vh 0vh;
+        width: auto;
         height: auto;
         padding: 2%;
+		margin: 0 auto !important;
         color: #fff;
         font-size: 10px;
         font-weight: 500;
@@ -2200,7 +2229,7 @@ body{
         text-align: center;
     }
     .info-inmos {
-        width: 90.5%;
+        width: 92.5%; 
         display: flex;
         padding: 4%;
         align-items: center;
@@ -2209,7 +2238,11 @@ body{
     }
     .info-inmos .center-info-inmos {
         width: 100%;
-        border: 1px solid #999;
+       -webkit-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+-moz-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+		background-color: #fff;
+		border-radius: 3vh;
         display: flex;
         padding: 2%;
         padding-right: 0px;
@@ -2217,16 +2250,24 @@ body{
     }
     .info-inmos .center-info-inmos .text-log {
         width: 55%;
+		
         display: flex;
         flex-direction: column;
-        padding: 2%;
+        padding: 0%;
+		align-items: center;
+		justify-content: center;
         padding-right: 0px;
     }
     .info-inmos .center-info-inmos .text-log .bank-inmo {
-        width: 100%;
+        width: 50%;
+		border-radius: 3vh;
+		align-items: center;
+		justify-content: center;
         display: flex;
         flex-direction: row;
         padding: 1%;
+		background-color: #565EA9;
+		
     }
     .info-inmos .center-info-inmos .text-log .bank-inmo h2 {
         width: 50%;
@@ -2242,7 +2283,9 @@ body{
     .info-inmos .center-info-inmos .text-log .bank-inmo img {
         width: 25%;
         display: flex;
+		background-color: #fff;
         flex-direction: row;
+		padding: 4%;
         color: #fff;
     }
     .info-inmos .center-info-inmos .text-log p {
@@ -2273,12 +2316,50 @@ body{
     .info-inmos .center-info-inmos .foto-log {
         width: 40%;
         display: flex;
+		
+		overflow: hidden;
+		border-radius: 20px;
     }
+
+
+.info-inmos .center-info-inmos .foto-log #jssor_1 {
+        width: 1800px !important;
+	
+        display: flex;
+		
+		overflow: hidden;
+		border-radius: 20px;
+    }
+
+  #jssor_1 {
+	  
+	  width: 3500px !important ;
+	  
+	 
+      
+	  
+	  
+	
+	
+	
+      
+		border-radius: 20px;
+    }
+#jssor_1 img{
+      
+	
+	
+	
+       
+		
+    }
+
     .accordion-4 {
         background-color: #565EA9;
         color: #fff;
         cursor: pointer;
-        padding: 1%;
+		border-radius: 3vh;
+        padding: 2%;
         width: 100%;
         border: none;
         text-align: left;
@@ -2293,8 +2374,8 @@ body{
     .accordion-4 span {
         position: absolute;
         width: 2%;
-        right: 1%;
-        top: 14%;
+        right: 2%;
+        top: 2.8vh;
         display: flex;
         align-items: center;
     }
@@ -2304,10 +2385,17 @@ body{
     .panel-zones {
         display: flex;
         flex-direction: column;
-        background-color: white;
+        background-color: white; 
+		border-radius: 3vh;
         align-items: center;
+		padding: 3%;
+		margin-top: 1%;
+		margin-bottom: 2%;
         overflow: hidden;
         width: 100%;
+		   -webkit-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+-moz-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
     }
     .panel-zones .cajas-calc {
         display: flex;
@@ -2368,14 +2456,17 @@ body{
     .accordion-3 {
         background-color: #565EA9;
         color: #fff;
+		padding: 22%;
+		border-radius: 2.7vh;
         cursor: pointer;
-        padding: 1%;
-        width: 90%;
+        padding: 2%;
+        width: 100%;
         border: none;
         text-align: left;
+		display: flex;
         position: relative;
         outline: none;
-        font-size: 0.9vw;
+        font-size: 1vw;
         font-weight: 700;
         transition: 0.4s;
         margin-bottom: 1%;
@@ -2384,8 +2475,8 @@ body{
     .accordion-3 span {
         position: absolute;
         width: 2%;
-        right: 1%;
-        top: 14%;
+        right: 2%;
+        top: 30%;
         display: flex;
         align-items: center;
     }
@@ -2395,9 +2486,10 @@ body{
     .panel-inmos {
         display: flex;
         flex-direction: column;
-        background-color: white;
+        background-color: #fff;
         overflow: hidden;
-        width: 90%;
+        width: 100%;
+		
     }
     .panel-inmos .mapa-searcher-filtro {
         display: flex;
@@ -2434,10 +2526,11 @@ body{
         background-color: #565EA9;
         color: #fff;
         cursor: pointer;
-        padding: 1%;
+        padding: 2%;
         width: 100%;
         border: none;
         text-align: left;
+		border-radius: 3vh 3vh 0vh 0vh;
         outline: none;
         font-size: 0.9vw;
         font-weight: 700;
@@ -2458,7 +2551,9 @@ body{
         display: flex;
         background-color: white;
         overflow: hidden;
+		border-radius: 0vh 0vh 3vh 3vh;
         font-size: 0.8vw;
+		margin-bottom: 1.4%;
         color: #777;
         width: 100%;
         border: 1px solid #999;
@@ -2476,6 +2571,7 @@ body{
         width: 100%;
         padding: 2%;
         padding-left: 4%;
+		border-radius: 3vh;
         padding-right: 4%;
         background: url(../imagenes/banner-filtrar.jpg) no-repeat fixed center;
         background-size: cover;
@@ -2563,10 +2659,13 @@ body{
     .grid-inmos-resume .grid-resume-center .caja-inmos {
         display: flex;
         width: 100%;
+		border-radius: 3vh;
         height: auto;
         flex-direction: column;
         border: 2px solid #dfdfdf;
-		
+		  -webkit-box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.45);
+        -moz-box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.45);
+        box-shadow: 0px 0px 12px -5px rgba(0, 0, 0, 0.45);
         background-color: #fff;
         padding: 4%;
     }
@@ -2606,12 +2705,12 @@ body{
     }
     .grid-inmos-resume .grid-resume-center .caja-inmos .button-enviar-inmos a {
         display: flex;
-        width: 50%;
-        color: #172851;
+        width: 50%; 
+        color: #fff;
         font-size: 0.9vw;
-        text-align: center;
+        text-align: center; background-color: #6768AF;
         border-radius: 12px;
-        border: 2px solid #4D575E;
+       
         text-decoration: none;
         padding: 3.5%;
         font-weight: 500;
@@ -2754,15 +2853,17 @@ body{
         align-items: center;
         justify-content: center;
         flex-direction: column;
+		margin-bottom: 3%;
     }
     .grid-banks .center-grid-banks {
         display: grid;
         width: 90%;
         height: auto;
         grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-        gap: 2% 2%;
+        gap: 5% 3%;
         padding: 2%;
-        padding-top: 0;
+		
+       
     }
     .grid-banks .center-grid-banks .caja-banks {
         display: flex;
@@ -2770,25 +2871,55 @@ body{
         height: auto;
         flex-direction: column;
         align-items: center;
-        border: 2px solid #DFDFDF;
-        padding: 5%;
+        
+        padding: 6%;
+		margin-bottom: 7%;
+		
+		position: relative;
+		
+		
+		box-shadow: 0px 3px 14px 4px rgba(0, 0, 0, 0.25);
+       
+        background: rgb(191, 229, 64);
+        background: linear-gradient(180deg, rgba(191, 229, 64, 1) 0%, rgba(129, 196, 29, 1) 46%, rgba(86, 94, 169, 1) 100%);
+		
+		
+		
+		
+		border-radius: 3.5vh;
     }
     .grid-banks .center-grid-banks .caja-banks .logo-bank-agent {
         display: flex;
-        width: 80%;
-        height: auto;
+		position: absolute;
+        width: 14vh;
+		height: 14vh;
+		background-color: #fff;
+		top: -13%;
+		border-radius: 50%;
+		align-items: center;
+		justify-content: center;
+       
+		box-shadow: 0px 3px 14px 4px rgba(0, 0, 0, 0.25);
+       
         flex-direction: row;
         margin-top: 2%;
         margin-bottom: 2%;
+    }
+.grid-banks .center-grid-banks .caja-banks .logo-bank-agent img {
+       
+        width: 90% !important;
+		
     }
     .grid-banks .center-grid-banks .caja-banks .cuadro-bank-asesor {
         display: flex;
         width: 80%;
         height: auto;
         flex-direction: column;
-        border: 2px solid #565EA9;
-        margin-top: 2%;
+       
+        margin-top: 12%;
+		background-color: #fff;
         padding: 2%;
+		border-radius: 3vh;
         margin-bottom: 2%;
         justify-content: center;
         align-items: center;
@@ -3076,6 +3207,7 @@ body{
     }
     .box-card {
         width: 100%;
+		
         display: flex;
         padding: 4%;
         padding-top: 2%;
@@ -3091,13 +3223,19 @@ body{
     }
     .box-card .box-card-center .space-card {
         width: 15%;
+		
         height: auto;
         display: flex;
         flex-direction: row;
     }
     .box-card .box-card-center .box-left {
         width: 45%;
+		background-color: #fff;
+		border-radius: 3vh;
+			box-shadow: 0px 3px 14px 4px rgba(0, 0, 0, 0.25);
         padding: 2%;
+		background: #fafafa;
+background: linear-gradient(180deg,rgba(250, 250, 250, 1) 0%, rgba(255, 255, 255, 1) 54%, rgba(242, 242, 242, 1) 100%);
         height: auto;
         display: flex;
         align-items: center;
@@ -3106,9 +3244,12 @@ body{
     .box-card .box-card-center .box-right {
         width: 36%;
         height: auto;
-        display: flex;
+        display: flex; 
         flex-direction: column;
         background-color: #fcfcfc;
+		
+		border-radius: 3vh;
+			box-shadow: 0px 3px 14px 4px rgba(0, 0, 0, 0.25);
     }
     .box-card .box-card-center .box-right .loge {
         width: 100%;
@@ -3144,11 +3285,11 @@ body{
     }
     .box-card .box-card-center .box-right .texti {
         width: 100%;
-        padding: 4%;
+        padding: 5%;
         height: auto;
         display: flex;
-        border: 1px solid #888;
-        border-radius: 0px 0px 12px 12px;
+        
+       
         flex-direction: column;
     }
     .box-card .box-card-center .box-right .texti h2 {
@@ -3157,9 +3298,9 @@ body{
         margin-bottom: 1%;
         height: auto;
         display: flex;
-        color: #4D575E;
+        color: #565EA9;
         font-size: 1.5vw;
-        font-weight: 500;
+        font-weight: 600;
         flex-direction: column;
     }
     .box-card .box-card-center .box-right .texti h3 {
@@ -3169,8 +3310,8 @@ body{
         height: auto;
         display: flex;
         color: #4D575E;
-        font-size: 1.2vw;
-        font-weight: 400;
+        font-size: 1.1vw;
+        font-weight: 600;
         flex-direction: column;
     }
     .box-card .box-card-center .box-right .texti ul {
@@ -3190,7 +3331,7 @@ body{
         font-size: 0.9vw;
         font-weight: 400;
         flex-direction: column;
-    }
+    } 
     .form-cotiza {
         width: 90%;
         display: flex;
@@ -3198,15 +3339,19 @@ body{
         margin-top: 5%;
         padding: 2%;
         padding-top: 2%;
+		border-radius: 3vh;
         padding-bottom: 4%;
         flex-direction: column;
+		box-shadow: 0px 3px 14px 4px rgba(0, 0, 0, 0.25);
         background: #dfdfdf;
     }
     .form-cotiza .caja-cotiza {
         width: 80%;
+		border-radius: 3vh;
         display: flex;
         align-items: center;
         margin-top: 0%;
+		
         margin-bottom: 0%;
         justify-content: center;
         padding: 2%;
@@ -3349,11 +3494,15 @@ body{
         justify-content: center;
     }
     .box-presupuesto .box-presupuesto-center .formas-presupuesto .form-1 .titulos .balla {
-        width: 14%;
-        height: auto;
+         width: 11vh;
+        height: 11vh;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
         padding: 2%;
-        border-radius: 60px;
-        background-color: #004C8D;
+        border-radius: 50%;
+       background: #565EA9;
     }
     .box-presupuesto .box-presupuesto-center .formas-presupuesto .form-1 .titulos .balla span {
         width: 100%;
@@ -3385,12 +3534,13 @@ body{
         width: 100%;
         text-align: center;
         font-size: 1.2vw;
-        color: #4D575E;
+		margin-left: -1.5%;
+        color: #ffff;
         font-weight: 500;
         text-align: center;
-        background: #dfdfdf;
+        background: #565EA9;
         border-radius: 0px 10px 10px 0px;
-        padding: 1%;
+        padding: 2.7%;
         height: auto;
         display: flex;
         align-items: center;
@@ -3402,7 +3552,7 @@ body{
         border-left: 1px solid #888;
         height: auto;
         padding: 2%;
-        display: flex;
+        display: flex; 
         align-items: center;
         flex-direction: column;
         height: auto;
@@ -3417,11 +3567,15 @@ body{
         justify-content: center;
     }
     .box-presupuesto .box-presupuesto-center .formas-presupuesto .solicita .titulos .balla {
-        width: 14%;
-        height: auto;
+        width: 11vh;
+        height: 11vh;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		justify-content: center;
         padding: 2%;
-        border-radius: 60px;
-        background-color: #004C8D;
+        border-radius: 50%;
+       background: #565EA9;
     }
     .box-presupuesto .box-presupuesto-center .formas-presupuesto .solicita .titulos .balla span {
         width: 100%;
@@ -3453,12 +3607,13 @@ body{
         width: 100%;
         text-align: center;
         font-size: 1.2vw;
-        color: #4D575E;
+		margin-left: -1.5%;
+        color: #ffff;
         font-weight: 500;
         text-align: center;
-        background: #dfdfdf;
+        background: #565EA9;
         border-radius: 0px 10px 10px 0px;
-        padding: 1%;
+        padding: 2.7%;
         height: auto;
         display: flex;
         align-items: center;
@@ -3480,15 +3635,19 @@ body{
         height: auto;
     }
     .box-presupuesto .box-presupuesto-center .formas-presupuesto .solicita .box-agente-cotizar {
-        width: 70%;
+        width: 70%;  
         height: auto;
         padding: 2%;
         display: flex;
         margin-top: 3%;
         align-items: center;
         flex-direction: column;
-        border: 1px solid #888;
+		border-radius: 3vh;
+        box-shadow: 0px 3px 14px 4px rgba(0, 0, 0, 0.25);
         padding-top: 3%;
+		 background: rgb(191, 229, 64);
+        background: linear-gradient(180deg, rgba(191, 229, 64, 1) 0%, rgba(129, 196, 29, 1) 46%, rgba(86, 94, 169, 1) 100%);
+		
         padding-bottom: 4%;
     }
     .box-presupuesto .box-presupuesto-center .formas-presupuesto .solicita .box-agente-cotizar .horario-agente {
@@ -3506,7 +3665,7 @@ body{
         text-align: center;
         font-size: 1.3vw;
         font-weight: 600;
-        color: #004C8D;
+        color: #fff;
         margin-top: 1%;
         margin-bottom: 1%;
         align-items: center;
@@ -3519,7 +3678,7 @@ body{
         text-align: center;
         font-size: 1vw;
         font-weight: 600;
-        color: #004C8D;
+        color: #fff;
         margin-top: 1%;
         margin-bottom: 1%;
         align-items: center;
@@ -3547,7 +3706,7 @@ body{
         margin-bottom: 1%;
         font-size: 1.2vw;
         flex-direction: row;
-        color: #004C8D;
+        color: #fff;
         font-weight: 600;
         height: auto;
         padding: 2%;
@@ -3590,6 +3749,7 @@ body{
     .banner-banco-filtro .banner-banco-filtro-center {
         width: 100%;
         padding: 5%;
+		border-radius: 4vh;
         background: url(../imagenes/back-azul-bancos.jpg) no-repeat fixed center;
         background-size: cover;
         background-position: center;
@@ -3626,8 +3786,15 @@ body{
         width: 100%;
     }
     .panel-all {
-        width: 100%; 
+        width: 85%; 
+		margin-left: 4%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
 		
+		margin-bottom: 3%;
+		 
         padding: 0%;
         padding-top: 0%;
     }
@@ -3635,12 +3802,13 @@ body{
         background-color: #565EA9;
         color: #fff;
         cursor: pointer;
-        padding: 1%;
+		border-radius: 3vh;
+        padding: 1.8%;
         width: 90%;
         border: none;
         text-align: left;
         outline: none;
-        font-size: 0.9vw;
+        font-size: 1vw;
         font-weight: 700;
         transition: 0.4s;
         margin-bottom: 1%;
@@ -3660,6 +3828,8 @@ body{
     }
     .accordion span img {
         width: 100%;
+		margin-right:1%;
+	
     }
     .panel {
         padding: 2%;
@@ -3668,6 +3838,13 @@ body{
         padding-bottom: 0px;
         overflow: hidden;
         width: 90%;
+		border-radius: 0vh 0vh 5vh 5vh;
+		padding-bottom: 6vh;
+			 -webkit-box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 3px -5px rgba(0, 0, 0, 0.75);
+			
+			
     }
     .panel #grid {
         display: grid;
@@ -3736,6 +3913,8 @@ body{
     .tab {
         overflow: hidden;
         background-color: #fff;
+		border-radius: 4vh 4vh 0vh 0vh;
+		padding: 3vh;
     }
     /* Style the buttons inside the tab */
     
@@ -3748,8 +3927,8 @@ body{
         width: 30%;
         padding-top: 0.5%;
         padding-bottom: 0.5%;
-        padding: 1%;
-        border-radius: 10px 10px 0px 0px;
+        padding: 1.5%;
+        border-radius: 10px 10px 10px 10px;
         transition: 0.3s;
         font-size: 1.1vw;
         font-weight: 600;
@@ -3772,7 +3951,7 @@ body{
     .tabcontent {
         display: none;
         width: 100%;
-        height: auto;
+        height: auto; 
         border-top: none;
     }
     .tabcontent iframe {
@@ -3782,6 +3961,7 @@ body{
     .tabs-all-panel { 
         width: 100%;
         padding: 4%;
+		border-radius: 4vh;
         padding-top: 0%;
         height: auto;
     } 
@@ -3846,6 +4026,7 @@ body{
         display: flex;
         border: 1px solid #999;
         flex-direction: row;
+		border-radius: 3vh;
         width: 100%;
     }
     .grid-planos-infox .all .image-plano-infox {
@@ -3919,10 +4100,15 @@ body{
         width: 100%;
     }
     .grid-planos-infox .all .texto-plano-infox .desc-planos h2 {
-        display: flex;
+        display: flex; 
+		background-color: #565EA9;
         flex-direction: column;
         margin-bottom: 2%;
-        color: #172851;
+		color: #fff;
+		border-radius: 1.5vh;
+		padding: 2.7%;
+		width: auto;
+        
         font-size: 1.5vw;
     }
     .grid-planos-infox .all .texto-plano-infox .desc-planos h3 {
@@ -3995,14 +4181,15 @@ body{
 		
     } 
     .infox-proyecto .center-infox {
-        width: 96%;
+        width: 94%;
 		
         display: flex;
         flex-direction: row;
     }
 
 .infox-proyecto .center-infox .todo-left-infox {
-        width: 65%;
+        width: 66%;
+	
 		align-items: center;
 	justify-content: center;
         display: flex;
@@ -4014,7 +4201,9 @@ body{
 .infox-proyecto .center-infox .todo-right-infox{
         width: 30%;
 	
-	padding: 1%;
+	
+	
+	padding: 0%;
 	margin-left: 2%;
 		align-items: center;
 	
@@ -4028,14 +4217,23 @@ body{
         width: 100%;
 	background-color: #fff;
 	padding: 6%;
-	border-radius: 0.8vh;
+	border-radius: 2.5vh;
 	
-	
+	border: 1px solid #ccc;
 		
 	
         display: flex;
 	justify-content: center;
         flex-direction: column;
+	
+	
+	-webkit-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+-moz-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+	
+	
+	
+	
     }
 
 
@@ -4045,6 +4243,7 @@ body{
 	font-weight: 300;margin-top: 2%;
 	margin-bottom:3%;
 	color: #555;
+	text-align: center;
 	
 	
 	
@@ -4056,30 +4255,44 @@ body{
 
 .infox-proyecto .center-infox .todo-right-infox #contact-form-pro .campos-contacto-home{
         width: 100%;
-	border-radius: 0.5vh;
-	border: 1px solid #999;
-	height: 3.3vh;
-	margin-top: 1vh;
-	margin-bottom: 1vh;
-	padding: 1vh;
+	border-radius: 0;
+	border: 0px solid #ccc;
+	height: 4.8vh;
+	margin-top: 0vh;
+	margin-bottom: 2.5vh;
+	padding: 1.9vh; 
+	background-color: #fff;
+	color: #888 !important;
+	border-bottom: 2px solid #ccc;
 	
 	
+	 outline: none;
 		
 	
         display: flex;
         flex-direction: column;
+	
     }
+
+
+
 
 .infox-proyecto .center-infox .todo-right-infox #contact-form-pro .campos-contacto-come{
         width: 100%;
-	border-radius: 0.5vh;
-	border: 1px solid #999;
-	height: auto;
+	border-radius: 0.8vh;
+	border: 0px solid #ccc;
+	height: 9vh;
+	border-bottom: 2px solid #ccc;
+	
 	margin-top: 1vh;
+	background-color: #fff;
 	margin-bottom: 1vh;
 	padding: 1vh;
+	border-radius: 0px;
 	
-	
+	color: #888;
+	font-size: 1.8vh;
+	font-weight: 600;
 		
 	
         display: flex;
@@ -4088,31 +4301,36 @@ body{
 
 
 .infox-proyecto .center-infox .todo-right-infox #contact-form-pro .send-home-wsp{
-        width: 90%;
-	border-radius: 2.5vh;
+        width: 100%;
+	border-radius: 1.5vh;
 	border: 1px solid #999;
 	height: auto;
+	cursor: pointer;
 	margin-top: 1vh;
 	margin-bottom: 1vh;
-	padding: 1.4vh;
+	background-color: #81C41E;
+	padding: 2vh;
 	align-items: center;
+	color: #fff;
 	
 	
 		font-weight: 600;
+	font-size: 2vh;
         display: block;
 	margin: 0 auto;
         flex-direction: column;
     }
 
 .infox-proyecto .center-infox .todo-right-infox #contact-form-pro .send-home-wsp2{
-        width: 90%;
-	font-weight: 600;
-	border-radius: 2.5vh;
+        width: 100%;
+		font-weight: 600;
+	font-size: 2vh;
+	border-radius: 1.5vh;
 	border: 1px solid #999;
 	height: auto;
 	margin-top: 1vh;
-	margin-bottom: 1vh;
-	padding: 1.4vh;
+	margin-bottom: 1.5vh !important;
+	padding: 2vh;
 	margin: 0 auto;
 	align-items: center;
 		background-color: #565EA9;
@@ -4125,7 +4343,9 @@ body{
        
 	margin-top: 0vh;
 	margin-bottom: 0vh;
-	color: #555;
+	color: #888;
+	font-size: 1.8vh;
+	font-weight: 600;
 	
 	
 	
@@ -4154,10 +4374,13 @@ body{
 
 
 .infox-proyecto .center-infox .todo-right-infox #contact-form-pro h1{
-	font-size: 2.6vh;
-	font-weight: 600;
-	color: #777;
+	font-size: 3vh;
+	
+	font-weight: 500;
+	color: #565EA9;
+	margin-bottom: 4vh;
         width: 100%;
+	text-align: center;
 	
     }
 
@@ -4235,19 +4458,31 @@ body{
 		
     }
 	.infox-proyecto .center-infox .box-infox .container-gal .sala-boton {
-        width: auto%;
-		border-radius:1.5vh;
-		background-color:red;
+        width: 40vh;
+		border-radius:5vh;
+		height: auto;
+		background-color:#81C41E;
 		padding:2%;
-		font-size:1em;
+		justify-content: center;
+		text-align: center;
+		font-size: 2.5vh;
+		font-weight: 600;
+		
 		margin-top:2%;
 		color:#fff;
 		text-decoration:none;
-        height: auto;
+       
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
     }
+.infox-proyecto .center-infox .box-infox .container-gal .sala-boton img{
+        width: 15%;
+		
+        
+    }
+
+
 	
 	.infox-proyecto .center-infox .box-infox .container-gal {
         width: 100%;
@@ -4268,27 +4503,39 @@ body{
         height: auto;
         display: flex;
         flex-direction: row;
+		margin-top: 2vh;
+			border-radius: 3vh;
         align-items: center;
-        background-color: #fff;
+		background-color: #575DAA;
+		 -webkit-box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.3);
+            -moz-box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.1);
+      
     }
     .infox-proyecto .center-infox .box-infox .container-gal .botones-infox a {
-        width: 33.3%;
+        width: 32%;
+		margin-left: 1%;
+		margin-right: 1%;
         text-decoration: none;
         font-weight: 700;
         font-size: 1vw;
-        color: #4D575E;
+        color: #fff;
+		
+		 
         padding: 2%;
         height: auto;
-        border: 2px solid #4D575E;
+        border: 0px solid #4D575E;
         display: flex;
         flex-direction: row;
         align-items: center;
         justify-content: center;
         transition: all 0.2s ease-in-out;
         -moz-transition: all 0.2s ease-in-out;
+		
+		 
     }
     .infox-proyecto .center-infox .box-infox .container-gal .botones-infox a:hover {
-        border: 2px solid #fff;
+        border: 0 px solid #fff;
         color: #fff;
         background-color: #565EA9;
     }
@@ -4302,28 +4549,34 @@ body{
     }
     .infox-proyecto .center-infox .box-infox .text-infox {
         width: 100%;
-        padding: 2%;
-		margin-top: 3%;
+       
+		margin-top: 3%; 
 		
+		   -webkit-box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
+            -moz-box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
+            box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
         height: auto;
+		background-color: #fff;
         display: flex;
+		border-radius: 5vh;
         flex-direction: column;
         align-items: center;
-        padding-top: 0%;
+		padding: 3% !important;
+       
     }
     .infox-proyecto .center-infox .box-infox .text-infox p {
-        font-size: 0.8vw;
-		text-align: left;
+        font-size: 1.9vh;
+		text-align: center !important;
         color: #5E656D;
-        line-height: 1.1vw;
-        height: 45%;
-		font-weight:500;
+        line-height: 2.4vh;
+        height: 5vh;
+		font-weight:400;
         margin-top: 2%;
         overflow-y: scroll;
     }
     .infox-proyecto .center-infox .box-infox .text-infox {
         width: 100%;
-        padding: 2%;
+        padding: 0%;
         height: auto;
         display: flex;
         flex-direction: column;
@@ -4331,12 +4584,13 @@ body{
         padding-top: 0%;
     }
     .infox-proyecto .center-infox .box-infox .text-infox .carac-infox {
-        width: 100%;
+        width: 94%;
+		
         height: auto;
         display: grid;
         align-items: center;
         grid-template-columns: 40% 40%;
-        gap: 3% 3%;
+        gap: 1% 1%;
     }
     .infox-proyecto .center-infox .box-infox .text-infox .carac-infox li {
         margin-top: 1%;
@@ -4346,34 +4600,42 @@ body{
     }
     .infox-proyecto .center-infox .box-infox .text-infox .name-infox {
         width: 100%;
-        height: auto;
+		-webkit-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+-moz-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+        height: auto;  background-color: #565EA9;
+		border-radius: 2.5vh;
         display: flex;
+		padding: 3%;
         flex-direction: row;
         align-items: center;
     }
     .infox-proyecto .center-infox .box-infox .text-infox .name-infox .space-text {
-        width: 1%;
+        width: 0%;
     }
     .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox {
-        width: 45%; 
-	 	border:1px solid #111;
+        width: 65%; 
+	
+	 	
         display: flex;
-        flex-direction: row;
+        flex-direction: row; 
     }
     .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox #buttoni {
         border: 0px;
         cursor: pointer;
+		background-color: #575DAA !important;
     } 
     .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .colorize {
-        background: #EDEEEF;
-        width: 35%;
+      
+        width: 40%;
         font-size: 0.8vw;
         border: 0px;
         justify-content: center;
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: #565EA9;
+        color: #fff;
+		background-color: none;
     }
     .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .colorize img {
         width:40%;
@@ -4382,26 +4644,26 @@ body{
         margin-left: 0%;
         margin-right: 0%;
         text-decoration: none;
-        background: #EDEEEF;
+       
         padding: 2.5%;
 		width:64% !important;
 		
-        font-size: 0.8vw;
+        font-size: 1.5vw;
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: #565EA9;
+        color: #fff;
     }
 	.infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .precio big {
         
-        font-size: 1.6vh;
+        font-size: 3vh;
 		width:100%;
        
         
     }
 	.infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .precio small {
         
-        font-size: 1vh;
+        font-size: 2vh;
 		width:100%;
        
         
@@ -4414,7 +4676,8 @@ body{
         text-decoration: none;
         background: #565EA9;
         padding: 0% 0% 0% 0%;
-        font-size: 0.6vw;
+        font-size: 1.3vw;
+		font-weight: 500;
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -4424,9 +4687,10 @@ body{
         width: 10%;
     }
     .infox-proyecto .center-infox .box-infox .text-infox .name-infox .logo-text-infox {
-        width: 60%;
+        width: 55%;
         height: auto;
         display: flex;
+		
         flex-direction: column;
         
     }
@@ -4439,12 +4703,12 @@ body{
         align-items: center;
         margin-top: 0;
         padding: 0;
-        color: #172851;
+        color: #fff;
         margin-bottom: 1%;
     }
     .infox-proyecto .center-infox .box-infox .text-infox .name-infox .logo-text-infox span {
         width: auto;
-        color: #172851;
+        color: #fff;
         height: auto;
         margin-bottom: 2%;
         margin-top: 0;
@@ -4452,7 +4716,7 @@ body{
         display: flex;
         flex-direction: row;
         align-items: center;
-    }
+    } 
     .infox-proyecto .center-infox .box-infox .text-infox .name-infox .logo-text-infox span img {
         width: 5%;
         margin-right: 2%;
@@ -4760,8 +5024,10 @@ body{
     .grid-go .grid-center #grid .caja {
         transition: all 0.3s ease;
         border: 1px solid #A6A4A4;
-        height: 650px;
+        height: auto;
+		background-color: #fff;
         display: flex;
+		border-radius: 3vh;
         flex-direction: column;
         position: relative;
     }
@@ -5170,7 +5436,7 @@ body{
     }
     .grid-go .grid-center #grid .caja .desc {
         height: auto;
-        background-color: #fff;
+       
         padding: 6%;
         color: #555;
         display: flex;
@@ -5721,8 +5987,9 @@ body{
         background: rgb(191, 229, 64);
         background: linear-gradient(180deg, rgba(191, 229, 64, 1) 0%, rgba(129, 196, 29, 1) 46%, rgba(86, 94, 169, 1) 100%);
         display: flex;
+		border-radius: 3vh;
         flex-direction: column;
-        align-items: center;
+        align-items: center; 
         justify-content: center;
     }
     .lima-filtros .center .grid-filtros .caja-filtro:hover {
@@ -5731,8 +5998,8 @@ body{
     .lima-filtros .center .grid-filtros .caja-filtro a {
         background-color: #fff;
         border-radius: 50%;
-        width: 14vw;
-        height: 14vw;
+        width: 13.5vw;
+        height: 13.5vw;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -5762,19 +6029,23 @@ body{
     .maps-filtro {
         width: 100%;
         padding: 4%;
-        padding-bottom: 1%;
+        padding-bottom: 3.5%;
+		
         display: flex;
         height: auto;
         align-items: center;
     }
     .maps-filtro .center-mapa {
         width: 100%;
+		overflow: hidden;
+		
         display: flex;
+		border-radius: 3.5vh;
         align-items: center;
         justify-content: center;
     }
     .maps-filtro .center-mapa iframe {
-        width: 96%;
+        width: 100%;
         display: flex;
         height: 76vh;
     }
@@ -6334,8 +6605,7 @@ body{
     }
 .form-ingreso h2{
 	color: #888;
-	font-size: 2vh;
-	text-align: center;
+	font-size: 3vh;
         
     }
     .form-ingreso .caja-inputs .inputs-recepcion {
@@ -6534,6 +6804,7 @@ body{
     }
     .banner-ad-filtro .banner-ad-filtro-center {
         width: 100%;
+		border-radius: 3vh;
         padding: 2%;
         padding-left: 4%;
         padding-right: 4%;
@@ -6621,6 +6892,8 @@ body{
         transition: all 0.3s ease;
         border: 1px solid #999;
 		background: #fff;
+		border-radius: 3vh;
+		
         height: auto;
         display: flex;
         flex-direction: column;
@@ -6987,7 +7260,7 @@ body{
     }
     .contenedor-programas-asesor #grid .caja .desc {
         height: auto;
-        background-color: #fff;
+       
         padding: 6%;
         color: #555;
         display: flex;
@@ -7030,7 +7303,7 @@ body{
         color: #E52525;
         display: block;
         width: 60%;
-        align-items: center;
+        align-items: center; 
     }
     .contenedor-programas-asesor #grid .caja .desc .textos-3 {
         height: auto;
@@ -7688,12 +7961,12 @@ body{
     .text-areacin {
         position: absolute;
         top: 0%;
-        left: 0%;
-        width: 45%;
+        left: 27%;
+        width: 37%;
         height: auto;
-        padding: 1.5%;
-        color: #fff;
-        font-size: 17px;
+        padding: 1.7%;
+        color: #fff;border-radius: 0vh 0vh 3vh 3vh;
+        font-size: 38px;
         font-weight: 600;
         background: rgba(0, 0, 0, 0.5);
         text-align: center;
@@ -8768,6 +9041,7 @@ body{
        
     width: 90%;
 	border-radius:1.2vh;
+	
     display: flex;
     flex-direction: column;
 	
@@ -8916,6 +9190,7 @@ body{
         height: auto;
         background-color: #fff;
         display: flex;
+		border-radius: 3vh;
         flex-direction: column;
         position: relative;
         text-decoration: none !important;
@@ -8961,7 +9236,7 @@ body{
     }
     .slick-slide .caja .desc {
         height: auto;
-        background-color: #fff;
+        background-color: none;
         padding: 6%;
         color: #555;
         display: flex;
@@ -9391,8 +9666,8 @@ body{
         position: fixed;
         visibility: visible;
         height: auto;
-        background: #fff;
-        border-radius: 8px 0px 0px 8px;
+        background: #565EA9;
+        border-radius: 25px 0px 0px 25px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -9406,7 +9681,7 @@ body{
     }
     .info-modulo .center .contenido-hide h2 {
         display: flex;
-        color: #565FA9;
+        color: #ffff;
         font-size: 0.82vw;
         font-weight: 700;
         text-align: center;
@@ -9414,7 +9689,7 @@ body{
     .info-modulo .center .contenido-hide p {
         display: flex;
         text-align: center;
-        color: #555;
+        color: #fff;
         font-size: 0.7vw;
         font-weight: 600;
         text-align: center;
@@ -9422,7 +9697,7 @@ body{
     }
     .info-modulo .center .contenido-hide span {
         display: flex;
-        color: #555;
+        color: #fff;
         font-size: 0.6vw;
         margin-bottom: 6%;
         margin-top: 6%;
@@ -9483,7 +9758,7 @@ body{
     .info-modulo .center .contenido-hide .foto .two-botons .horario p {
         text-align: center;
         padding: 0%;
-        color: #555;
+        color: #fff;
         flex-direction: row;
         font-size: 0.8em;
     }
@@ -9492,11 +9767,11 @@ body{
         width: auto;
         flex-direction: row;
         align-items: center;
-        font-size: 1.8vh;
+        font-size: 1.9vh;
     }
     .info-modulo .center .contenido-hide .foto .two-botons .horario .hours small {
         display: flex;
-        color: #555;
+        color: #fff;
     }
     .info-modulo .center .contenido-hide .foto .two-botons .tit h3 {
         display: none;
@@ -10501,7 +10776,6 @@ body{
         height: 100vh;
         display: flex;
         flex-direction: column;
-		align-items: center;
     }
 		
 		
@@ -10514,7 +10788,7 @@ body{
         height: 24vw;
 			margin-top: 10%;
         transition: all 0.3s ease;
-        display: flex;
+        display: none;
         align-items: center;
         border-radius: 14px;
         padding: 3%;
@@ -15110,7 +15384,7 @@ if it's not present, don't show loader */
             align-items: center;
             width: 100%;
 			padding-bottom: 10%;
-            background-color:#fff;
+            background: url(../imagenes/feria-intro-register-responsive.jpg) fixed center;
         }
         .registro-home .slide.active {
             display: flex;
@@ -15120,10 +15394,10 @@ if it's not present, don't show loader */
             font-size: 1.4em
         }
         .white-form-enter h3 {
-            font-size: 1em;
+            font-size: 1.9em;
 			font-weight: 800;
 			display: flex;
-			  margin-bottom: 1%;
+			  margin-bottom: 0.8%;
         }
         .white-form-enter .image-lap-responsive {
             display: flex;
@@ -17920,10 +18194,11 @@ if it's not present, don't show loader */
         .white-form-enter .blanco {
             width: 100%;
 			align-items: center;
-			padding: 0%;
+			padding: 4%;
 			flex-direction: column;
 			background-color: #fff;
             height: auto;
+			border-radius: 3vh;
             display: flex;
         }
 		
@@ -19478,13 +19753,14 @@ if it's not present, don't show loader */
             font-size: 1em;
         }
         .text-areacin {
-            font-size: 1.4em;
-            text-align: center;
+            font-size: 3.5em;
+            text-align: center; 
+			left: 15%;
         }
         .info-proyectos {
             height: auto;
             padding: 1%;
-            width: 96%;
+            width: 96%; 
             display: flex;
             margin-bottom: 2%;
         }
@@ -19759,7 +20035,8 @@ if it's not present, don't show loader */
             animation: flotante 1.5s ease forwards;
         }
         .info-modulo .center {
-            width: 83%;
+            width: 92%;
+			
             top: 0%;
             z-index: 15;
             padding: 1%;
@@ -19822,7 +20099,7 @@ if it's not present, don't show loader */
         }
         .info-modulo .center .contenido-hide .foto .all-agente span {
             display: flex;
-            font-size: 0.7em;
+            font-size: 1.2em;
         }
         .info-modulo .center .contenido-hide .foto .two-botons {
             display: flex;
@@ -20658,15 +20935,19 @@ if it's not present, don't show loader */
             flex-direction: row;
         }
         header .center-header .logo {
-            width: 45%;
+            width: 62%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
             height: auto;
+			
         }
         header .center-header .logo img {
             width: 100%;
             height: auto;
         }
         header .center-header .space-res {
-            width: 5%;
+            width: 4%;
             height: auto;
             display: flex;
         }
@@ -20995,11 +21276,11 @@ if it's not present, don't show loader */
             padding-bottom: 0px;
             padding-top: 0px;
             align-items: center;
-            flex-direction: row;
+            flex-direction: column;
         }
         .button-filter .buttones-center .text-blog {
-            width: 17%;
-            display: flex;
+            width: 100%;
+            display: flex; 
             padding: 1%;
             padding-bottom: 0px;
             align-items: center;
@@ -21007,10 +21288,12 @@ if it's not present, don't show loader */
         .button-filter .buttones-center .text-blog h2 {
             color: #2A2967;
             font-weight: 500;
-            font-size: 0.8em;
+            font-size: 1.8em;
+			text-align: center;
         }
         .button-filter .buttones-center .filter-blog {
-            width: 81%;
+            width: 96%;
+			margin-bottom: 3%;
             margin-left: 2%;
             display: grid;
             align-items: center;
@@ -21019,11 +21302,11 @@ if it's not present, don't show loader */
         }
         .button-filter .buttones-center .filter-blog a {
             background: #81C41D;
-            padding: 3%;
+            padding: 5%;
             width: 100%;
             border-radius: 12px;
             margin-bottom: 2%;
-            font-size: 0.8em;
+            font-size: 0.9em;
             font-weight: 500;
             color: #fff;
             text-decoration: none;
@@ -21386,7 +21669,7 @@ if it's not present, don't show loader */
             width: 18%;
             display: none;
             height: auto;
-            padding: 0.8%;
+            padding: 0.8 
             margin-top: 3%;
             background: #fff;
             border: 2px solid #fcfcfc;
@@ -21592,15 +21875,25 @@ if it's not present, don't show loader */
             width: 100% !important;
             height: 600px !important;
         }
+		.panel-all-ask{
+            width: 96%;
+			display: block;
+			margin: 0 auto;
+			padding: 1%;
+			margin-bottom: 3%;
+           
+        }
+		
         .panel-all-ask .acordeon-ask {
-            width: 78%;
-            margin-right: 2%;
+            width: 100%;
+            margin-right: 0%;
             display: flex;
             flex-direction: column;
+			border-radius: 2vh;
         }
         .panel-all-ask .ad-ask {
             width: 20%;
-            display: flex;
+            display: none;
             flex-direction: column;
             padding-top: 0.6%;
         }
@@ -21613,35 +21906,35 @@ if it's not present, don't show loader */
             background-color: #565EA9;
             color: #fff;
             cursor: pointer;
-            padding: 1%;
+            padding: 4%;
             width: 100%;
             border: none;
             text-align: left;
             outline: none;
-            font-size: 0.74em;
+            font-size: 0.92em;
             font-weight: 700;
             transition: 0.4s;
             margin-top: 1%;
         }
         .accordion-2 span {
             position: absolute;
-            right: 25%;
-            width: 2.5%;
-            margin-top: 0.2%;
+            right: 7%;
+            width: 4.5%;
+            margin-top: 0.1%;
         }
         .accordion-2 span img {
             width: 100%;
         }
         .panel-ask {
-            padding: 2%;
+            padding: 3%;
             display: flex;
             background-color: white;
             overflow: hidden;
-            font-size: 0.8em;
+            font-size: 1em;
             color: #777;
             width: 100%;
             border: 1px solid #999;
-            line-height: 1em;
+            line-height: 1.2em;
         }
         .hide-counter {
             position: relative;
@@ -21664,18 +21957,20 @@ if it's not present, don't show loader */
         .box-blog .box-blog-center .content-temas {
             width: 100%;
             height: auto;
-            grid-template-columns: 100%;
-            gap: 1% 1%;
-            display: flex;
+            
+           
+            display: block;
+			margin-bottom: 0%;
             flex-direction: column;
         }
         .box-blog .box-blog-center .content-temas .tema-blog {
             width: 100%;
+			padding: 3%;
             height: auto;
-            display: flex;
+            display: block;
             flex-direction: column;
-            margin-bottom: 2%;
-            border-bottom: 2px solid #81C41D;
+            margin-bottom: 4%;
+           
         }
         .box-blog .box-blog-center .content-temas .tema-blog .foto-blog {
             width: 100%;
@@ -22031,8 +22326,8 @@ if it's not present, don't show loader */
         .grid-inmos-resume .grid-resume-center .caja-inmos p {
             width: 100%;
             text-align: center;
-            line-height: 1.2em;
-            font-size: 0.9em;
+            line-height: 1.3em;
+            font-size: 1.1em;
             font-weight: 300;
             height: auto;
             align-items: center;
@@ -22049,12 +22344,12 @@ if it's not present, don't show loader */
         }
         .grid-inmos-resume .grid-resume-center .caja-inmos .button-enviar-inmos a {
             display: flex;
-            width: 50%;
-            color: #172851;
-            font-size: 0.9em;
+            width: 60%;
+           
+            font-size: 1.2em;
             text-align: center;
             border-radius: 12px;
-            border: 2px solid #4D575E;
+           
             text-decoration: none;
             padding: 3.5%;
             font-weight: 500;
@@ -22176,14 +22471,16 @@ if it's not present, don't show loader */
             border: 2px solid #DFDFDF;
             margin-bottom: 4%;
             padding: 5%;
+			margin-top: 12%;
         }
 
         .grid-banks .center-grid-banks .caja-banks .logo-bank-agent {
             display: flex;
-            width: 80%;
-            height: auto;
+            width: 16vh;
+		
+            height: 16vh;
             flex-direction: row;
-            margin-top: 2%;
+            margin-top: 1%;
             margin-bottom: 2%;
         }
         .grid-banks .center-grid-banks .caja-banks .cuadro-bank-asesor {
@@ -22192,9 +22489,9 @@ if it's not present, don't show loader */
             height: auto;
             flex-direction: column;
             border: 2px solid #565EA9;
-            margin-top: 2%;
+            margin-top: 5%;
             padding: 2%;
-            margin-bottom: 2%;
+            margin-bottom: 6%;
             justify-content: center;
             align-items: center;
         }
@@ -22323,7 +22620,7 @@ if it's not present, don't show loader */
             z-index: 100000;
         }
         .los-titulos {} .los-titulos h1 {
-            font-size: 1.4em;
+            font-size: 2em;
         }
         .back-green {
             width: 100%;
@@ -22343,7 +22640,7 @@ if it's not present, don't show loader */
         }
         .grid-go {
             width: 100%;
-            padding: 4%;
+            padding: 4%; 
             padding-top: 0%;
             padding-bottom: 2%;
             display: flex;
@@ -22351,7 +22648,7 @@ if it's not present, don't show loader */
             justify-content: center;
         }
         .grid-go .grid-center {
-            width: 70%;
+            width: 81%;
             display: flex;
             flex-direction: row;
         }
@@ -22364,18 +22661,20 @@ if it's not present, don't show loader */
             display: none;
         }
         .grid-go .grid-center .banner-ad-go img {} .grid-go .grid-center #grid {
-            display: flex;
+            display: block;
             width: 100%;
+			
             height: auto;
             position: relative;
             flex-direction: column;
         }
         .grid-go .grid-center #grid .caja {
             transition: all 0.3s ease;
-            border: 1px solid #999;
-            margin-bottom: 10%;
-            height: auto;
-            display: flex;
+           
+			margin-bottom: 3px;
+            margin-bottom: 3%;
+            height: auto; 
+            display: block;
             flex-direction: column;
             position: relative;
         }
@@ -22383,7 +22682,7 @@ if it's not present, don't show loader */
             position: absolute;
             height: auto;
             top: 6%;
-            right: -28%;
+            right: -19%;
             width: 15vh;
             display: flex;
             z-index: 220;
@@ -22416,9 +22715,9 @@ if it's not present, don't show loader */
         }
         .grid-go .grid-center #grid .caja .desc {
             height: auto;
-            background-color: #fff;
+           
             padding: 6%;
-            color: #555;
+            color: #555; 
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -22574,7 +22873,7 @@ if it's not present, don't show loader */
         }
         .slick-slide .caja .desc {
             height: auto;
-            background-color: #fff;
+          
             padding: 6%;
             color: #555;
             display: flex;
@@ -22683,7 +22982,7 @@ if it's not present, don't show loader */
         .box-card {
             width: 100%;
             display: flex;
-            padding: 4%;
+            padding: 4%; 
             padding-top: 2%;
             padding-bottom: 3%;
             margin-bottom: 4%;
@@ -22692,7 +22991,7 @@ if it's not present, don't show loader */
             justify-content: center;
         }
         .box-card .box-card-center {
-            width: 80%;
+            width: 98%;
             height: auto;
             display: flex;
             flex-direction: column;
@@ -22708,6 +23007,7 @@ if it's not present, don't show loader */
             padding: 2%;
             padding-left: 0px;
             padding-right: 0px;
+			margin-bottom: 6%;
             height: auto;
             display: flex;
             align-items: center;
@@ -22718,7 +23018,7 @@ if it's not present, don't show loader */
             height: auto;
             display: flex;
             flex-direction: column;
-            background-color: #fcfcfc;
+           
         }
         .box-card .box-card-center .box-right .loge {
             width: 100%;
@@ -22847,7 +23147,7 @@ if it's not present, don't show loader */
             justify-content: center;
         }
         #regForm .tab .inputss span {
-            font-size: 0.8em;
+            font-size: 1em;
         }
         #regForm button {
             background-color: #81C41D;
@@ -22914,7 +23214,7 @@ if it's not present, don't show loader */
             display: flex;
             flex-direction: row;
             width: 100%;
-            height: 5vh;
+            height: 6vh; 
             align-items: center;
             border: 2px solid #4D575E;
             border-radius: 14px;
@@ -22929,7 +23229,7 @@ if it's not present, don't show loader */
             margin: 0;
             padding-right: 30px;
             width: 100%;
-            font-size: 0.8em;
+            font-size: 1.05em;
         }
         #input_tab:focus {
             outline: none;
@@ -22969,7 +23269,7 @@ if it's not present, don't show loader */
             margin-top: 2%;
         }
         .box-presupuesto .box-presupuesto-center {} .box-presupuesto .box-presupuesto-center .formas-presupuesto {
-            width: 96%;
+            width: 100%;
             height: auto;
             display: flex;
             flex-direction: column;
@@ -22986,7 +23286,7 @@ if it's not present, don't show loader */
         }
         .box-presupuesto .box-presupuesto-center .formas-presupuesto .form-1 {
             width: 100%;
-            height: auto;
+            height: auto; 
             padding: 2%;
             display: flex;
             align-items: center;
@@ -23003,8 +23303,8 @@ if it's not present, don't show loader */
             justify-content: center;
         }
         .box-presupuesto .box-presupuesto-center .formas-presupuesto .form-1 .titulos .balla {
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             padding: 3%;
             border-radius: 50px;
             background-color: #004C8D;
@@ -23016,7 +23316,7 @@ if it's not present, don't show loader */
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.82em;
+            font-size: 0.9em;
         }
         .box-presupuesto .box-presupuesto-center .formas-presupuesto .form-1 .titulos .balla strong {
             width: 100%;
@@ -23025,7 +23325,7 @@ if it's not present, don't show loader */
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 1.2em;
+            font-size: 1.6em;
         }
         .box-presupuesto .box-presupuesto-center .formas-presupuesto .form-1 .titulos .tit {
             width: 80%;
@@ -23036,11 +23336,11 @@ if it's not present, don't show loader */
             height: auto;
         }
         .box-presupuesto .box-presupuesto-center .formas-presupuesto .form-1 .titulos .tit h3 {
-            font-size: 1em;
-            color: #4D575E;
+            font-size: 1.2em;
+         
             font-weight: 500;
             text-align: center;
-            background: #dfdfdf;
+            
             padding: 3%;
         }
         .box-presupuesto .box-presupuesto-center .formas-presupuesto .solicita {
@@ -23063,8 +23363,8 @@ if it's not present, don't show loader */
             justify-content: center;
         }
         .box-presupuesto .box-presupuesto-center .formas-presupuesto .solicita .titulos .balla {
-            width: 60px;
-            height: 60px;
+            width: 80px;
+            height: 80px;
             padding: 3%;
             border-radius: 50px;
             background-color: #004C8D;
@@ -23076,7 +23376,7 @@ if it's not present, don't show loader */
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.82em;
+            font-size: 1.1em;
         }
         .box-presupuesto .box-presupuesto-center .formas-presupuesto .solicita .titulos .balla strong {
             width: 100%;
@@ -23096,23 +23396,23 @@ if it's not present, don't show loader */
             height: auto;
         }
         .box-presupuesto .box-presupuesto-center .formas-presupuesto .solicita .titulos .tit h3 {
-            font-size: 1em;
-            color: #4D575E;
+             font-size: 1.2em;
+            color: #fff;
             font-weight: 500;
             text-align: center;
-            background: #dfdfdf;
+           
             padding: 3%;
         }
         .box-presupuesto .box-presupuesto-center .formas-presupuesto .solicita h4 {
-            width: 85%;
+            width: 85%; 
             margin-bottom: 2%;
             margin-top: 6%;
-            font-size: 0.85em;
+            font-size: 1.2em;
             font-weight: 500;
             line-height: 1.2em;
         }
         .box-presupuesto .box-presupuesto-center .formas-presupuesto .solicita .box-agente-cotizar {
-            width: 70%;
+            width: 94%;
             height: auto;
             padding: 2%;
             display: flex;
@@ -23133,10 +23433,10 @@ if it's not present, don't show loader */
             flex-direction: column;
         }
         .box-presupuesto .box-presupuesto-center .formas-presupuesto .solicita .box-agente-cotizar .horario-agente big {
-            font-size: 1em;
+            font-size: 1.2em;
         }
         .box-presupuesto .box-presupuesto-center .formas-presupuesto .solicita .box-agente-cotizar .horario-agente small {
-            font-size: 0.9em;
+            font-size: 1.2em;
         }
         .box-presupuesto .box-presupuesto-center .formas-presupuesto .solicita .box-agente-cotizar .botons-agente-cotiza {
             width: 80%;
@@ -23192,25 +23492,32 @@ if it's not present, don't show loader */
             height: auto;
         }
         .form-cotiza {
-            width: 80%;
+            width: 94%;
             display: flex;
             align-items: center;
             margin-top: 5%;
-            padding: 2%;
+            padding: 3%;
             padding-top: 2%;
             padding-bottom: 4%;
             flex-direction: column;
             background: #dfdfdf;
+			margin-bottom: 2%;
+			
         }
         .form-cotiza .caja-cotiza {
-            width: 80%;
+            width: 100%; 
             display: flex;
             align-items: center;
-            margin-top: 0%;
-            margin-bottom: 0%;
+            margin-top: 1%;
+			margin-bottom: 1%;
+			
+           
             justify-content: center;
-            padding: 2%;
+            padding: 3%;
             flex-direction: column;
+			
+			
+			
             background: #dfdfdf;
         }
         .form-cotiza .caja-cotiza .result {
@@ -23223,9 +23530,9 @@ if it's not present, don't show loader */
             color: #888;
         }
         .form-cotiza .caja-cotiza .result small {
-            font-size: 1em;
+            font-size: 1.3em;
             align-items: center;
-            color: #888;
+            color: #888; 
         }
         .form-cotiza .caja-cotiza .forms-cotiza {
             width: 100%;
@@ -23238,17 +23545,17 @@ if it's not present, don't show loader */
             justify-content: center;
         }
         .send-cotiza-enviar {
-            width: 60%;
+            width: 80%;
             align-items: center;
             border: 0px;
-            font-size: 1em;
+            font-size: 1.2em;
             padding-left: 20%;
             padding-right: 20%;
             font-weight: 700;
-            padding: 4%;
+            padding: 6%;
         }
         .form-cotiza .caja-cotiza .forms-cotiza .escribe-2 {
-            width: 50%;
+            width: 65%;
             display: flex;
             align-items: center;
             flex-direction: row;
@@ -23270,9 +23577,10 @@ if it's not present, don't show loader */
         }
         .form-cotiza .caja-cotiza h3 {
             width: 100%;
-            font-weight: 300;
+            font-weight: 400;
             text-align: center;
-            font-size: 1em;
+			color: #004C8D;
+            font-size: 1.25em;
             align-items: center;
             margin-top: 0%;
             margin-bottom: 1%;
@@ -23350,7 +23658,7 @@ if it's not present, don't show loader */
             justify-content: center;
         }
         .info-inmos .center-info-inmos {
-            width: 92%;
+            width: 99%;
             border: 1px solid #dfdfdf;
             display: flex;
             padding: 2%;
@@ -23363,7 +23671,7 @@ if it's not present, don't show loader */
             padding: 2%;
         }
         .info-inmos .center-info-inmos .text-log .bank-inmo {
-            width: 100%;
+            width: 90%;
             display: flex;
             flex-direction: row;
             padding: 1%;
@@ -23380,7 +23688,7 @@ if it's not present, don't show loader */
             font-weight: 500;
         }
         .info-inmos .center-info-inmos .text-log .bank-inmo img {
-            width: 40%;
+            width: 30%;
             display: flex;
             flex-direction: row;
             color: #fff;
@@ -23388,7 +23696,7 @@ if it's not present, don't show loader */
         .info-inmos .center-info-inmos .text-log p {
             width: 100%;
             padding: 1%;
-            font-size: 0.9em;
+            font-size: 1.2em;
             color: #777;
             display: flex;
             line-height: 1.2em;
@@ -23414,10 +23722,24 @@ if it's not present, don't show loader */
         }
         .info-inmos .center-info-inmos .foto-log {
             width: 100%;
-            display: flex;
+            display: flex; 
         }
-        .panel-all {
+		
+		
+		.info-inmos .center-info-inmos .foto-log # {
             width: 100%;
+            display: flex; 
+        }
+		
+		
+		
+		
+        .panel-all {
+            width: 100%;  
+			
+			margin-left: 0px;
+		
+			
             padding: 0%;
             padding-top: 2%;
             position: relative;
@@ -23426,7 +23748,7 @@ if it's not present, don't show loader */
             background-color: #565EA9;
             color: #fff;
             cursor: pointer;
-            padding: 2%;
+            padding: 3.5%;
             padding-left: 8%;
             width: 100%;
             border: none;
@@ -23438,6 +23760,9 @@ if it's not present, don't show loader */
             margin-bottom: 1%;
             position: relative;
             margin-top: 1%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
         }
         .accordion-3 span {
             width: 5%;
@@ -23446,8 +23771,9 @@ if it's not present, don't show loader */
             background-color: #565EA9;
             color: #fff;
             cursor: pointer;
-            padding: 2%;
+            padding: 4%;
             padding-left: 8%;
+			
             width: 100%;
             border: none;
             text-align: left;
@@ -23460,9 +23786,23 @@ if it's not present, don't show loader */
             margin-top: 1%;
         }
         .accordion-4 span {
-            width: 5%;
+			top: 1vh !important;
+            width: 8%;
+			right: 2vh;
         }
-        .accordion-4 span img {} .panel-inmos {
+        .accordion-4 span img {
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+		} .panel-inmos {
             display: flex;
             flex-direction: column;
             background-color: white;
@@ -23720,10 +24060,12 @@ if it's not present, don't show loader */
             padding-top: 1%;
             padding-bottom: 2%;
             align-items: center;
+			background-color: transparent;
         }
         .family-foto .center-family {
             width: 100%;
-            border: 1px solid #999;
+			box-shadow: none;
+         background-color: transparent;
             display: flex;
             align-items: center;
             height: auto;
@@ -23733,6 +24075,7 @@ if it's not present, don't show loader */
             width: 100%;
             padding: 2%;
             display: flex;
+			background-color: transparent !important;
             height: auto;
             flex-direction: column;
         }
@@ -23742,11 +24085,11 @@ if it's not present, don't show loader */
             display: flex;
             align-items: center;
             height: auto;
-            flex-direction: row;
+            flex-direction: column;
         }
 
         .family-foto .center-family .text-icon-family .botones-family a {
-            width: 33%;
+            width: 80%;
             margin-right: 2%;
             margin-left: 2%;
             flex-direction: column;
@@ -23763,24 +24106,24 @@ if it's not present, don't show loader */
             margin-bottom: 4%;
         }
         .family-foto .center-family .text-icon-family .botones-family a img {
-            width: 80%;
+            width: 60%;
             margin-top: 2%;
         }
         .family-foto .center-family .text-icon-family p {
             text-align: center;
-            font-size: 1.3em;
+            font-size: 1.9em;
             width: 100%;
             height: auto;
             color: #004C8D;
             margin-top: 1px;
-            font-weight: 700;
+            font-weight: 800;
         }
         .family-foto .center-family .text-icon-family p strong {
-            font-size: 1.5em;
-            font-weight: 700;
+            font-size: 2.2em;
+            font-weight: 800;
         }
         .family-foto .center-family .text-icon-family p small {
-            font-size: 1.2em;
+            font-size: 1.28em;
             font-weight: 700;
             color: #DD7D32;
         }
@@ -23796,7 +24139,8 @@ if it's not present, don't show loader */
         .panel-zones {
             display: flex;
             flex-direction: column;
-            background-color: white;
+            background-color: transparent!important;
+			box-shadow: 10px 5px 5px transparent;
             align-items: center;
             overflow: auto;
             width: 100%;
@@ -23811,10 +24155,10 @@ if it's not present, don't show loader */
         .panel-zones .cajas-calc .text-credit .centered {
             width: 100%;
             padding: 6%;
-            padding-top: 10%;
+            padding-top: 10%; 
             padding-bottom: 10%;
             display: flex;
-            flex-direction: column;
+            flex-direction: row !important;
             background-color: #004C8D;
             border-radius: 0px 18px 18px 0px;
             align-items: center;
@@ -23844,8 +24188,9 @@ if it's not present, don't show loader */
         }
         .panel-zones .cajas-calc .text-credit {
             display: flex;
-            flex-direction: column;
-            width: 60%;
+            flex-direction: row;
+			
+            width: 60%; 
             padding-top: 2%;
             padding-bottom: 2%;
             align-items: center;
@@ -23915,7 +24260,9 @@ if it's not present, don't show loader */
         }
         .panel-zones .comunicate-map {
             width: 90%;
-            padding-top: 1%;
+            padding-top: 1%; 
+			
+			
             padding-bottom: 1%;
             display: flex;
             flex-direction: column;
@@ -23945,13 +24292,13 @@ if it's not present, don't show loader */
             display: none;
         }
         .panel-zones .comunicate-map .cuadro-bank-asesor {
-            width: 90%;
+            width: 100%;
             justify-content: center;
             padding-top: 1%;
             padding-bottom: 1%;
             display: flex;
             flex-direction: column;
-            border: 1px solid #004C8D;
+           
             align-items: center;
             margin-bottom: 10%;
         }
@@ -24016,13 +24363,13 @@ if it's not present, don't show loader */
             width: 100%;
             text-align: center;
             height: auto;
-            font-size: 1em;
-            color: #004C8D;
+            font-size: 1.3em;
+            color: #fff;
             margin-top: 1%;
             margin-bottom: 1%;
         }
         .panel-zones .comunicate-map .cuadro-bank-asesor .horario-agente-banks small {
-            color: #004C8D;
+            color: #fff;
             width: 100%;
             height: auto;
             font-size: 1.3em;
@@ -24076,14 +24423,18 @@ if it's not present, don't show loader */
             justify-content: center;
         }
         .infox-proyecto .center-infox {
-            width: 96%;
+            width: 98%;
             display: flex;
             flex-direction: column;
             align-items: center;
         }
         .infox-proyecto .center-infox .logo-infox {
-            width: 90%;
+            width: 99%;
+			padding: 3%;
+			border-radius: 3vh;
             height: auto;
+			
+			background-color: #565EA9;
             display: flex;
             flex-direction: row;
             margin-bottom: 5%;
@@ -24092,6 +24443,7 @@ if it's not present, don't show loader */
             width: 50%;
             margin-right:0%;
 			margin: 0 auto;
+			
             height: auto;
             display: block;
             flex-direction: row;
@@ -24099,16 +24451,20 @@ if it's not present, don't show loader */
         }
         .infox-proyecto .center-infox .logo-infox .log-company img {
             width: 80%;
+			padding: 3%;
+			background-color: #fff;
             height: auto;
             display: flex;
             flex-direction: row;
         }
         .infox-proyecto .center-infox .logo-infox .place-company {
-            width: 40%;
+            width: 45%;
+			
+			font-weight: 800;
             height: auto;
             display: flex;
             flex-direction: column;
-            margin-left: 3%;
+            margin-left: 1%;
             align-items: center;
             justify-content: center;
         }
@@ -24116,9 +24472,9 @@ if it's not present, don't show loader */
             width: 100%;
             height: auto;
             font-size: 1.3em;
-            margin-bottom: 0.6%;
+            margin-bottom: 0.6%;color: #fff;
             text-align: right;
-            font-weight: 400;
+            font-weight: 800;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -24149,6 +24505,7 @@ if it's not present, don't show loader */
             height: auto;
             display: flex;
             flex-direction: row;
+			
             align-items: center;
         }
         .infox-proyecto .center-infox .box-infox .container-gal .botones-infox {
@@ -24157,18 +24514,19 @@ if it's not present, don't show loader */
             display: flex;
             flex-direction: row;
             align-items: center;
-            background-color: #fff;
+			padding: 2%;
+           
         }
         .infox-proyecto .center-infox .box-infox .container-gal .botones-infox a {
             width: 33.3%;
             text-decoration: none;
             font-weight: 700;
             font-size: 0.9em;
-            color: #4D575E;
+            color: #fff;
 			text-align: center;
             padding: 2%;
             height: 7vh;
-            border: 1px solid #4D575E;
+           
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -24189,24 +24547,29 @@ if it's not present, don't show loader */
             align-items: center;
         }
         .infox-proyecto .center-infox .box-infox .text-infox p {
-            font-size: 0.8em;
-            line-height: 1.4em;
+            font-size: 0.9em;
+            line-height: 1.5em;
             height: 50%;
-            margin-top: 2%;
+            margin-top: 3%;
+			margin-bottom: 4%;
             overflow-y: scroll;
         }
         .infox-proyecto .center-infox .box-infox .text-infox {
             width: 100%;
-            padding: 2%;
+			border-radius: 2.5vh;
+            padding: 4% !important;
+			
             height: auto;
             display: flex;
+			margin-bottom: 4%;
             flex-direction: column;
             align-items: center;
             padding-top: 0%;
             margin-top: 4%;
         }
         .infox-proyecto .center-infox .box-infox .text-infox .carac-infox {
-            width: 100%;
+            width: 90%;
+			
             height: auto;
             display: grid;
             align-items: center;
@@ -24216,20 +24579,25 @@ if it's not present, don't show loader */
         .infox-proyecto .center-infox .box-infox .text-infox .carac-infox li {
             margin-top: 1%;
             margin-bottom: 2%;
-            font-size: 0.8em;
+            font-size: 0.9em;
         }
         .infox-proyecto .center-infox .box-infox .text-infox .name-infox {
             width: 100%;
             height: auto;
+			
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
+			padding: 5%;
         }
         .infox-proyecto .center-infox .box-infox .text-infox .name-infox .space-text {
             width: 1%;
         }
         .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox {
-            width: 52%;
+            width: 100%;
+			
+			margin-top: 3%;
+			
             display: flex;
             flex-direction: row;
         }
@@ -24239,9 +24607,9 @@ if it's not present, don't show loader */
         }
         .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .colorize {
             background: #EDEEEF;
-            width: 52%;
+            width: 35%;
             font-size: 0.8em;
-            border: 1px solid #999 !important;
+            
             border: 0px;
             justify-content: center;
             display: flex;
@@ -24251,27 +24619,29 @@ if it's not present, don't show loader */
             color: #565EA9;
         }
         .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .colorize img {
-            width: 80%;
+            width: 90%;
         }
         .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .precio {
             margin-left: 1%;
             margin-right: 0%;
             text-decoration: none;
-            background: #EDEEEF;
+            
             padding: 2.5%;
-            font-size: 0.85em impo;
+            font-size: 2.85em;
             display: flex;
             flex-direction: column;
             align-items: center;
-            color: #565EA9;
+            color: #fff;
+			
+			
         }
 		
 		   .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .precio big {
-			   font-size:1.2vh;
+			   font-size:2.2vh;
            
         }
 		  .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .precio small {
-			   font-size:1.6vh;
+			   font-size:2.6vh;
            
         }
 		 
@@ -24282,18 +24652,21 @@ if it's not present, don't show loader */
             margin-right: 1%;
             text-decoration: none;
             background: #565EA9;
-            padding: 2.5%;
-            font-size: 0.6em;
+            padding: 1.5%;
+            font-size: 1.4em;
             display: flex;
             flex-direction: row;
             align-items: center;
             color: #fff;
         }
         .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox a img {
-            width: 18%;
+            width: 15%;
         }
         .infox-proyecto .center-infox .box-infox .text-infox .name-infox .logo-text-infox {
-            width: 50%;
+            width: 100%;
+			
+			justify-content: center;
+			
             height: auto;
             display: flex;
             flex-direction: column;
@@ -24302,46 +24675,61 @@ if it's not present, don't show loader */
         .infox-proyecto .center-infox .box-infox .text-infox .name-infox .logo-text-infox h2 {
             width: 100%;
             height: auto;
-            font-size: 1.4em;
-            display: flex;
+			text-align: center !important;
+            font-size: 2.3em;
+            display: block;
             flex-direction: row;
+			margin: 0 auto;
             align-items: center;
             margin-top: 0;
             padding: 0;
-            color: #172851;
+            color: #fff;
             margin-bottom: 1%;
         }
         .infox-proyecto .center-infox .box-infox .text-infox .name-infox .logo-text-infox span {
-            width: auto;
-            color: #172851;
+            width: 100% !important;
+  
+            color: #fff;
             height: auto;
             margin-bottom: 2%;
             margin-top: 0;
-            font-size: 0.9em;
+			justify-content: center;
+            font-size: 1.2em; 
             display: flex;
             flex-direction: row;
             align-items: center;
         }
         .infox-proyecto .center-infox .box-infox .text-infox .name-infox .logo-text-infox span img {
             width: 5%;
-            margin-right: 3%;
+            margin-right: 2%;
             height: auto;
             display: flex;
             flex-direction: row;
             align-items: center;
         }
-        .tabs-all {
+        .tabs-all { 
             width: 100%;
+			
             padding: 1%;
             padding-top: 0%;
+			margin-top: 3%;
             display: flex;
             align-items: center;
             flex-direction: column;
         }
+		
+		 .tabs-all .panel iframe { 
+			
+			 border-radius: 3vh !important;
+           
+        }
         .tab {
             overflow: hidden;
-            width: 94%;
+            width: 100%;
             background-color: #fff;
+			padding: 2.5% !important;
+			border-radius: 3vh;
+			margin-bottom: 3%;
         }
         /* Style the buttons inside the tab */
         
@@ -24356,7 +24744,7 @@ if it's not present, don't show loader */
             padding-top: 0.5%;
             padding-bottom: 0.5%;
             padding: 2%;
-            border-radius: 10px 10px 0px 0px;
+            border-radius: 5px 10px 0px 0px;
             transition: 0.3s;
             font-size: 0.9em;
             font-weight: 600;
@@ -24378,19 +24766,24 @@ if it's not present, don't show loader */
         .tabcontent {
             display: none;
             width: 94%;
-            height: 50vh;
+            height: auto;
             border-top: none;
-            border: 1px solid #888;
+           
         }
         .tabcontent iframe {
             width: 100%;
             height: 100%;
+			
         }
         .tabs-all-panel {
             width: 100%;
             padding: 4%; 
             padding-top: 0%;
             height: auto;
+        }
+		  .tabs-all-panel iframe{
+			  border-radius: 3vh;
+           
         }
         .tab2 {
             overflow: hidden;
@@ -24444,7 +24837,7 @@ if it's not present, don't show loader */
             background-color: #565EA9;
             color: #fff;
             cursor: pointer;
-            padding: 2%;
+            padding: 4%;
             padding-left: 5%;
             width: 100%;
             border: none;
@@ -24509,7 +24902,7 @@ if it's not present, don't show loader */
             position: absolute;
             z-index: 200;
             width: 100%;
-            height: 100%;
+            height: 100%; 
             display: flex;
             align-items: center;
             justify-content: center;
@@ -24570,6 +24963,7 @@ if it's not present, don't show loader */
         
         .tabcontent2 {
             display: none;
+			
             width: 100%;
             height: auto;
             border-top: none;
@@ -24579,17 +24973,20 @@ if it's not present, don't show loader */
             height: 100%;
         }
         .grid-planos-infox {
-            display: flex;
+            display: block;
+			
             padding: 2%;
             padding-left: 0px;
             padding-right: 0px;
             padding-top: 1%;
+			
+			
             width: 100%;
             height: auto;
             flex-direction: column;
         }
         .grid-planos-infox .all {
-            display: flex;
+            display: block;
             margin-bottom: 4%;
             border: 1px solid #999;
             flex-direction: column;
@@ -24657,48 +25054,50 @@ if it's not present, don't show loader */
         .grid-planos-infox .all .texto-plano-infox {
             padding: 2%;
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             width: 100%;
         }
         .grid-planos-infox .all .texto-plano-infox .desc-planos {
             display: flex;
             flex-direction: column;
-            width: 100%;
+            width: 100%; 
+			
         }
         .grid-planos-infox .all .texto-plano-infox .desc-planos h2 {
             display: flex;
             flex-direction: column;
             margin-bottom: 2%;
-            color: #172851;
-            font-size: 0.85em;
+            color: #fff;text-align: center;
+            font-size: 1.4em;
         }
         .grid-planos-infox .all .texto-plano-infox .desc-planos h3 {
             display: flex;
             flex-direction: column;
             margin-bottom: 1%;
             color: #172851;
-            font-size: 0.8em;
+			text-align: center;
+            font-size: 1.6em;
             margin-top: 1%;
-            font-weight: 400;
+            font-weight: 600;
         }
         .grid-planos-infox .all .texto-plano-infox .desc-planos ul {
             display: flex;
             flex-direction: column;
-            margin-bottom: 2%;
-            margin-top: 1%;
+            margin-bottom: 5%;
+            margin-top: 3%;
         }
         .grid-planos-infox .all .texto-plano-infox .desc-planos ul li {
             margin-bottom: 1%;
             text-align: left;
             color: #172851;
-            font-size: 0.8em;
+            font-size: 1.2em;
             margin-top: 1%;
             font-weight: 400;
             list-style: circle;
         }
         .grid-planos-infox .all .texto-plano-infox .botones-planox {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             width: 100%;
             justify-content: center;
             align-items: center;
@@ -24709,10 +25108,12 @@ if it's not present, don't show loader */
             background-color: #004C8D;
             color: #fff;
             font-weight: 500;
-            height: 60px;
-            font-size: 0.7em;
-            padding: 2%;
-            width: 32%;
+            height: auto;
+            font-size: 1.2em;
+            padding: 6%;
+			margin-bottom: 2%;
+			margin-top: 2%;
+            width: 70%;
             margin-left: 1.5%;
             margin-right: 1.5%;
             align-items: center;
@@ -24723,7 +25124,7 @@ if it's not present, don't show loader */
             width: 100%;
         }
         .grid-planos-infox .all .texto-plano-infox .botones-planox a img {
-            width: 60%;
+            width: 40%;
             margin-top: 2%;
         }
         .grid-planos-infox .all .texto-plano-infox .botones-planox .green {
@@ -24739,14 +25140,14 @@ if it's not present, don't show loader */
         }
         #newpost {
             position: absolute;
-            width: 60%;
+            width: 90%;
             display: none;
             height: auto;
-            padding: 1%;
-            margin-top: 9%;
+            padding: 3%;
+            margin-top: 14%;
             background: #fff;
             border: 2px solid #fcfcfc;
-            margin-left: -11%;
+            margin-left: -7%;
             -webkit-box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
             box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
@@ -24759,7 +25160,7 @@ if it's not present, don't show loader */
         #newpost .follow a {
             font-size: 0.8em;
             color: #fff;
-            padding: 3%;
+            padding: 8%;
         }
         .modal-contents-plano {
             height: auto;
@@ -24830,6 +25231,7 @@ if it's not present, don't show loader */
         }
         .maps-filtro .center-mapa iframe {
             width: 86%;
+			border-radius: 4vh;
             display: flex;
             height: 54vh;
         }
@@ -24845,7 +25247,7 @@ if it's not present, don't show loader */
             margin-bottom: 10%;
         }
         .lima-filtros .center {
-            width: 86%;
+            width: 94%;
             display: flex;
             align-items: center;
             flex-direction: column;
@@ -25151,11 +25553,11 @@ if it's not present, don't show loader */
 			cursor: pointer !important;
         }
 		
-		 
+		
 		
 		
 		.well-chat2 .caja-chat2 {
-          display: flex;
+          display: none;
 			z-index:99889;
             width:92%;
 			margin: 0 auto;
@@ -25557,8 +25959,8 @@ if it's not present, don't show loader */
 		
 		
     .white-form-enter .welcome-banner .welcome-button a {
-        font-size:3.5vw;
-		width: 35% !important;
+        font-size:4.8vw;
+		width: 50% !important;
 		margin-left: 3%;
 		margin-right: 3%;
        
@@ -25570,7 +25972,31 @@ if it's not present, don't show loader */
         
     }
 		
+		.infox-proyecto .center-infox .box-infox .container-gal .sala-boton {
+        width: 70%;
+		border-radius:3vh;
+		height: auto;
+		background-color:#81C41E;
+		padding:3%;
+		justify-content: center;
+		text-align: center;
+		font-size: 2.5vh;
+		font-weight: 600;
 		
+		margin-top:5%;
+			margin-bottom: 2%;
+		color:#fff;
+		text-decoration:none;
+       
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+.infox-proyecto .center-infox .box-infox .container-gal .sala-boton img{
+        width: 15%;
+		
+        
+    }
 		
 .infox-proyecto .center-infox .todo-left-infox {
         width: 100%;
@@ -25594,4 +26020,221 @@ if it's not present, don't show loader */
     }
 		
 		
+		
+		
+		
+		
+
+.infox-proyecto .center-infox .todo-right-infox{
+        width: 100%;
+	
+	
+	
+	padding: 0%;
+	margin-left: 2%;
+		align-items: center;
+	
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
+.infox-proyecto .center-infox .todo-right-infox #contact-form-pro{
+        width: 100%;
+	background-color: #fff;
+	padding: 6%;
+	border-radius: 2.5vh;
+	
+	border: 1px solid #ccc;
+		
+	
+        display: flex;
+	justify-content: center;
+        flex-direction: column;
+	
+	
+	-webkit-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+-moz-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+	
+	
+	
+	
+    }
+
+
+.infox-proyecto .center-infox .todo-right-infox #contact-form-pro strong{
+        width: 100%;
+	font-size: 1.4vh;
+	font-weight: 300;margin-top: 2%;
+	margin-bottom:3%;
+	color: #555;
+	text-align: center;
+	
+	
+	
+		
+	
+        display: flex;
+        flex-direction: column;
+    }
+
+.infox-proyecto .center-infox .todo-right-infox #contact-form-pro .campos-contacto-home{
+        width: 100%;
+	border-radius: 0;
+	border: 0px solid #ccc;
+	height: 4.8vh;
+	margin-top: 0vh;
+	margin-bottom: 2.5vh;
+	padding: 1.9vh; 
+	background-color: #fff;
+	color: #888 !important;
+	border-bottom: 2px solid #ccc;
+	
+	
+	 outline: none;
+		
+	
+        display: flex;
+        flex-direction: column;
+	
+    }
+
+
+
+
+.infox-proyecto .center-infox .todo-right-infox #contact-form-pro .campos-contacto-come{
+        width: 100%;
+	border-radius: 0.8vh;
+	border: 0px solid #ccc;
+	height: 9vh;
+	border-bottom: 2px solid #ccc;
+	
+	margin-top: 1vh;
+	background-color: #fff;
+	margin-bottom: 1vh;
+	padding: 1vh;
+	border-radius: 0px;
+	
+	color: #888;
+	font-size: 2vh;
+	font-weight: 500;
+		
+	
+        display: flex;
+        flex-direction: column;
+    }
+
+
+.infox-proyecto .center-infox .todo-right-infox #contact-form-pro .send-home-wsp{
+        width: 100%;
+	border-radius: 1.5vh;
+	border: 1px solid #999;
+	height: auto;
+	cursor: pointer;
+	margin-top: 1vh;
+	margin-bottom: 1vh;
+	background-color: #81C41E;
+	padding: 2vh;
+	align-items: center;
+	color: #fff;
+	
+	
+		font-weight: 600;
+	font-size: 2vh;
+        display: block;
+	margin: 0 auto;
+        flex-direction: column;
+    }
+
+.infox-proyecto .center-infox .todo-right-infox #contact-form-pro .send-home-wsp2{
+        width: 100%;
+		font-weight: 600;
+	font-size: 2vh;
+	border-radius: 1.5vh;
+	border: 1px solid #999;
+	height: auto;
+	margin-top: 1vh;
+	margin-bottom: 1.5vh !important;
+	padding: 2vh;
+	margin: 0 auto;
+	align-items: center;
+		background-color: #565EA9;
+	color: #fff;
+	
+        display: flex;
+        flex-direction: column;
+    }
+.infox-proyecto .center-infox .todo-right-infox #contact-form-pro small{
+       
+	margin-top: 0vh;
+	margin-bottom: 0vh;
+	color: #888;
+	font-size: 2.2vh;
+	font-weight: 500;
+	
+	
+	
+		
+	
+        display: flex;
+        
+    }
+
+
+.infox-proyecto .center-infox .todo-right-infox #contact-form-pro p{
+       
+	margin-top: 0vh;
+	margin-bottom: 0vh;
+	color: #555;
+	
+	
+	
+		
+	
+        display: flex;
+	flex-direction: column;
+        
+    }
+
+
+
+.infox-proyecto .center-infox .todo-right-infox #contact-form-pro h1{
+	font-size: 4vh;
+	
+	font-weight: 600;
+	color: #565EA9;
+	margin-bottom: 4vh;
+        width: 100%;
+	text-align: center;
+	
+    }
+
+		
+		
+
+.info-inmos .center-info-inmos .foto-log #jssor_1 {
+        width: 490px ;
+	height: 300px ;
+	
+	
+        display: flex;
+		
+		overflow: hidden;
+		border-radius: 20px;
+    }
+
+  #jssor_1 {
+      
+	  
+    }
+#jssor_1 img{
+      
+	 
+	
+	
+       
+		
+    }
  

@@ -23,6 +23,7 @@ App.mapManager = {
         this.projectsInitials = options.projects || [];
         this.urlBackend = options.urlBackend || null;
         this.selectedLanguage = options.selectedLanguage || null;
+        this.defaultZoom = options.defaultZoom ?? this.defaultZoom;
         this.map = L.map(this.mapId).setView(this.defaultCenter, this.defaultZoom);
 
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -32,6 +33,53 @@ App.mapManager = {
         this.loadProjects();
 
         return this;
+    },
+
+    addMarker(lat, lng, name = "Ubicación") {
+        lat = parseFloat(lat);
+        lng = parseFloat(lng);
+
+        // validar coordenadas
+        if (isNaN(lat) || isNaN(lng)) return;
+
+        const marker = L.marker([lat, lng], {
+            icon: this.customIcon
+        }).addTo(this.map);
+
+        // popup simple
+        const popupHTML = `
+            <div class="tooltip-card">
+                <div class="tooltip-body">
+                    <h4>${name}</h4>
+                </div>
+            </div>
+        `;
+
+        marker.bindPopup(popupHTML, {
+            className: 'custom-tooltip',
+            maxWidth: 280,
+            offset: [0, -15]
+        });
+
+        // hover comportamiento
+        marker.on('mouseover', function () {
+            this.openPopup();
+        });
+
+        marker.on('mouseout', function () {
+            setTimeout(() => {
+                const popup = document.querySelector('.custom-tooltip');
+                if (popup && !popup.matches(':hover')) {
+                    this.closePopup();
+                }
+            }, 200);
+        });
+
+        // guardar en lista global
+        this.markers.push(marker);
+
+        // centrar mapa en el nuevo marker
+        this.map.setView([lat, lng], this.defaultZoom);
     },
 
     loadProjects() {

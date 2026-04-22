@@ -863,7 +863,7 @@
         autoopen: false,
         background: true,
         color: 'black',
-        opacity: '0.5',
+        opacity: '0.3',
         horizontal: 'center',
         vertical: 'middle',
         offsettop: 0,

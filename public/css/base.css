@@ -116,3 +116,6 @@ form .form-controls{
     height: auto;
     display: none;
 }
+.mt-1 {
+    margin-top: 1rem;
+}

@@ -22,6 +22,7 @@
         <link href="css/grt-responsive-menu.css" rel="stylesheet" type="text/css" />
         <link href="css/icon.css" rel="stylesheet" />
         <link href="css/base.css?t=<?php echo time(); ?>" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
         <?php echo $this->partial('partial/principal/css/panel', []); ?>
     </head>
 
@@ -174,7 +175,9 @@
                 </div>
             </div>
         </footer>
-
+        
+        <!-- JS de Leaflet -->
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
         <script type="text/javascript" src="js/jquery.min.js"></script>
         <script type="text/javascript" defer src="js/all.js"></script>
         <script type="text/javascript" src="js/jssor.slider-28.1.0.min.js"></script>
@@ -185,6 +188,7 @@
         <script type="text/javascript" src="js/jquery.validate_messages_es.js"></script>
         <script type="text/javascript" src="js/panel/scripts.js?t=<?php echo time(); ?>"></script>
         <script type="text/javascript" src="js/panel/main.js?t=<?php echo time(); ?>"></script>
+        <script type="text/javascript" src="js/home/map.js?t=<?php echo time(); ?>"></script>
 
         <script>
             //Cargar parametros

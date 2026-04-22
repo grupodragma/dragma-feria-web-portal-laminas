@@ -1,47 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 79.4 179" style="enable-background:new 0 0 79.4 179;" xml:space="preserve">
 <style type="text/css">
-	.st0{fill:#ECECED;}
-	.st1{opacity:0.9;}
-	.st2{fill:#222C51;stroke:#222C51;stroke-width:4.2793;stroke-miterlimit:10;}
-	.st3{fill:url(#SVGID_1_);}
-	.st4{fill:url(#SVGID_2_);}
-	.st5{fill:#FFFFFF;}
-	.st6{enable-background:new    ;}
-	.st7{fill:#A85A2A;}
-	.st8{clip-path:url(#SVGID_4_);enable-background:new    ;}
-	.st9{fill:#924925;}
-	.st10{fill:#944A25;}
-	.st11{fill:#964C26;}
-	.st12{fill:#984D26;}
-	.st13{fill:#9A4F27;}
-	.st14{fill:#9C5027;}
-	.st15{fill:#9E5228;}
-	.st16{fill:#9F5328;}
-	.st17{fill:#A15529;}
-	.st18{clip-path:url(#SVGID_6_);enable-background:new    ;}
-	.st19{clip-path:url(#SVGID_8_);enable-background:new    ;}
-	.st20{fill:#914825;}
-	.st21{fill:#B6672E;}
-	.st22{fill:url(#SVGID_9_);}
-	.st23{display:none;}
-	.st24{display:inline;}
-	.st25{fill:#F9FBFC;}
+	.st0{fill:#575DAA;}
+	.st1{display:none;}
 </style>
-<g id="OBJECTS">
-	<g>
-		<rect class="st0" width="79.4" height="179"/>
-		<g class="st1">
-			<polygon class="st2" points="32.8,111.4 27.5,105.6 43.3,91.3 27.7,77.4 32.9,71.6 55,91.3 			"/>
-		</g>
-	</g>
-</g>
 <g id="loog">
 </g>
 <g id="web">
 </g>
-<g id="DESIGNED_BY_FREEPIK" class="st23">
+<path class="st0" d="M62.9,52.6H16.5C7.4,52.6,0,60,0,69.1v40.8c0,9.1,7.4,16.5,16.5,16.5h46.4c9.1,0,16.5-7.4,16.5-16.5V69.1
+	C79.4,60,72,52.6,62.9,52.6z M49.3,92L34.8,105c-1.5,1.3-3.7,1.2-5-0.3c-1.3-1.4-1.2-3.6,0.2-4.9l8.7-7.9c1.6-1.4,1.5-3.8,0-5.2
+	l-8.4-7.6c-1.5-1.2-1.6-3.5-0.3-4.9c1.2-1.5,3.5-1.6,4.9-0.3l14.4,12.8C50.8,88.2,50.9,90.5,49.3,92z"/>
+<g id="DESIGNED_BY_FREEPIK" class="st1">
 </g>
+<image style="overflow:visible;" width="1129" height="99" xlink:href="671791AF.jpg"  transform="matrix(1 0 0 1 -507.7372 -333)">
+</image>
 </svg>

@@ -1,0 +1,40 @@
+/* 
+    This CSS file was created by OwL for use by pointer.js, 
+     witch can be found on https://seattleowl.com. 
+*/
+
+#pointer-dot {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    
+    position: absolute;
+    border-radius: 10px;
+    z-index: 255555;
+    pointer-events: none;
+    transition: border-color 0.5s;
+}
+
+#pointer-ring {
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    padding: 5px;
+	background:rgba(238, 67, 58, 0.3);
+   
+    position: absolute;
+    border-radius: 20px;
+    z-index: 255555;
+    pointer-events: none;
+}
+
+html {
+    cursor: none !important;
+}
+
+a {
+    cursor: none !important;
+}
+
