@@ -12,6 +12,7 @@
     </form>
 </div>
 
+<?php if( !empty($this->banner['banner-superior-horizontal']) && (isset($this->banner['banner-superior-horizontal']['banner_programado']) || isset($this->banner['banner-superior-horizontal']['banner_principal'])) ) : ?>
 <div class="banner-ad" style="padding-bottom: 0%;">
     <div class="banner-ad-center">
         <a href="javascript:void(0)">
@@ -19,6 +20,7 @@
         </a>
     </div>
 </div>
+<?php endif; ?>
 
 <div class="los-titulos-bancos">
     <h1>INMOBILIARIAS</h1>
