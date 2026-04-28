@@ -143,12 +143,14 @@
                         <strong></strong>
                         <big><?php echo ( isset($this->layout()->simboloMoneda[$proyecto['moneda']]) ) ? $this->layout()->simboloMoneda[$proyecto['moneda']]." ".number_format($proyecto['precio_desde'], 2, '.', ',') : number_format($proyecto['precio_desde'], 2, '.', ','); ?></big>
                     </div>
+                    <?php if( !empty($proyecto['precio_especial']) && floatval($proyecto['precio_especial']) != 0 ) : ?>
                     <div class="textos-3" style="<?php if( $proyecto['precio_especial'] !== '0.00' && $proyecto['sala_venta'] == "0") { echo "display: inherit;"; } ?>">
                         <span>Precio Especial</span>
                         <img src="imagenes/logo-lima.png" alt="">
                         <strong></strong>
                         <big><?php echo ( isset($this->layout()->simboloMoneda[$proyecto['moneda']]) ) ? $this->layout()->simboloMoneda[$proyecto['moneda']]." ".number_format($proyecto['precio_especial'], 2, '.', ',') : number_format($proyecto['precio_especial'], 2, '.', ','); ?></big>
                     </div>
+                    <?php endif; ?>
                     <?php if( $proyecto['sala_venta'] == "1" && $proyecto['sala_venta_rv'] != "" ) : ?>
                     <a href="javascript:abrirVentanaWindow('<?php echo $proyecto['sala_venta_rv']; ?>')" class="textos-4">SALA DE VENTA VIRTUAL</a>
                     <?php endif; ?>
