@@ -104,9 +104,9 @@ form .form-controls{
     text-decoration: none;
 }
 
-.contenedor-programas-asesor #grid .caja div .back-standi .back {
+/*.contenedor-programas-asesor #grid .caja div .back-standi .back {
     visibility: visible !important;
-}
+}*/
 
 #form-msg-cotiza {
     width: 100%;

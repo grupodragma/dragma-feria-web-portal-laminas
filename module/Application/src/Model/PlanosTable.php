@@ -63,12 +63,12 @@ class PlanosTable {
                         'value'=> $item['tipo_habitacion']
                     ];
                 }
-                if($item['numero_habitacion_hash_url'] != ''){
+                /*if($item['numero_habitacion_hash_url'] != ''){
                     $filtrosPlanos[] = [
                         'key'=> $item['numero_habitacion_hash_url'],
                         'value'=> $item['numero_habitacion']
                     ];
-                }
+                }*/
             }
         }
         return array_unique($filtrosPlanos, SORT_REGULAR);

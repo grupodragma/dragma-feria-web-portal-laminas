@@ -81,7 +81,7 @@ class PanelController extends AbstractActionController {
             'filtroOpciones'=> $this->objPlanosTable->filtrarOpcionesPlanos($dataPlanos)
         ];
         //print_r($data['filtroOpciones']);
-        //Respuesta
+        //die;
         return new ViewModel($data);
     }
     public function busquedaProyectosAction() {

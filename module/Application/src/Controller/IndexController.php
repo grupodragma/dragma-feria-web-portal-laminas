@@ -79,7 +79,7 @@ class IndexController extends AbstractActionController {
             'rangoPrecios'=> $this->objRangoPreciosTable->obtenerRangoPrecios(),
             'etapas'=> $this->objEtapaTable->obtenerEtapa()
         ];
-        //print_r($data['banner']);
+        //print_r($data);
         //die;
         return new ViewModel($data);
     }

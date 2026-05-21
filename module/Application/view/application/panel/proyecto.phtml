@@ -2,7 +2,7 @@
 
 <style>
     .grid-planos-infox{
-        gap: 1% 1%;
+        gap: 20px;
     }
     #map {
         height: 100%;
@@ -13,6 +13,9 @@
     }
     .well-chat2 .caja-chat2 {
         display: inherit;
+    }
+    .tabs-all-panel {
+        padding: 0 4%;
     }
 </style>
 
@@ -150,21 +153,8 @@
     <div class="tab" style="width: 90%;">
         <button class="tablinks" onclick="openCity(event, 'RecorridoVirtual')" id="defaultOpen">Recorrido Virtual</button>
         <button class="tablinks" onclick="openCity(event, 'Recorrido360')">Recorrido 360°</button>
-        <!-- <button class="tablinks" onclick="openCity(event, 'UbicacionMapa')">Ubicación</button> -->
         <button class="tablinks" onclick="openCity(event, 'PlanosID')">Planos</button>
     </div>
-
-    <!-- <div id="UbicacionMapa" class="tabcontent">
-        <?php if( $this->proyecto['latitud'] != '' || $this->proyecto['longitud'] != '' ) : ?>
-        <iframe
-            width="100%"
-            height="450" 
-            style="border:0"
-            src="https://www.google.com/maps/embed/v1/place?q=<?php echo $this->proyecto['latitud']; ?>,<?php echo $this->proyecto['longitud']; ?>&amp;key=<?php echo $this->layout()->google_maps['key']; ?>"
-            title="<?php echo $this->proyecto['nombre']; ?>"
-        ></iframe>
-        <?php endif; ?>
-    </div> -->
 
     <div id="PlanosID" class="tabcontent">
         <div class="panel">
@@ -189,10 +179,10 @@
                             <div class="texto-plano-infox">
                                 <div class="desc-planos">
                                     <h2><?php echo $item['nombre']; ?></h2>
-                                    <h3>Desde <?php echo $item['moneda']." ".$item['precio_desde']; ?></h3>
+                                    <h3>Desde <?php echo $item['moneda']." ".number_format($item['precio_desde']); ?></h3>
                                     <ul>
                                     <?php if($informacion) : foreach($informacion as $info): ?>
-                                    <li><?php echo $this->layout()->language->translate($info['titulo'])['text']; ?> - <?php echo $this->layout()->language->translate($info['descripcion'])['text']; ?></li>
+                                    <li><b><?php echo $this->layout()->language->translate($info['titulo'])['text']; ?></b>: <?php echo $this->layout()->language->translate($info['descripcion'])['text']; ?></li>
                                     <?php endforeach; endif; ?>
                                     </ul>
                                 </div>
@@ -262,95 +252,6 @@
     </div>
 
     <?php endif; ?>
-
-    <!-- <button class="accordion" id="promociones">
-        PROMOCIONES <span><img src="imagenes/arrow-select.svg" alt=""></span>
-    </button>
-
-    <div class="panel" style="display: block;">
-        <div id="grid" data-aos="fade-up">
-            <?php if(!empty($this->promociones)) : foreach( $this->promociones as $item ) : ?>
-            <a href="#" class="caja<?php echo $item['idpromociones']; ?>_open">
-                <span><img src="imagenes/lupa-zoom-01.svg" alt=""></span><img src="<?php echo ( $item['hash_imagen'] != "" ) ? $this->layout()->url_backend."/promociones/imagen/".$item['hash_imagen'] : "imagenes/promo-image.jpg" ?>" width="100%" alt="">
-            </a>
-            <div id="caja<?php echo $item['idpromociones']; ?>" class="well-2">
-                <div class="modal-contents-caja">
-                    <div><img src="<?php echo $this->layout()->url_backend; ?>/promociones/imagen/<?php echo $item['hash_imagen']; ?>" width="100%" alt=""></div>
-                    <div class="botones-two" style="display: none">
-                        <?php if( $item['tipo_enlace'] == 'PDF' ) : ?>
-                        <a href="<?php echo $this->layout()->url_backend; ?>/promociones/documentos/<?php echo $item['hash_pdf']; ?>" class="_modal_brochure" download="<?php echo $item['nombre_pdf']; ?>" target="_blank"><?php echo $this->layout()->language->translate('DESCARGA BROCHURE')['text']; ?></a>
-                        <div class="space"></div>
-                        <?php endif; ?>
-                        <?php if( $item['tipo_enlace'] == 'URL' ) : ?>
-                        <a href="<?php echo $item['enlace']; ?>" class="_modal_abrir_enlace" target="_blank"><?php echo $this->layout()->language->translate('ABRIR ENLACE')['text']; ?></a>
-                        <div class="space"></div>
-                        <?php endif; ?>
-                        <?php if (isset($this->layout()->datosUsuario)) : ?>
-                        <a href="javascript:void(0)" class="_modal_envia_correo" onclick="Panel.enviarCorreo('promocion', <?php echo $item['idpromociones']; ?>, this)"><?php echo $this->layout()->language->translate('ENVIA POR CORREO')['text']; ?></a>
-                        <?php endif; ?>
-                        <div class="space"></div>
-                        <a href="javascript:void(0)">CONTACTO</a>
-                        <div class="space"></div>
-                        <a href="javascript:abrirVentanaWindow('<?php echo ( $item['enlace_wsp'] != '' ) ? $item['enlace_wsp'] : $this->empresa['enlace_wsp']; ?>')" class="wsp _modal_wsp"><img src="imagenes/whatsapp.svg" alt=""></a>
-                    </div>
-                </div>
-            </div>
-            <?php endforeach; else : ?>
-            <p>No se encontraron promociones</p>
-            <?php endif; ?>
-        </div>
-    </div> -->
-
-    <!-- <button class="accordion" id="planos">
-        PLANOS <span><img src="imagenes/arrow-select.svg" alt=""></span>
-    </button>
-
-    <div class="panel">
-        <div class="tabs-all-panel">
-            <div class="tab2">
-                <?php if(!empty($this->filtroOpciones)) : ?>
-                <button class="opcion-elemento tablinks2" data-elemento="todos"><span>Todos</span></button>
-                <?php endif; ?>
-                <?php foreach($this->filtroOpciones as $item) : ?>
-                <button class="opcion-elemento tablinks2" data-elemento="<?php echo $item['key']; ?>"><span><?php echo $item['value']; ?></span></button>
-                <?php endforeach; ?>
-            </div>
-            <div class="tabcontent2 contenedor-elementos" style="display: inherit">
-                <div class="grid-planos-infox">
-                    <?php foreach($this->planos as $item) : $informacion = json_decode($item['informacion'], true); ?>
-                    <div class="all elemento" data-elemento="<?php echo "todos|".$item['tipo_habitacion_hash_url']."|".$item['numero_habitacion_hash_url']; ?>" style="display: none;">
-                        <div class="image-plano-infox">
-                            <a href="#" class="caja<?php echo $item['idplanos']; ?>_open">
-                                <span><img src="imagenes/lupa-zoom-01.svg" alt=""></span> <img src="<?php echo ( $item['hash_imagen'] != "" ) ? $this->layout()->url_backend."/planos/imagen/".$item['hash_imagen'] : "imagenes/plano-page-01.jpg" ?>" alt="">
-                            </a>
-                        </div>
-                        <div class="texto-plano-infox">
-                            <div class="desc-planos">
-                                <h2><?php echo $item['nombre']; ?></h2>
-                                <h3>Desde <?php echo $item['moneda']." ".$item['precio_desde']; ?></h3>
-                                <ul>
-                                <?php if($informacion) : foreach($informacion as $info): ?>
-                                <li><?php echo $this->layout()->language->translate($info['titulo'])['text']; ?> - <?php echo $this->layout()->language->translate($info['descripcion'])['text']; ?></li>
-                                <?php endforeach; endif; ?>
-                                </ul>
-                            </div>
-                            <div class="botones-planox">
-                                <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/calcula-credito/<?php echo $this->proyecto['idbancos']; ?>">Calcula tu crédito hipotecario<img src="imagenes/bcp-cal-02.svg" alt=""></a>
-                                <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/cotizar-ahora" class="green">COTIZAR AHORA</a>
-                                <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>/panel/reservar" class="green">Lo quiero reservar con S/500.00</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="caja<?php echo $item['idplanos']; ?>" class="well-plano">
-                        <div class="modal-contents-plano">
-                            <div class="image"><img src="<?php echo ( $item['hash_imagen'] != "" ) ? $this->layout()->url_backend."/planos/imagen/".$item['hash_imagen'] : "imagenes/plano-page-01.jpg" ?>" alt=""></div>
-                        </div>
-                    </div>
-                    <?php endforeach; ?>
-                </div>
-            </div>
-        </div>
-    </div> -->
 </div>
 
 <?php
