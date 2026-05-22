@@ -1,3 +1,10 @@
+<style>
+    .grid-go .grid-center #grid,
+    .grid-go .grid-center #grid .caja {
+        height: fit-content;
+    }
+</style>
+
 <div class="los-titulos">
     <h1><?php echo $this->titulo; ?></h1>
 </div>
@@ -85,7 +92,7 @@
                         <big><?php echo mb_strtoupper($proyecto['nombre']); ?></big>
                         <span><?php echo mb_strtoupper($proyecto['titulo_recuadro']); ?></span>
                     </div>
-                    <div class="textos-2">
+                    <div class="textos-2" style="border: 2px solid red;">
                         <span>Precio desde</span>
                         <strong></strong>
                         <big><?php echo ( isset($this->layout()->simboloMoneda[$proyecto['moneda']]) ) ? $this->layout()->simboloMoneda[$proyecto['moneda']]." ".number_format($proyecto['precio_desde'], 2, ',', '') : number_format($proyecto['precio_desde'], 2, ',', ''); ?></big>

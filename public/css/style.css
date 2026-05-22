@@ -89,6 +89,8 @@
 .banner{
     height:950px;
 	
+	
+	
     width: 100%;
 	
     overflow: hidden;
@@ -904,6 +906,9 @@ display: flex;
     position: relative;
     top: 0;
     left: 0;
+	
+	
+	border: 3px solid #111;
    
   
 }
@@ -2292,6 +2297,7 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
         width: 100%;
         padding: 2%;
         font-size: 0.9vw;
+		text-align: justify;
         color: #777;
         display: flex;
         line-height: 1.2vw;
@@ -2300,7 +2306,7 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
         width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: center; 
         justify-content: center;
         margin-bottom: 4%;
     }
@@ -2679,14 +2685,14 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
     }
     .grid-inmos-resume .grid-resume-center .caja-inmos .log-inmos img {
         display: flex;
-        width:85%;
+        width:80%;
         height: auto;
         flex-direction: column;
         align-items: center;
     }
     .grid-inmos-resume .grid-resume-center .caja-inmos p {
         width: 100%;
-        text-align: center;
+        text-align: justify;
         line-height: 1.1vw;
         font-size: 0.8vw;
         font-weight: 300;
@@ -4408,7 +4414,8 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
     }
 
     .infox-proyecto .center-infox .logo-infox {
-        width: 50%;
+        width: 70%;
+		
 		margin-top: 2%;
 		margin-bottom: 2%;
         height: auto;
@@ -4423,7 +4430,7 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
 
 .infox-proyecto .center-infox strong{
         width: auto;
-	background-color: #02CD00;
+	background-color: #;
 	top: 0px; 
 	font-size: 2vh;
 	text-transform: uppercase;
@@ -4448,7 +4455,8 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
 
 
     .infox-proyecto .center-infox .logo-infox .log-company {
-        width: 42%;
+        width: 35%;
+		
         height: auto;
         display: flex;
         flex-direction: row;
@@ -4461,7 +4469,7 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
         flex-direction: row;
     }
     .infox-proyecto .center-infox .logo-infox .place-company {
-        width: auto;
+        width: 40%;
 		
 		
         height: auto;
@@ -4475,12 +4483,12 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
        
     }
     .infox-proyecto .center-infox .logo-infox .place-company span {
-        width: auto;
+        width: 100%;
         height: auto;
         color: #5E656D;
 		text-align: left;
-		
-        font-size: 1.42vw;
+			
+        font-size: 1.4vw;
         font-weight: 600;
         display: flex;
         flex-direction: row;
@@ -4494,6 +4502,47 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
         flex-direction: row;
         align-items: center;
     }
+
+
+
+.infox-proyecto .center-infox .logo-infox .place-company2 {
+        width: 50%;
+		
+		
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-left: 1%;
+		
+		justify-content: center;
+		
+        
+       
+    }
+    .infox-proyecto .center-infox .logo-infox .place-company2 big {
+        width: auto;
+		border-radius: 1.5vh;
+		padding: 1%;
+		text-align: center !important;
+		
+        height: auto;
+        color: #fff;
+		
+		padding-top: 4%;
+		padding-bottom: 4%;
+		align-items: center;
+		justify-content: center;
+		text-transform: uppercase;
+		
+        font-size: 1.2vw;
+		background-color: red;
+        font-weight: 600;
+        display: flex;
+        flex-direction: row;
+       
+    }
+
+
     .infox-proyecto .center-infox .box-infox {
         width: 100%;
         height: auto;
@@ -4621,8 +4670,8 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
 		text-align: center ;
         color: #5E656D;
         line-height: 2.4vh;
-        height: 5vh;
-		font-weight:400;
+        height: 8.5vh;
+		font-weight:400; 
         margin-top: 2%;
         overflow-y: scroll;
     }
@@ -4638,16 +4687,23 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
     .infox-proyecto .center-infox .box-infox .text-infox .carac-infox {
         width: 94%;
 		
+		
         height: auto;
         display: grid;
-        align-items: center;
-        grid-template-columns: 40% 40%;
-        gap: 1% 1%;
+        
+        grid-template-columns: 48% 48%;
+        gap: 2% 2%;
     }
     .infox-proyecto .center-infox .box-infox .text-infox .carac-infox li {
         margin-top: 1%;
-        margin-bottom: 2%;
+		
+		width: 100%;
+		background-color: #EDEDED;
+		border-radius: 1.5vh;
+		padding: 2%;
+        margin-bottom: 2%; 
         font-size: 0.9vw;
+		list-style: none;
         color: #5E656D;
     }
     .infox-proyecto .center-infox .box-infox .text-infox .name-infox {
@@ -6926,6 +6982,7 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
         height: auto;
         display: flex;
         flex-direction: column;
+		
     }
     .contenedor-programas-asesor .center h1 {
         color: #555;
@@ -6937,20 +6994,22 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
     }
     .contenedor-programas-asesor #grid {
         display: grid;
-        margin-top: 3vh;
+        margin-top: 1vh;
         width: 100%;
         height: auto;
         position: relative;
         grid-template-columns: 17.3% 17.3% 17.3% 17.3% 17.3%;
-        gap: 4% 3%;
+        gap: 2% 3%;
     }  
     .contenedor-programas-asesor #grid .caja {
         transition: all 0.3s ease;
-        border: 1px solid #999;
-		background: #fff;
-		border-radius: 3vh;
+        
 		
-        height: auto;
+		margin-bottom: 2vh;
+		
+		border-radius: 3vh;
+		 
+       
         display: flex;
         flex-direction: column;
         position: relative;
@@ -7288,34 +7347,38 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
         width: 100%;
     }
     .contenedor-programas-asesor #grid .caja .logos-top {
-        display: flex;
+        display: flex; border: 1px #ccc solid;
         flex-direction: row;
         align-items: center;
-        width: 90%;
+        width: 100%;
+		border-radius: 2vh 2vh 0vh 0vh;
+		background-color: #fff;
         padding-top: 3%;
         padding-bottom: 3%;
     }
     .contenedor-programas-asesor #grid .caja .logos-top span {
         background-color: #555FAA;
         padding: 3%;
-        width: 50%;
+        width: 47%;
         color: #fff;
         border-radius: 0 7px 7px 0px;
         font-size: 0.8vw;
         margin-right: 5%;
     }
     .contenedor-programas-asesor #grid .caja .logos-top img {
-        width: 45%;
+        width: 54%;
         color: #fff;
     }
     .contenedor-programas-asesor #grid .caja:hover {
-        transform: translate(0px, -4px);
+        transform: translate(0px, -4px); 
         z-index: 200;
-        -webkit-box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.45);
-        box-shadow: 0px 5px 10px 4px rgba(0, 0, 0, 0.45);
+      
     }
     .contenedor-programas-asesor #grid .caja .desc {
         height: auto;
+		background-color: #fff;
+		border-radius: 0vh 0vh 3vh 3vh;
+		border: 1px #ccc solid;
         
         padding: 6%;
         color: #555;
@@ -22380,14 +22443,17 @@ if it's not present, don't show loader */
         }
         .grid-inmos-resume .grid-resume-center .caja-inmos .log-inmos img {
             display: flex;
-            width: 70%;
+            width: 65%;
             height: auto;
             flex-direction: column;
             align-items: center;
         }
         .grid-inmos-resume .grid-resume-center .caja-inmos p {
-            width: 100%;
-            text-align: center;
+            width: 95%;
+			margin: 0 auto;
+			margin-bottom: 4%;
+			margin-top: 3%;
+            text-align: justify;
             line-height: 1.3em;
             font-size: 1.1em;
             font-weight: 300;
@@ -23764,11 +23830,11 @@ if it's not present, don't show loader */
         .info-inmos .center-info-inmos .text-log p {
             width: 100%;
             padding: 1%;
-            font-size: 1.2em;
+            font-size: 1.1em;
             color: #777;
             display: flex;
             line-height: 1.2em;
-            text-align: center;
+            text-align: justify;
         }
         .info-inmos .center-info-inmos .text-log .logo-in {
             width: 100%;
@@ -23779,7 +23845,7 @@ if it's not present, don't show loader */
             margin-bottom: 4%;
         }
         .info-inmos .center-info-inmos .text-log .logo-in img {
-            width: 60%;
+            width: 54%;
             display: flex;
             flex-direction: column;
             margin-top: 2%;
@@ -24534,17 +24600,21 @@ if it's not present, don't show loader */
 
 
         .infox-proyecto .center-infox .logo-infox .log-company {
-            width: 50%;
+            width: 40%;
             margin-right:0%;
+			
+			justify-content: center;
+			align-items: center;
 			margin: 0 auto;
 			
             height: auto;
-            display: block;
-            flex-direction: row;
+            display: flex;
+            flex-direction: column;
+			margin-right: 1%;
             align-items: center;
         }
         .infox-proyecto .center-infox .logo-infox .log-company img {
-            width: 80%;
+            width: 100%;
 			padding: 3%;
 			background-color: #fff;
             height: auto;
@@ -24554,11 +24624,13 @@ if it's not present, don't show loader */
         .infox-proyecto .center-infox .logo-infox .place-company {
             width: 45%;
 			
+			
 			font-weight: 800;
+			margin-right: 2%;
             height: auto;
             display: flex;
             flex-direction: column;
-            margin-left: 1%;
+            margin-left: 0%;
             align-items: center;
             justify-content: center;
         }
@@ -24581,6 +24653,48 @@ if it's not present, don't show loader */
             flex-direction: row;
             align-items: center;
         }
+		
+		
+		
+		
+.infox-proyecto .center-infox .logo-infox .place-company2 {
+        width: 50%;
+		
+		
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        margin-left: 0%;
+		
+		justify-content: center;
+		
+        
+       
+    }
+    .infox-proyecto .center-infox .logo-infox .place-company2 big {
+        width: auto;
+		border-radius: 1.5vh;
+		padding: 1%;
+		text-align: center !important;
+		
+        height: auto;
+        color: #fff;
+		
+		padding-top: 4%;
+		padding-bottom: 4%;
+		align-items: center;
+		justify-content: center;
+		text-transform: uppercase;
+		
+        font-size: 3vw;
+		background-color: red;
+        font-weight: 600;
+        display: flex;
+        flex-direction: row;
+       
+    }
+
+
         .infox-proyecto .center-infox .box-infox {
             width: 100%;
             height: auto;
@@ -24663,16 +24777,17 @@ if it's not present, don't show loader */
             margin-top: 4%;
         }
         .infox-proyecto .center-infox .box-infox .text-infox .carac-infox {
-            width: 90%;
+            width: 100%;
+			flex-direction: column;
 			
             height: auto;
-            display: grid;
+            display: flex;
             align-items: center;
-            grid-template-columns: 46% 46%;
+            grid-template-columns: 100%;
             gap: 1% 1%;
         }
         .infox-proyecto .center-infox .box-infox .text-infox .carac-infox li {
-            margin-top: 1%;
+            margin-top: 1%; 
             margin-bottom: 2%;
             font-size: 0.9em;
         }
@@ -24831,15 +24946,19 @@ if it's not present, don't show loader */
         .tab button {
             background-color: inherit;
             float: left;
-            border: none;
+			margin-left: 1%;
+			margin-right: 1%;
+           
             outline: none;
             cursor: pointer;
+			border-radius: 2vh !important;
             width: 33.3%;
-            margin: 0 auto;
+          
+			
             padding-top: 0.5%;
             padding-bottom: 0.5%;
             padding: 2%;
-            border-radius: 5px 10px 0px 0px;
+           
             transition: 0.3s;
             font-size: 0.9em;
             font-weight: 600;
@@ -24890,14 +25009,17 @@ if it's not present, don't show loader */
             background-color: inherit;
             float: left;
             display: flex;
-            border: none;
+		
+           border: #81C41D 2px solid !important;
             outline: none;
             cursor: pointer;
             width: 25%;
-            padding-top: 0.5%;
-            padding-bottom: 0.5%;
+			margin-left: 0.3%;
+			margin-right: 0.3%;
+            padding-top: 0.4%;
+            padding-bottom: 0.4%;
             padding: 1%;
-            border-radius: 10px 10px 0px 0px;
+            border-radius: 10px 10px 10px 10px;
             transition: 0.3s;
             flex-direction: column;
             align-items: center;

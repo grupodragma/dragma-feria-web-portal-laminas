@@ -92,83 +92,9 @@
             </div>
         </div>
 
-        <header>
-            <div class="center-header" data-aos="fade-down">
-                <div class="logo">
-                    <a href="index.html"> <img src="imagenes/LOGO-EXPOHOGAR.svg" /></a>
-                </div>
-
-                <div class="space-res" style="visibility: hidden;"></div>
-                <div id="menu">
-                    <nav>
-                        <ul class="grt-menu">
-                            <li><a href="index.html" class="opciones">Home</a></li>
-
-                            <li class="grt-dropdown"><a href="inmobiliarias-resume.html" class="opciones">Inmobiliarias</a></li>
-                            <li><a href="principales-bancos.html" class="opciones">Bancos</a></li>
-
-                            <li><a href="blog-1.html" class="opciones">Blog</a></li>
-                            <li><a href="contacto.html" class="opciones">Auditorio</a></li>
-                        </ul>
-                    </nav>
-                </div>
-
-                <div class="space-res" style="visibility: hidden;"></div>
-
-                <div class="boton-cotiza">
-                    <div class="container-language" style="visibility: hidden;">
-                        <select
-                            name="idioma"
-                            class="idioma"
-                            style="
-                                margin: 0;
-                                margin-bottom: 0%;
-                                margin-top: 0%;
-                                border-radius: 5px;
-                                vertical-align: top;
-                                padding-top: 2vh;
-                                padding-bottom: 2vh;
-                                border: 2px solid #565fa9;
-
-                                padding: 1.2vh;
-                                background-color: #fff;
-                                background-image: url('https://centrovirtualdeconvenciones.com/arrow-select-green.svg');
-                                background-position: 97% center;
-                                background-position: right 10px center;
-                                background-repeat: no-repeat;
-                                background-size: 1.1em;
-                                appearance: none;
-
-                                -webkit-border-radius: 3px;
-                                -webkit-padding-end: 30px;
-                                -webkit-padding-start: 8px;
-                                -webkit-user-select: none;
-
-                                font-size: 0.9vw;
-                                overflow: hidden;
-                                text-overflow: ellipsis;
-                                color: #111;
-                                white-space: nowrap;
-                                width: 100%;
-                                transition: border 300ms;
-                            "
-                        >
-                            <option style="background-color: #fff; color: #555;">ESP</option>
-                            <option style="background-color: #fff; color: #555;">ENG</option>
-                            <option style="background-color: #fff; color: #555;">POR</option>
-                            <option style="background-color: #fff; color: #555;">CHI</option>
-                        </select>
-                    </div>
-
-                    <div class="user-header" style="visibility: hidden;">
-                        <img src="imagenes/nombres-registro.svg" />
-                        <span>Hola Usario</span>
-                    </div>
-                </div>
-
-                <button class="grt-mobile-button"><span class="line1"></span><span class="line2"></span><span class="line3"></span></button>
-            </div>
-        </header>
+        <?php echo $this->partial('partial/panel/componentes/header', [
+            'menus'=> $this->menus
+        ]); ?>
 
         <?= $this->content; ?>
 
@@ -229,6 +155,7 @@
         <script type="text/javascript" src="js/jquery.validate_messages_es.js"></script>
         <script type="text/javascript" src="js/home/scripts.js?t=<?php echo time(); ?>"></script>
         <script type="text/javascript" src="js/home/main.js?t=<?php echo time(); ?>"></script>
+        <script type="text/javascript" src="js/panel/main.js?t=<?php echo time(); ?>"></script>
         <script type="text/javascript" src="js/home/map.js?t=<?php echo time(); ?>"></script>
 
         <?= $this->inlineScript() ?>

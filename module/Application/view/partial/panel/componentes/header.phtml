@@ -1,0 +1,36 @@
+<header>
+    <div class="center-header" data-aos="fade-down">
+        <div class="logo">
+            <a href="<?php echo $this->layout()->idiomaSeleccionado; ?>"> <img src="imagenes/LOGO-EXPOHOGAR.svg" alt=""></a>
+        </div>
+        <div class="space-res"></div>
+
+        <?php
+            echo $this->partial(
+                'partial/panel/componentes/lista-menu',
+                [
+                    'menus'=> $this->menus
+                ]
+            );
+        ?>
+
+        <div class="space-res"></div>
+
+        <div class="boton-cotiza">
+            <div class="container-language">
+                <select name="idioma" class="idioma select-idiomas" onchange="Panel.cambiarIdioma(this)">
+                    <?php if($this->layout()->listaIdiomas): foreach($this->layout()->listaIdiomas as $key => $idioma): ?>
+                    <option value="<?php echo $key; ?>" <?php if( $key === $this->layout()->idiomaSeleccionado ) { echo 'selected="select"'; } ?>><?php echo $this->layout()->language->translate($idioma)['text']; ?></option>
+                    <?php endforeach; endif; ?>
+                </select>
+            </div>
+            <div class="user-header" style="<?php if( !isset($this->layout()->datosUsuario) ) { echo "display: none;"; } ?>">
+                <img src="imagenes/nombres-registro.svg" alt="">
+                <span><?php echo $this->layout()->datosUsuario['nombres']; ?></span>
+            </div>
+        </div>
+
+        <button class="grt-mobile-button"><span class="line1"></span><span class="line2"></span><span class="line3"></span></button>
+
+    </div>
+</header>

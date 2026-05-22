@@ -44,22 +44,19 @@
     <div class="center-infox">
         <div class="todo-left-infox">
             <div class="logo-infox">
-                <div class="log-company"><img src="<?php echo ( $this->empresa['hash_logo'] != '' ) ? $this->layout()->url_backend."/empresas/logo/".$this->empresa['hash_logo'] : ''; ?>" alt=""></div>
-
-                <div class="place-company">
-                    <!-- <span>VIA NOVA</span><span><img src="imagenes/map-logo-infox.svg" alt="">MAGDALENA</span> -->
-                    <span><?php echo $this->proyecto['nombre']; ?></span>
-                </div>
+                <div class="log-company"><img src="<?php echo ( $this->proyecto['hash_logo'] != '' ) ? $this->layout()->url_backend."/productos/imagen/".$this->proyecto['hash_logo'] : $this->layout()->url_backend."/img/no-imagen.jpg"; ?>" alt=""></div>
+                <div class="place-company"><span><?php echo $this->proyecto['nombre']; ?></span></div>
+                <div class="place-company2"><big><?php echo $this->proyecto['nombre_etapa']; ?></big></div>
             </div>
             <div class="box-infox">
                 <div class="container-gal">
                     <div class="contai-infox">
-                        <div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 980px; height: 520px; overflow: hidden; visibility: hidden;">
+                        <div id="jssor_1" style="position:relative;margin:0 auto;top:0px;left:0px; overflow: hidden; width: 2000px;">
                             <!-- Loading Screen -->
-                            <div data-u="loading" class="jssorl-009-spin" style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; text-align: center; background-color: rgba(0, 0, 0, 0.7);">
-                                <img style="margin-top: -19px; position: relative; top: 50%; width: 38px; height: 38px;" src="img/spin.svg" alt="">
-                            </div>
-                            <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 980px; height: 520px; overflow: hidden;">
+                            <div data-u="loading" class="jssorl-009-spin" style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
+                    <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;" src="img/spin.svg" />
+                  </div>
+                  <div data-u="slides" style="cursor:default;position:relative;top:0px;left:0px;width:3000px;height:1100px;overflow:hidden; ">
                                 <?php foreach( $this->proyecto['imagenes'] as $imagen) : ?>
                                 <div>
                                     <img data-u="image" src="<?php echo $this->layout()->url_backend."/productos/slider/".$imagen['hash_imagen']; ?>" alt="">
@@ -83,12 +80,12 @@
                                 </div>
                             </div>
                             <!-- Arrow Navigator -->
-                            <div data-u="arrowleft" class="jssora106" style="width: 45px; height: 55px; top: 220px; left: 1px;" data-scale="0.75">
-                                <img data-u="image" src="imagenes/flecha-slider-der-01.svg" alt="">
-                            </div>
-                            <div data-u="arrowright" class="jssora106" style="width: 45px; height: 55px; top: 220px; right: 1px;" data-scale="0.75">
-                                <img data-u="image" src="imagenes/flecha-slider-izq-02.svg" alt="">
-                            </div>
+                            <div data-u="arrowleft" class="jssora106" style="width:90px;height:90px;top:410px;left:4px; " data-scale="0.75">
+                    <img data-u="image" src="imagenes/flecha-slider-der-01.svg" />
+                  </div>
+                  <div data-u="arrowright" class="jssora106" style="width:90px;height:90px;top:410px;right:4px;" data-scale="0.75">
+                    <img data-u="image" src="imagenes/flecha-slider-izq-02.svg" />
+                  </div>
                         </div>
                     </div>
                     <div class="botones-infox">

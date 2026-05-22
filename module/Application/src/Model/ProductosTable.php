@@ -51,7 +51,15 @@ class ProductosTable {
         return $data;
     }
     public function obtenerDatoProductos($where){
-        $rowset = $this->tableGateway->select($where);
+        $select = $this->tableGateway->getSql()->select();
+        $select->join(
+            'etapa',
+            'etapa.idetapa = productos.idetapa',
+            ['nombre_etapa' => 'nombre'],
+            Select::JOIN_LEFT
+        );
+        $select->where($where);
+        $rowset = $this->tableGateway->selectWith($select);
         $result = $rowset->current();
         if($result){
             $result['imagenes'] = $this->tableGatewayProductosImagenes->obtenerDatosProductosImagenes(['idproductos'=> $result['idproductos']]);

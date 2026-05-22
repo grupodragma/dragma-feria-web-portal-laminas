@@ -91,7 +91,7 @@ class BannerTable {
     private function obtenerDatosElementoTablaPorCategoria($categoria, $idtabla){
         switch($categoria){
             case 'PROYECTO':
-                return $this->objProductosTable->obtenerDatoProductos(['idproductos'=> $idtabla]);
+                return $this->objProductosTable->obtenerDatoProductos(['productos.idproductos'=> $idtabla]);
                 break;
             case 'BANCO':
                 return $this->objBancosTable->obtenerDatoBancos(['idbancos'=> $idtabla]);

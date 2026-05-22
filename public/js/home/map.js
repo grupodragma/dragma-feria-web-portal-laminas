@@ -16,7 +16,7 @@ App.mapManager = {
     }),
 
     init(mapId, options = {}) {
-        console.log('options', options);
+        //console.log('options', options);
 
         this.mapId = mapId;
         this.projects = options.projects || [];
@@ -85,7 +85,7 @@ App.mapManager = {
     loadProjects() {
         if (!Array.isArray(this.projects)) return;
 
-        console.log('loadProjects', this.projects);
+        //console.log('loadProjects', this.projects);
 
         this.clearMarkers();
 
@@ -153,7 +153,7 @@ App.mapManager = {
     },
 
     filterProjects(obj) {
-        console.log('filterProjects');
+        //console.log('filterProjects');
 
         let contenedorFiltros = $(obj).parents("form");
         let objSelect = contenedorFiltros.find("select.filtro-mapa");
@@ -167,7 +167,7 @@ App.mapManager = {
             if(valorSelect == '')totalfiltrosVacios++;
         });
 
-        console.log(filter);
+        //console.log(filter);
 
         this.projects = this.projectsInitials;
 

@@ -55,7 +55,7 @@ class PanelController extends AbstractActionController {
         $this->layout()->setTemplate('layout/panel');
         $hash_url = $this->params()->fromRoute('hash_url', '');
         //Validar si existe proyecto
-        $dataProyecto = $this->objProductosTable->obtenerDatoProductos(['hash_url' => $hash_url]);
+        $dataProyecto = $this->objProductosTable->obtenerDatoProductos(['productos.hash_url' => $hash_url]);
         if(!$dataProyecto){
             $this->getResponse()->setStatusCode(404);
             return;
@@ -80,7 +80,7 @@ class PanelController extends AbstractActionController {
             'planos'=> $dataPlanos,
             'filtroOpciones'=> $this->objPlanosTable->filtrarOpcionesPlanos($dataPlanos)
         ];
-        //print_r($data['filtroOpciones']);
+        //print_r($data['proyecto']);
         //die;
         return new ViewModel($data);
     }
