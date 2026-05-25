@@ -726,7 +726,8 @@ background: linear-gradient(360deg, rgba(1,1,1,0.8) 0%, rgba(1,1,1,0.8) 100%);
 
 .banner .logos-head .logos-left-1{
 	
-	width:50%;
+	width:33%;
+	
 	
 	
 	height: auto;
@@ -737,11 +738,25 @@ background: linear-gradient(360deg, rgba(1,1,1,0.8) 0%, rgba(1,1,1,0.8) 100%);
 	justify-content: center;
    
 }
-
+ 
+.banner .logos-head .logos-left-1 p{
+	
+	padding: 2%;
+	
+	color: #555;
+	font-weight: 600;
+	
+	font-size: 2.2vh;
+	text-align: center;
+	
+	
+   
+}
 
 .banner .logos-head .logos-left-2{
 	
-	width:50%;
+	width:33%;
+	
 	
 	
 	height: auto;
@@ -763,30 +778,33 @@ background: linear-gradient(360deg, rgba(1,1,1,0.8) 0%, rgba(1,1,1,0.8) 100%);
    
 }
 
-.banner .logos-head .logos-left-1 p{
-	background-color: #6341ce;
-	padding: 4%;
-	border-radius: 0px 10px 10px 0px;
-	color: #fff;
-	font-weight: 600;
-	width: 74%;
-	font-size: 17px;
-	
-	
-   
-}
 
-
-.banner .logos-head .logos-left-2{
+.banner .logos-head .logos-left-3{
 	
-	width:50%;
-	
+	width:33%;
 	
 	height: auto;
 	
 	
 	display: flex;
 	flex-direction:column;
+	justify-content: center;
+   
+}
+ 
+.banner .logos-head .logos-left-3 p{
+	background-color: red;
+	padding: 4%;
+	padding-top: 9%;
+	text-align: center;
+	padding-bottom: 9%;
+	border-radius: 10px 10px 10px 10px;
+	color: #fff;
+	font-weight: 600;
+	
+	font-size: 1.5vh;
+	
+	
    
 }
 
@@ -4414,9 +4432,10 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
     }
 
     .infox-proyecto .center-infox .logo-infox {
-        width: 70%;
+        width: 80%;
 		
 		margin-top: 2%;
+		
 		margin-bottom: 2%;
         height: auto;
 		
@@ -4455,29 +4474,36 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
 
 
     .infox-proyecto .center-infox .logo-infox .log-company {
-        width: 35%;
-		
+        width: 33.3%;border-radius: 1vh;
+			background-color: #E9E9E9;
         height: auto;
         display: flex;
+		padding: 1%;
         flex-direction: row;
+		
+		justify-content: center;
         align-items: center;
     }
     .infox-proyecto .center-infox .logo-infox .log-company img {
-        width: 100%;
+        width: 65%;
         height: auto;
         display: flex;
         flex-direction: row;
     }
     .infox-proyecto .center-infox .logo-infox .place-company {
-        width: 40%;
+        width: 33.3%;
 		
-		
+		padding: 1%;
         height: auto;
+		border-radius: 1vh;
+		background-color: #E9E9E9;
         display: flex;
         flex-direction: column;
-        margin-left: 5%;
+        margin-left: 1%;
+		margin-right: 1%;
 		
 		justify-content: center;
+		align-items: center;
 		
         
        
@@ -4486,34 +4512,28 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
         width: 100%;
         height: auto;
         color: #5E656D;
-		text-align: left;
+		text-align: center;
 			
-        font-size: 1.4vw;
+        font-size: 1.3vw;
         font-weight: 600;
-        display: flex;
+        display: block;
         flex-direction: row;
         align-items: center;
     }
-    .infox-proyecto .center-infox .logo-infox .place-company span img {
-        width: 7%;
-        margin-right: 1%;
-        height: auto;
-        display: none;
-        flex-direction: row;
-        align-items: center;
-    }
-
+    
 
 
 .infox-proyecto .center-infox .logo-infox .place-company2 {
-        width: 50%;
+        width: 33.3%;
+	
+		
 		
 		
         height: auto;
         display: flex;
         flex-direction: column;
-        margin-left: 1%;
-		
+      margin-left: 0%;
+	margin-right: 1%;
 		justify-content: center;
 		
         
@@ -4528,8 +4548,8 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
         height: auto;
         color: #fff;
 		
-		padding-top: 4%;
-		padding-bottom: 4%;
+		padding-top: 6%;
+		padding-bottom: 6%;
 		align-items: center;
 		justify-content: center;
 		text-transform: uppercase;
@@ -4559,11 +4579,11 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
 		
     }
 	.infox-proyecto .center-infox .box-infox .container-gal .sala-boton {
-        width: 40vh;
-		border-radius:5vh;
+        width: 40%;
+		border-radius:4vh;
 		height: auto;
 		background-color:#81C41E;
-		padding:2%;
+		padding:1.5%;
 		justify-content: center;
 		text-align: center;
 		font-size: 2.5vh;
@@ -4578,7 +4598,8 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
         align-items: center;
     }
 .infox-proyecto .center-infox .box-infox .container-gal .sala-boton img{
-        width: 15%;
+        width: 12%;
+	margin-right: 4%;
 		
         
     }
@@ -4696,6 +4717,8 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
     }
     .infox-proyecto .center-infox .box-infox .text-infox .carac-infox li {
         margin-top: 1%;
+		display: flex;
+		flex-direction: row;
 		
 		width: 100%;
 		background-color: #EDEDED;
@@ -4706,6 +4729,15 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
 		list-style: none;
         color: #5E656D;
     }
+
+.infox-proyecto .center-infox .box-infox .text-infox .carac-infox li img{
+	width: 10%;
+	margin-right: 4%;
+       
+    }
+
+
+
     .infox-proyecto .center-infox .box-infox .text-infox .name-infox {
         width: 100%;
 		-webkit-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
@@ -13318,7 +13350,8 @@ if it's not present, don't show loader */
         }
     }
     .registro-home {
-        height: 100vh;
+        height:100vh;
+		
         width: 100%; 
 		position: relative;
 		
@@ -20160,13 +20193,14 @@ if it's not present, don't show loader */
             animation: flotante 1.5s ease forwards;
         }
         .info-modulo .center {
-            width: 92%;
+            width: 98%;
 			
             top: 0%;
             z-index: 15;
+			
             padding: 1%;
-            padding-top: 3%;
-            padding-bottom: 3%;
+            padding-top: 1%;
+            padding-bottom: 1%;
             background: rgb(114, 124, 145);
             background: radial-gradient(circle, rgba(0, 42, 62, 0.7) 4%, rgba(0, 42, 62, 0.8) 36%, rgba(0, 42, 62, 0.9) 100%);
             color: #fff;
@@ -20178,11 +20212,14 @@ if it's not present, don't show loader */
             flex-direction: row;
             justify-content: center;
             align-items: center;
+			
         }
         .info-modulo .center .contenido-hide {
             display: flex;
             flex-direction: row;
             align-items: center;
+			
+			
         }
         .info-modulo .center .contenido-hide h2 {
             display: none;
@@ -20206,6 +20243,7 @@ if it's not present, don't show loader */
             justify-content: center;
             align-items: center;
             width: 100%;
+			
             height: auto;
         }
         .info-modulo .center .contenido-hide .foto small {
@@ -20220,10 +20258,12 @@ if it's not present, don't show loader */
             display: flex;
             flex-direction: column;
             width: 35%;
+			
             height: auto;
         }
         .info-modulo .center .contenido-hide .foto .all-agente span {
             display: flex;
+			display: none;
             font-size: 1.2em;
         }
         .info-modulo .center .contenido-hide .foto .two-botons {
@@ -20238,6 +20278,7 @@ if it's not present, don't show loader */
         }
         .info-modulo .center .contenido-hide .foto .two-botons .horario {
             display: flex;
+			display: none;
             flex-direction: column;
             width: 100%;
         }
@@ -20266,6 +20307,7 @@ if it's not present, don't show loader */
         }
         .info-modulo .center .contenido-hide .foto .two-botons .tit span {
             display: flex;
+			display: none;
             font-size: 0.7em;
         }
         .info-modulo .center .contenido-hide .foto .two-botons a {
@@ -24550,14 +24592,15 @@ if it's not present, don't show loader */
         }
         .infox-proyecto {
             width: 100%;
-            padding: 2%;
+            padding: 0.9%;
             display: flex;
             padding-top: 0px;
             align-items: center;
             justify-content: center;
         }
         .infox-proyecto .center-infox {
-            width: 98%;
+            width: 100%;
+			
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -24600,7 +24643,7 @@ if it's not present, don't show loader */
 
 
         .infox-proyecto .center-infox .logo-infox .log-company {
-            width: 40%;
+          
             margin-right:0%;
 			
 			justify-content: center;
@@ -24622,13 +24665,13 @@ if it's not present, don't show loader */
             flex-direction: row;
         }
         .infox-proyecto .center-infox .logo-infox .place-company {
-            width: 45%;
+           
 			
 			
 			font-weight: 800;
-			margin-right: 2%;
+			margin-right: 0%;
             height: auto;
-            display: flex;
+            display: flex;margin-right: 1%;
             flex-direction: column;
             margin-left: 0%;
             align-items: center;
@@ -24637,11 +24680,11 @@ if it's not present, don't show loader */
         .infox-proyecto .center-infox .logo-infox .place-company span {
             width: 100%;
             height: auto;
-            font-size: 1.3em;
-            margin-bottom: 0.6%;color: #fff;
-            text-align: right;
+            font-size: 1.2em;
+            margin-bottom: 0.6%;color: #555;
+            text-align: center;
             font-weight: 800;
-            display: flex;
+            display: block;
             flex-direction: row;
             align-items: center;
         }
@@ -24658,8 +24701,8 @@ if it's not present, don't show loader */
 		
 		
 .infox-proyecto .center-infox .logo-infox .place-company2 {
-        width: 50%;
-		
+       
+		 
 		
         height: auto;
         display: flex;
@@ -26190,14 +26233,14 @@ if it's not present, don't show loader */
     }
 		
 		.infox-proyecto .center-infox .box-infox .container-gal .sala-boton {
-        width: 70%;
+        width: 100%;
 		border-radius:3vh;
 		height: auto;
 		background-color:#81C41E;
-		padding:3%;
+		padding:2%;
 		justify-content: center;
 		text-align: center;
-		font-size: 2.5vh;
+		font-size: 2.1vh;
 		font-weight: 600;
 		
 		margin-top:5%;
@@ -26210,7 +26253,7 @@ if it's not present, don't show loader */
         align-items: center;
     }
 .infox-proyecto .center-infox .box-infox .container-gal .sala-boton img{
-        width: 15%;
+        width: 9%;
 		
         
     }
