@@ -108,6 +108,7 @@ class ProductosTable {
         s.nombre AS segmento,
         exp.hash_foto AS expositor_foto,
         dist.nombre AS distrito,
+        et.nombre AS etapa,
         IF(st.hash_url = 'circular-portal', ps.configuracion, NULL) AS stand_configuracion
         FROM productos p
         INNER JOIN empresas e ON e.idempresas = p.idempresas
@@ -116,7 +117,8 @@ class ProductosTable {
         LEFT JOIN distritos dist ON dist.iddistritos = p.iddistritos
         LEFT JOIN paginas_stand ps ON ps.idempresas = e.idempresas
         LEFT JOIN stand_galeria sg ON sg.idstandgaleria = e.idstandgaleria
-        LEFT JOIN stand st ON st.idstand = sg.idstand";
+        LEFT JOIN stand st ON st.idstand = sg.idstand
+        LEFT JOIN etapa et ON et.idetapa = p.idetapa";
         $condiciones[] = "p.destacado = 1";
         if( !empty($condiciones) ) $sql .= " WHERE ".implode(" AND ", $condiciones);
         $sql .= " ORDER BY p.idproductos DESC";

@@ -97,6 +97,8 @@ class PanelController extends AbstractActionController {
             'proyectosFiltrados'=> $this->objProductosTable->obtenerProyectosFiltrados($filtrosSeleccionados),
             'banner'=> $this->objBannerTable->obtenerPosicionBannerGeneralPorPagina('buscador')
         ];
+        //print_r($data['proyectosFiltrados']);
+        //die;
         return new ViewModel($data);
     }
     public function enviarCorreoAction(){

@@ -17,11 +17,14 @@
         </button>
 
         <div class="logos-head">
+            <div class="logos-left-2">
+                <img src="<?php echo ( $proyecto['empresa_logo'] != '' ) ? $this->layout()->url_backend."/empresas/logo/".$proyecto['empresa_logo'] : 'imagenes/logo-inmo.png'; ?>" alt="">
+            </div>
             <div class="logos-left-1">
                 <p><?php echo mb_strtoupper($proyecto['distrito']); ?></p>
             </div>
-            <div class="logos-left-2">
-                <img src="<?php echo ( $proyecto['empresa_logo'] != '' ) ? $this->layout()->url_backend."/empresas/logo/".$proyecto['empresa_logo'] : 'imagenes/logo-inmo.png'; ?>" alt="">
+            <div class="logos-left-3">
+                <p><?php echo mb_strtoupper($proyecto['etapa']); ?></p>
             </div>
         </div>
 
