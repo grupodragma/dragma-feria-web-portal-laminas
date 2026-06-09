@@ -11,7 +11,7 @@
          background-image: url("../imagenes/email-pattern.png");
     }
 	
-	
+	 
 	
 
 
@@ -81,9 +81,22 @@
 
 		
 
+#more {display: none;}
+
+#myBtn  {display: flex;
+	font-size: 2vh;
+	color:#6341ce;
+	border: 0px;
+	background-color: transparent;
+	font-weight: 700;
+	width: 100%;
+	text-align: left;
+	margin-bottom: 2vh;
+	
 
 
 
+}
 
 
 .banner{
@@ -3867,6 +3880,12 @@ background: linear-gradient(180deg,rgba(250, 250, 250, 1) 0%, rgba(255, 255, 255
 			 -webkit-box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
         box-shadow: 0px 0px 3px -5px rgba(0, 0, 0, 0.75);
+		
+		
+		
+		
+		
+		
 			
 			
     }
@@ -3934,6 +3953,18 @@ background: linear-gradient(180deg,rgba(250, 250, 250, 1) 0%, rgba(255, 255, 255
         padding: 4%;
         padding-top: 0%;
     }
+
+
+
+
+
+
+
+
+
+
+
+
     .tab {
         overflow: hidden;
         background-color: #fff;
@@ -3950,6 +3981,10 @@ background: linear-gradient(180deg,rgba(250, 250, 250, 1) 0%, rgba(255, 255, 255
         float: left;
         border: none;
         outline: none;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: row;
         cursor: pointer;
         width: 30%;
         padding-top: 0.5%;
@@ -3957,13 +3992,29 @@ background: linear-gradient(180deg,rgba(250, 250, 250, 1) 0%, rgba(255, 255, 255
         padding: 1.5%;
         border-radius: 10px 10px 10px 10px;
         transition: 0.3s;
-        font-size: 1.1vw;
-        font-weight: 600;
+       
 		margin-left: 0.5%;
 		margin-right: 0.5%;
 		border: 2px solid #565EA9;
 
     }
+
+.tab button img{
+	width: 6%;
+	margin-right: 4%;
+	display: none;
+      
+
+    }
+
+.tab button p{
+	
+       font-size: 1.1vw;
+        font-weight: 600;
+
+    }
+
+
     /* Change background color of buttons on hover */
     
     .tab button:hover {
@@ -4013,7 +4064,7 @@ background: linear-gradient(180deg,rgba(250, 250, 250, 1) 0%, rgba(255, 255, 255
         float: left;
 		border: 2px solid #81C41D;
 		border-bottom: 0px;
-		
+		 color: #565EA9;
         display: flex;
        
         outline: none;
@@ -4030,7 +4081,7 @@ background: linear-gradient(180deg,rgba(250, 250, 250, 1) 0%, rgba(255, 255, 255
         flex-direction: column;
         align-items: center;
         font-size: 1.1vw;
-        font-weight: 600;
+        font-weight: 600; 
     }
     /* Change background color of buttons on hover */
     
@@ -4432,7 +4483,7 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
     }
 
     .infox-proyecto .center-infox .logo-infox {
-        width: 80%;
+        width: 58%;
 		
 		margin-top: 2%;
 		
@@ -4471,14 +4522,14 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
        
     }
 
-
+ 
 
     .infox-proyecto .center-infox .logo-infox .log-company {
-        width: 33.3%;border-radius: 1vh;
+        width: 50%;border-radius: 1vh;
 			background-color: #E9E9E9;
         height: auto;
         display: flex;
-		padding: 1%;
+		padding: 1.5%;
         flex-direction: row;
 		
 		justify-content: center;
@@ -4491,7 +4542,7 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
         flex-direction: row;
     }
     .infox-proyecto .center-infox .logo-infox .place-company {
-        width: 33.3%;
+        width: 50%;
 		
 		padding: 1%;
         height: auto;
@@ -4619,7 +4670,30 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
         display: flex;
         flex-direction: row;
         align-items: center;
+		position: relative;
     }
+
+.per{
+        width: auto;
+	text-transform: uppercase;
+	padding: 1.5%;
+	font-weight: 800;
+	height: auto;
+	color: #fff;
+	border-radius: 1.8vh;
+	background-color: rgba(255,0,4,0.78);
+	font-size: 1.8vh;
+	top: 2vh;
+	left: 2vh;
+	
+	position: absolute;
+	z-index: 99999;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
     .infox-proyecto .center-infox .box-infox .container-gal .botones-infox {
         width: 100%;
         height: auto;
@@ -4633,7 +4707,13 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
             -moz-box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.1);
             box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.1);
       
-    }
+    } 
+
+.infox-proyecto .center-infox .box-infox .container-gal .botones-infox img{
+	display: none;
+      
+      
+    } 
     .infox-proyecto .center-infox .box-infox .container-gal .botones-infox a {
         width: 32%;
 		margin-left: 1%;
@@ -4661,7 +4741,7 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
         color: #fff;
         background-color: #565EA9;
     }
-    .infox-proyecto .center-infox .box-infox .space-infox {
+    .infox-proyecto .center-infox .space-infox {
         width: 2%;
         height: auto;
         display: none;
@@ -4669,9 +4749,9 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
 
         align-items: center;
     }
-    .infox-proyecto .center-infox .box-infox .text-infox {
+    .infox-proyecto .center-infox .todo-left-infox .text-infox {
         width: 100%;
-       
+        
 		margin-top: 3%; 
 		
 		   -webkit-box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
@@ -4686,17 +4766,18 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
 		padding: 2.5% !important;
        
     }
-    .infox-proyecto .center-infox .box-infox .text-infox p {
+    .infox-proyecto .center-infox .text-infox p {
         font-size: 1.9vh;
-		text-align: center ;
+		text-align: justify;
         color: #5E656D;
         line-height: 2.4vh;
-        height: 8.5vh;
+		width: 98%;
+       
 		font-weight:400; 
         margin-top: 2%;
-        overflow-y: scroll;
+       
     }
-    .infox-proyecto .center-infox .box-infox .text-infox {
+    .infox-proyecto .center-infox .text-infox {
         width: 100%;
         padding: 0%;
         height: auto;
@@ -4705,7 +4786,63 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
         align-items: center;
         padding-top: 0%;
     }
-    .infox-proyecto .center-infox .box-infox .text-infox .carac-infox {
+
+ .infox-proyecto .center-infox .text-infox .name-infox .logo-text-infox {
+        width: 54%;
+		
+        height: auto;
+        display: flex;
+	
+		
+        flex-direction: column;
+        
+    }
+    .infox-proyecto .center-infox .text-infox .name-infox .logo-text-infox h2 {
+        width: 100%;
+        height: auto;
+        font-size: 2.1vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 0;
+        padding: 0;
+        color: #fff;
+        margin-bottom: 1%;
+    }
+    .infox-proyecto .center-infox .text-infox .name-infox .logo-text-infox span {
+        width: auto;
+        color: #fff;
+        height: auto;
+        margin-bottom: 2%;
+        margin-top: 0;
+        font-size: 1.1vw;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    } 
+    .infox-proyecto .center-infox .text-infox .name-infox .logo-text-infox span img {
+        width: 5%;
+        margin-right: 2%;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    .infox-proyecto .center-infox .text-infox .name-infox {
+        width: 100%;
+		-webkit-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+-moz-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+        height: auto;  background-color: #565EA9;
+		border-radius: 2.5vh;
+        display: flex;
+		
+	
+		padding: 2.5%;
+        flex-direction: row;
+        align-items: center;
+    }
+    .infox-proyecto .center-infox .text-infox .carac-infox {
         width: 94%;
 		
 		
@@ -4714,59 +4851,49 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
         
         grid-template-columns: 48% 48%;
         gap: 2% 2%;
+		margin-bottom: 2%;
     }
-    .infox-proyecto .center-infox .box-infox .text-infox .carac-infox li {
+    .infox-proyecto .center-infox .text-infox .carac-infox li {
         margin-top: 1%;
 		display: flex;
 		flex-direction: row;
+		align-items: center;
 		
 		width: 100%;
 		background-color: #EDEDED;
 		border-radius: 1.5vh;
-		padding: 2%;
+		padding: 3%;
         margin-bottom: 2%; 
-        font-size: 0.9vw;
+		font-weight: 600;
+		text-transform: uppercase;
+        font-size: 0.8vw;
 		list-style: none;
         color: #5E656D;
     }
 
-.infox-proyecto .center-infox .box-infox .text-infox .carac-infox li img{
-	width: 10%;
-	margin-right: 4%;
+.infox-proyecto .center-infox .text-infox .carac-infox li img{
+	width: 8%;
+	margin-right: 3%;
        
     }
 
 
-
-    .infox-proyecto .center-infox .box-infox .text-infox .name-infox {
-        width: 100%;
-		-webkit-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
--moz-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
-        height: auto;  background-color: #565EA9;
-		border-radius: 2.5vh;
-        display: flex;
-	
-		padding: 2.5%;
-        flex-direction: row;
-        align-items: center;
-    }
-    .infox-proyecto .center-infox .box-infox .text-infox .name-infox .space-text {
+    .infox-proyecto .center-infox .text-infox .name-infox .space-text {
         width: 0%;
     }
-    .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox {
+    .infox-proyecto .center-infox .text-infox .name-infox .share-infox {
         width: 65%; 
 	
 	 	
         display: flex;
         flex-direction: row; 
     }
-    .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox #buttoni {
+    .infox-proyecto .center-infox .text-infox .name-infox .share-infox #buttoni {
         border: 0px;
         cursor: pointer;
 		background-color: #575DAA !important;
     } 
-    .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .colorize {
+    .infox-proyecto .center-infox  .text-infox .name-infox .share-infox .colorize {
       
         width: 40%;
         font-size: 0.8vw;
@@ -4778,10 +4905,16 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
         color: #fff;
 		background-color: none;
     }
-    .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .colorize img {
-        width:40%;
+
+ .infox-proyecto .center-infox  .text-infox .name-infox .share-infox .colorize span{
+	 visibility: hidden;
+	 height: 0px;
+        
+        }
+    .infox-proyecto .center-infox .text-infox .name-infox .share-infox .colorize img {
+        width:60%;
     }
-    .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .precio {
+    .infox-proyecto .center-infox .text-infox .name-infox .share-infox .precio {
         margin-left: 0%;
         margin-right: 0%;
         text-decoration: none;
@@ -4796,21 +4929,21 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
         align-items: center;
         color: #fff;
     }
-	.infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .precio big {
+	.infox-proyecto .center-infox .text-infox .name-infox .share-infox .precio big {
        
         font-size: 2.6vh;
 		width:100%;
        
         
     }
-	.infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .precio small {
+	.infox-proyecto .center-infox .text-infox .name-infox .share-infox .precio small {
        
         font-size: 2vh;
 		width:100%;
        
         
     }
-    .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox a {
+    .infox-proyecto .center-infox .text-infox .name-infox .share-infox a {
         width: auto;
         justify-content: center;
         margin-left: 0%;
@@ -4825,49 +4958,10 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
         align-items: center;
         color: #fff;
     }
-    .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox a img {
+    .infox-proyecto .center-infox .text-infox .name-infox .share-infox a img {
         width: 9%;
     }
-    .infox-proyecto .center-infox .box-infox .text-infox .name-infox .logo-text-infox {
-        width: 54%;
-		
-        height: auto;
-        display: flex;
-		
-        flex-direction: column;
-        
-    }
-    .infox-proyecto .center-infox .box-infox .text-infox .name-infox .logo-text-infox h2 {
-        width: 100%;
-        height: auto;
-        font-size: 2.1vw;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        margin-top: 0;
-        padding: 0;
-        color: #fff;
-        margin-bottom: 1%;
-    }
-    .infox-proyecto .center-infox .box-infox .text-infox .name-infox .logo-text-infox span {
-        width: auto;
-        color: #fff;
-        height: auto;
-        margin-bottom: 2%;
-        margin-top: 0;
-        font-size: 1.1vw;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    } 
-    .infox-proyecto .center-infox .box-infox .text-infox .name-infox .logo-text-infox span img {
-        width: 5%;
-        margin-right: 2%;
-        height: auto;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-    }
+   
     .solicitud {
         width: 100%;
         padding: 4%;
@@ -8116,13 +8210,13 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
     }
     .text-areacin {
         position: absolute;
-        top: 0%;
-        left: 27%;
+        bottom: 0%;
+        left: 23%;
         width: 37%;
         height: auto;
-        padding: 1.7%;
-        color: #fff;border-radius: 0vh 0vh 3vh 3vh;
-        font-size: 38px;
+        padding: 1.5%;
+        color: #fff;border-radius: 3vh 3vh 0vh 0vh;
+        font-size: 36px;
         font-weight: 600;
         background: rgba(0, 0, 0, 0.5);
         text-align: center;
@@ -9903,7 +9997,8 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
         display: flex;
         justify-content: center;
         align-items: center;
-        border: 2px solid #565EA9;
+		background-color: #565EA9;
+        border: 2px solid #fff;
         border-radius: 50px;
         width: 98%;
     }
@@ -19911,9 +20006,11 @@ if it's not present, don't show loader */
             font-size: 1em;
         }
         .text-areacin {
-            font-size: 3.5em;
+            font-size: 3.2em;
             text-align: center; 
-			left: 15%;
+			right:0px !important;
+			left: 30% !important;
+			padding: 1%;
         }
         .info-proyectos {
             height: auto;
@@ -20183,31 +20280,39 @@ if it's not present, don't show loader */
             margin-bottom: 3%;
         }
         .info-modulo {
-            display: flex;
-            visibility: visible;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+			display: flex;
+           
 
             height: auto;
             justify-content: center;
-            align-items: center;
-            margin-bottom: 4%;
+          
+            margin-bottom: 1%;
             animation: flotante 1.5s ease forwards;
         }
         .info-modulo .center {
-            width: 98%;
+            width: 100%;
 			
             top: 0%;
-            z-index: 15;
 			
-            padding: 1%;
-            padding-top: 1%;
-            padding-bottom: 1%;
-            background: rgb(114, 124, 145);
-            background: radial-gradient(circle, rgba(0, 42, 62, 0.7) 4%, rgba(0, 42, 62, 0.8) 36%, rgba(0, 42, 62, 0.9) 100%);
+            z-index: 15;
+			animation: 0;
+			
+            padding: 0%;
+            padding-top: 0%;
+			border: 0px;
+            padding-bottom: 0%;
+           
+            background-color: transparent;
             color: #fff;
+			margin-top: 0px;
             position: relative;
             visibility: visible;
             height: auto;
-            border-radius: 8px 8px 8px 8px;
+			border-radius: 0px;
+           
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -20218,6 +20323,7 @@ if it's not present, don't show loader */
             display: flex;
             flex-direction: row;
             align-items: center;
+			justify-content: center;
 			
 			
         }
@@ -20233,7 +20339,7 @@ if it's not present, don't show loader */
             color: #fff;
             font-size: 0.6em;
             margin-bottom: 0%;
-            margin-top: 4%;
+            margin-top: 1%;
             font-weight: 400;
             text-align: center;
         }
@@ -20257,7 +20363,8 @@ if it's not present, don't show loader */
         .info-modulo .center .contenido-hide .foto .all-agente {
             display: flex;
             flex-direction: column;
-            width: 35%;
+            width: 28%;
+			
 			
             height: auto;
         }
@@ -20272,6 +20379,7 @@ if it's not present, don't show loader */
             justify-content: center;
             align-items: center;
             width: 56%;
+		
             height: auto;
             margin-bottom: 0%;
             margin-top: 0%;
@@ -20315,9 +20423,10 @@ if it's not present, don't show loader */
             justify-content: center;
             align-items: center;
             width: 42%;
+			
             -webkit-transition: .2s ease-in-out;
             transition: .2s ease-in-out;
-            padding: 3%;
+            padding: 2%;
             height: auto;
             background: none;
             color: #fff;
@@ -20328,7 +20437,8 @@ if it's not present, don't show loader */
         }
         .info-modulo .center .contenido-hide .foto img {
             display: flex;
-            width: 90%;
+            width: 100%;
+			
             margin-bottom: 0%;
             border-radius: 10px;
             margin-top: 0%;
@@ -24607,14 +24717,17 @@ if it's not present, don't show loader */
         }
         .infox-proyecto .center-infox .logo-infox {
             width: 99%;
-			padding: 3%;
+			padding: 0%;
 			border-radius: 3vh;
             height: auto;
+		
+			margin-top: 0px;
 			
 			background-color: #565EA9;
             display: flex;
+			height: 0px;
             flex-direction: row;
-            margin-bottom: 5%;
+            margin-bottom: 0%;
         }
 		
 .infox-proyecto .center-infox strong{
@@ -24627,7 +24740,7 @@ if it's not present, don't show loader */
 	position: relative;
 	left: 0;
 	
-	color: #888;
+	color: #888; 
 	border-radius: 0px 10px 10px 0px;
 	
 		
@@ -24637,10 +24750,11 @@ if it's not present, don't show loader */
         display: flex;
 	
         flex-direction: row;
+	
 		
        
     }
-
+ 
 
         .infox-proyecto .center-infox .logo-infox .log-company {
           
@@ -24648,13 +24762,19 @@ if it's not present, don't show loader */
 			
 			justify-content: center;
 			align-items: center;
+			z-index: 999999;
 			margin: 0 auto;
+			background-color: #fff;
 			
             height: auto;
+			width: 26%;
+			position: absolute;
             display: flex;
             flex-direction: column;
-			margin-right: 1%;
+			margin-right: 0%;
+			left: 1vh;
             align-items: center;
+			top:34vh;
         }
         .infox-proyecto .center-infox .logo-infox .log-company img {
             width: 100%;
@@ -24669,9 +24789,10 @@ if it's not present, don't show loader */
 			
 			
 			font-weight: 800;
+			border: 2px solid #111;
 			margin-right: 0%;
             height: auto;
-            display: flex;margin-right: 1%;
+            display: none;margin-right: 1%;
             flex-direction: column;
             margin-left: 0%;
             align-items: center;
@@ -24722,7 +24843,7 @@ if it's not present, don't show loader */
 		
         height: auto;
         color: #fff;
-		
+		 
 		padding-top: 4%;
 		padding-bottom: 4%;
 		align-items: center;
@@ -24739,10 +24860,23 @@ if it's not present, don't show loader */
 
 
         .infox-proyecto .center-infox .box-infox {
-            width: 100%;
+            width: 99%;
             height: auto;
+			padding-top: 0px !important;
+			
+			border-radius: 1.5vh;
+			margin-top: 4%;
+			padding-bottom: 2%;
+			
+			border:2px solid #565EA9;
+			overflow: hidden;
+			
             display: flex;
+			background-color: #fff;
+			-webkit-box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.35); 
+box-shadow: 0px 0px 8px 1px rgba(0,0,0,0.35);
             flex-direction: column;
+			
         }
         .infox-proyecto .center-infox .box-infox .container-gal {
             width: 100%;
@@ -24760,7 +24894,7 @@ if it's not present, don't show loader */
             align-items: center;
         }
         .infox-proyecto .center-infox .box-infox .container-gal .botones-infox {
-            width: 100%;
+            width: 95%;
             height: auto;
             display: flex;
             flex-direction: row;
@@ -24772,98 +24906,187 @@ if it's not present, don't show loader */
             width: 33.3%;
             text-decoration: none;
             font-weight: 700;
-            font-size: 0.9em;
+            font-size: 0em;
             color: #fff;
 			text-align: center;
             padding: 2%;
             height: 7vh;
            
-            display: flex;
+            display: flex; 
             flex-direction: row;
             align-items: center;
             justify-content: center;
             transition: all 0.2s ease-in-out;
             -moz-transition: all 0.2s ease-in-out;
         }
-        .infox-proyecto .center-infox .box-infox .container-gal .botones-infox a:hover {
-            border: 2px solid #fff;
-            color: #fff;
-            background-color: #565EA9;
+		  .infox-proyecto .center-infox .box-infox .container-gal .botones-infox img{
+            width: 53%;
+            
+           
+            display: flex;
+           
         }
-        .infox-proyecto .center-infox .box-infox .space-infox {
-            width: 2%;
-            height: auto;
-            display: none;
-            flex-direction: row;
-            align-items: center;
+		 .infox-proyecto .center-infox .box-infox .container-gal .botones-infox a p{
+           
+         
+         
+           
         }
+		
+		
+#myBtn  {display: flex;
+	font-size: 2vh;
+	text-align: center !important;
+	
+	color:#565EA9;
+	border: 0px;
+	background-color: transparent;
+	font-weight: 700;
+	text-transform: uppercase;
+	width: auto;
+	
+	margin-bottom: 2vh;
+	
+
+
+
+}
         .infox-proyecto .center-infox .box-infox .text-infox p {
             font-size: 0.9em;
-            line-height: 1.5em;
-            height: 50%;
+            line-height: 1.7em;
+            height: auto;
+			margin: 0 auto;
+			width: 96%;
 			text-align: justify !important;
-            margin-top: 3%;
+            margin-top: 2.5%;
 			margin-bottom: 4%;
-            overflow-y: scroll;
+			
+           
         }
-        .infox-proyecto .center-infox .box-infox .text-infox {
-            width: 100%;
-			border-radius: 2.5vh;
+		
+		
+		.infox-proyecto .center-infox .box-infox .text-infox img {
+            
+			width: 12%;
+			
+			display: block !important;
+			
+			
+           
+        }
+		
+
+		
+		
+		
+        .infox-proyecto .center-infox .text-infox {
+            width: 94%;
+			
             padding: 4% !important;
 			
+			
             height: auto;
-            display: flex;
+            display: block;
+			margin: 0 auto;
 			margin-bottom: 4%;
             flex-direction: column;
             align-items: center;
             padding-top: 0%;
             margin-top: 4%;
+			
+			
+			
+			
+			border: 2px #565EA9 solid;
+			border-radius: 1.7vh !important;
+			
+			overflow: hidden;
+			
+          
+			
+box-shadow: 0px !important;
+            
+			
+			
+			
+			
         }
-        .infox-proyecto .center-infox .box-infox .text-infox .carac-infox {
+        .infox-proyecto .center-infox .text-infox .carac-infox {
             width: 100%;
 			flex-direction: column;
 			
             height: auto;
-            display: flex;
+            display: grid;
             align-items: center;
-            grid-template-columns: 100%;
+            
             gap: 1% 1%;
+			margin-bottom: 3%;
+			
+			
+			
+		
+      
+        grid-template-columns: 49% 49%;
+       
         }
-        .infox-proyecto .center-infox .box-infox .text-infox .carac-infox li {
+        .infox-proyecto .center-infox .text-infox .carac-infox li {
             margin-top: 1%; 
             margin-bottom: 2%;
+			padding: 5%;
             font-size: 0.9em;
         }
-        .infox-proyecto .center-infox .box-infox .text-infox .name-infox {
+        .infox-proyecto .center-infox .text-infox .name-infox {
             width: 100%;
+		
             height: auto;
 			
             display: flex;
+			box-shadow: none;
+			background-color: transparent;
             flex-direction: column;
             align-items: center;
 			padding: 5%;
         }
-        .infox-proyecto .center-infox .box-infox .text-infox .name-infox .space-text {
+        .infox-proyecto .center-infox .text-infox .name-infox .space-text {
             width: 1%;
         }
-        .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox {
+        .infox-proyecto .center-infox .text-infox .name-infox .share-infox {
             width: 100%;
+			
+			margin-top: 3%;
+			
+            display: flex;
+            flex-direction: column;
+        }
+		
+		
+		
+		 .infox-proyecto .center-infox .text-infox .name-infox .share-infox .dosis{
+            width: 100%;
+			
+			 border-radius: 1vh;
+			 overflow: hidden;
 			
 			margin-top: 3%;
 			
             display: flex;
             flex-direction: row;
         }
-        .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox #buttoni {
+		
+		
+		
+		
+        .infox-proyecto .center-infox .text-infox .name-infox .share-infox #buttoni {
             border: 0px;
             cursor: pointer;
         }
-        .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .colorize {
+        .infox-proyecto .center-infox  .text-infox .name-infox .share-infox .dos .colorize {
             background: #EDEEEF;
-            width: 35%;
+            width: 50%;
+			 
             font-size: 0.8em;
             
-            border: 0px;
+            
             justify-content: center;
             display: flex;
             flex-direction: column;
@@ -24871,51 +25094,79 @@ if it's not present, don't show loader */
 
             color: #565EA9;
         }
-        .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .colorize img {
-            width: 90%;
+		.infox-proyecto .center-infox  .text-infox .name-infox .share-infox .colorize span{
+	 visibility:visible;
+	 height: auto;
+			font-size: 2vh;
+			font-weight: 800;
+        
         }
-        .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .precio {
+        .infox-proyecto .center-infox  .text-infox .name-infox .share-infox .colorize img {
+            width: 90%;
+			visibility: none;
+			display: none;
+        }
+        .infox-proyecto .center-infox .text-infox .name-infox .share-infox .precio {
             margin-left: 1%;
             margin-right: 0%;
             text-decoration: none;
-            
-            padding: 2.5%;
+             color: #565EA9;
+            padding: 0%;
             font-size: 2.85em;
             display: flex;
             flex-direction: column;
-            align-items: center;
-            color: #fff;
+			justify-content: flex-start !important;
+			align-items: flex-start !important;
 			
-			
+            
+          
         }
 		
-		   .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .precio big {
-			   font-size:2.2vh;
-           
+		   .infox-proyecto .center-infox .text-infox .name-infox .share-infox .precio big {
+			   font-size:5.2vh;
+		 font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: bold;
+  font-style: normal;
         }
-		  .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox .precio small {
-			   font-size:2.6vh;
-           
+		  .infox-proyecto .center-infox .text-infox .name-infox .share-infox .precio small {
+			   font-size:2.2vh;
+			  width: auto;
+			  font-weight: 700;
+			  text-transform: uppercase;
+			  padding: 2.5%;
+			  padding-left: 5%;
+			  padding-right: 5%;
+			  margin-bottom: 3%;
+            color: #fff;
+			  border-radius: 1vh;
+			  margin-left: 0px !important;
+			
+			
+			 background-color:#565EA9;
         }
 		 
-        .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox a {
-            width: auto;
+        .infox-proyecto .center-infox .text-infox .name-infox .share-infox a {
+            width: 65%;
             justify-content: center;
-            margin-left: 1%;
+            margin-left: 0%;
             margin-right: 1%;
+			
             text-decoration: none;
             background: #565EA9;
-            padding: 1.5%;
-            font-size: 1.4em;
+            padding: 4%;
+            font-size: 2.2vh;
+			font-weight: 900;
             display: flex;
             flex-direction: row;
             align-items: center;
             color: #fff;
         }
-        .infox-proyecto .center-infox .box-infox .text-infox .name-infox .share-infox a img {
+        .infox-proyecto .center-infox .text-infox .name-infox .share-infox a img {
             width: 15%;
+			display: none;
         }
-        .infox-proyecto .center-infox .box-infox .text-infox .name-infox .logo-text-infox {
+        .infox-proyecto .center-infox .text-infox .name-infox .logo-text-infox {
             width: 100%;
 			
 			justify-content: center;
@@ -24925,34 +25176,35 @@ if it's not present, don't show loader */
             flex-direction: column;
             align-items: center;
         }
-        .infox-proyecto .center-infox .box-infox .text-infox .name-infox .logo-text-infox h2 {
+        .infox-proyecto .center-infox .text-infox .name-infox .logo-text-infox h2 {
             width: 100%;
             height: auto;
-			text-align: center !important;
-            font-size: 2.3em;
+			text-align: left!important;
+            font-size: 2.5em;
             display: block;
             flex-direction: row;
 			margin: 0 auto;
             align-items: center;
             margin-top: 0;
             padding: 0;
-            color: #fff;
-            margin-bottom: 1%;
+            color: #565EA9;;
+            margin-bottom: 0%;
+			
         }
-        .infox-proyecto .center-infox .box-infox .text-infox .name-infox .logo-text-infox span {
+        .infox-proyecto .center-infox .text-infox .name-infox .logo-text-infox span {
             width: 100% !important;
   
-            color: #fff;
+            color: #565EA9;
+			text-align: left;
             height: auto;
-            margin-bottom: 2%;
+            margin-bottom: 1%;
             margin-top: 0;
-			justify-content: center;
-            font-size: 1.2em; 
-            display: flex;
-            flex-direction: row;
-            align-items: center;
+			
+            font-size: 1.3em; 
+            display: block;
+            
         }
-        .infox-proyecto .center-infox .box-infox .text-infox .name-infox .logo-text-infox span img {
+        .infox-proyecto .center-infox .text-infox .name-infox .logo-text-infox span img {
             width: 5%;
             margin-right: 2%;
             height: auto;
@@ -24969,48 +25221,74 @@ if it's not present, don't show loader */
             display: flex;
             align-items: center;
             flex-direction: column;
+			
+		
+			
+			
         }
 		
 		 .tabs-all .panel iframe { 
-			
-			 border-radius: 3vh !important;
+			 
+			 border-radius: 2vh !important;
            
         }
         .tab {
             overflow: hidden;
             width: 100%;
-            background-color: #fff;
-			padding: 2.5% !important;
-			border-radius: 3vh;
-			margin-bottom: 3%;
+            background-color: transparent;
+			padding: 0.1% !important;
+			border-radius: 0vh;
+			margin-bottom: 0%;
         }
         /* Style the buttons inside the tab */
         
         .tab button {
-            background-color: inherit;
+            background-color: #565EA9;
+            color: #fff;
             float: left;
-			margin-left: 1%;
-			margin-right: 1%;
+			margin-left: 2%;
+			margin-right: 2%;
            
             outline: none;
             cursor: pointer;
-			border-radius: 2vh !important;
-            width: 33.3%;
+			border-radius: 3vh 3vh 0vh 0vh !important;
+            width: 32.3%;
           
 			
             padding-top: 0.5%;
             padding-bottom: 0.5%;
-            padding: 2%;
+            padding: 1%;
            
             transition: 0.3s;
             font-size: 0.9em;
             font-weight: 600;
         }
+		
+		
+		
+		
+.tab button img{
+	width: 44%;
+	margin-right: 0%;
+	display: flex;
+      
+
+    }
+
+.tab button p{
+	
+       
+	display: none;
+	
+
+    }
+
+
+		
         /* Change background color of buttons on hover */
         
         .tab button:hover {
-            background-color: #565EA9;
-            color: #fff;
+            
         }
         /* Create an active/current tablink class */
         
@@ -25022,9 +25300,13 @@ if it's not present, don't show loader */
         
         .tabcontent {
             display: none;
+			background-color: #fff;
             width: 94%;
+			overflow: hidden;
+			border-radius: 2vh;
+			border: 1px solid #DCDCDC;
             height: auto;
-            border-top: none;
+           
            
         }
         .tabcontent iframe {
@@ -25037,9 +25319,13 @@ if it's not present, don't show loader */
             padding: 4%; 
             padding-top: 0%;
             height: auto;
+			
+			
         }
 		  .tabs-all-panel iframe{
 			  border-radius: 3vh;
+			  
+			  
            
         }
         .tab2 {
@@ -25055,7 +25341,7 @@ if it's not present, don't show loader */
 		
            border: #81C41D 2px solid !important;
             outline: none;
-            cursor: pointer;
+            cursor: pointer; 
             width: 25%;
 			margin-left: 0.3%;
 			margin-right: 0.3%;
@@ -25066,7 +25352,7 @@ if it's not present, don't show loader */
             transition: 0.3s;
             flex-direction: column;
             align-items: center;
-            font-size: 1.1vw;
+            font-size: 1.2vw;
             font-weight: 600;
         }
         /* Change background color of buttons on hover */
@@ -25098,8 +25384,8 @@ if it's not present, don't show loader */
             color: #fff;
             cursor: pointer;
             padding: 4%;
-            padding-left: 5%;
-            width: 100%;
+            padding-left: 5%; 
+            width: 95%;
             border: none;
             text-align: left;
             outline: none;
@@ -25114,14 +25400,23 @@ if it's not present, don't show loader */
             width: 5%;
         }
         .accordion span img {} .panel {
-            padding: 2%;
+            padding: 1%;
             display: flex;
             background-color: white;
             padding-bottom: 0px;
             overflow: hidden;
-            width: 100%;
-            padding-top: 6%;
-            padding-bottom: 6%;
+			border-radius: 3vh;
+			
+			
+			
+			
+			
+			border-radius: 2vh;
+			
+			
+            width: 99%;
+            padding-top: 4%;
+            padding-bottom: 0%;
         }
         .panel #grid {
             display: grid;
@@ -25402,24 +25697,30 @@ if it's not present, don't show loader */
             position: absolute;
             width: 90%;
             display: none;
+			border: 0px solid #888;
             height: auto;
+			margin: 0 auto !important;
             padding: 3%;
-            margin-top: 14%;
+            margin-top: 14% !important;
             background: #fff;
-            border: 2px solid #fcfcfc;
-            margin-left: -7%;
+			margin-left: 0px !important;
+           
+           
             -webkit-box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
             -moz-box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
             box-shadow: 0px 0px 16px -5px rgba(0, 0, 0, 0.75);
         }
         #newpost .follow {
-            grid-template-columns: 48% 48%;
-            gap: 4% 4%;
+            grid-template-columns: 47% 47%;
+            gap: t% 4%;
             display: grid;
         }
         #newpost .follow a {
             font-size: 0.8em;
+			border-radius: 1vh;
+			
             color: #fff;
+			width: 100%;
             padding: 8%;
         }
         .modal-contents-plano {
@@ -26233,7 +26534,7 @@ if it's not present, don't show loader */
     }
 		
 		.infox-proyecto .center-infox .box-infox .container-gal .sala-boton {
-        width: 100%;
+        width: 95%;
 		border-radius:3vh;
 		height: auto;
 		background-color:#81C41E;
@@ -26242,7 +26543,10 @@ if it's not present, don't show loader */
 		text-align: center;
 		font-size: 2.1vh;
 		font-weight: 600;
-		
+			-webkit-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+-moz-box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
+	
 		margin-top:5%;
 			margin-bottom: 2%;
 		color:#fff;
@@ -26253,7 +26557,7 @@ if it's not present, don't show loader */
         align-items: center;
     }
 .infox-proyecto .center-infox .box-infox .container-gal .sala-boton img{
-        width: 9%;
+        width: 8%;
 		
         
     }
@@ -26286,7 +26590,7 @@ if it's not present, don't show loader */
 		
 
 .infox-proyecto .center-infox .todo-right-infox{
-        width: 100%;
+        width: 95%;
 	
 	
 	
@@ -26513,6 +26817,26 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
 }
 
 
+.per{
+        width: auto;
+	text-transform: uppercase;
+	padding: 1.5%;
+	font-weight: 800;
+	height: auto;
+	color: #fff;
+	border-radius: 1vh;
+	background-color: rgba(255,0,4,0.78);
+	font-size: 1.6vh;
+	top: 1.3vh;
+	left: 1.3vh;
+	
+	position: absolute;
+	z-index: 99999;
+        height: auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
 		
 
 .info-inmos .center-info-inmos .foto-log #jssor_1 {
@@ -26527,8 +26851,19 @@ box-shadow: 1px 1px 9px 2px rgba(0,0,0,0.2);
     }
 
   #jssor_1 {
+	  
+	  
+	  
+	 
       
 	  
+	  
+	
+	
+	
+      
+		border-radius: 0px;
+	 
     }
 #jssor_1 img{
       

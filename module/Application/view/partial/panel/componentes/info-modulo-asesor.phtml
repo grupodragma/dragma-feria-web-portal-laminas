@@ -16,13 +16,13 @@
                     </div>
                     <div class="box-responsive">
                         <a class="<?php if( $this->expositor['telefono'] == '' ) { echo "disabled"; } ?>" href="tel:<?php echo $this->expositor['telefono']; ?>">
-                            <img src="imagenes/asesor-llamada.png" alt="">
+                            <img src="imagenes/icon-multi-03.svg" alt="">
                         </a>
                         <a class="<?php if( $this->expositor['enlace_wsp'] == '' ) { echo "disabled"; } ?>" href="javascript:abrirVentanaWindow('<?php echo $this->expositor['enlace_wsp']; ?>')">
-                            <img src="imagenes/asesor-wsp.png" alt="">
+                            <img src="imagenes/icon-multi-02.svg" alt="">
                         </a>
                         <a href="javascript:void(0)" onclick="abrirVentanaWindow('<?php echo $this->expositor['enlace_conferencia_asesor']; ?>');">
-                            <img src="imagenes/asesor-video.png" alt="">
+                            <img src="imagenes/icon-multi-01.svg" alt="">
                         </a>
                     </div>
                     <div class="horario" style="<?php if( $this->expositor['horario_atencion'] === '00:00-00:00 | 00:00-00:00' ) { echo 'display: none;'; } ?>">
